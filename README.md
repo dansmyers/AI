@@ -81,7 +81,7 @@ If you achieve satisfactory performance on enough assigments, described in more 
 
 
 ### Assignments
-Your grade will be based on the following three things:
+Your grade will be based on the following things:
 
 1. A set of **regular assignments**, about five during the semester. These will focus on a combination of Java programs and short answer questions from the textbook.
 
@@ -89,6 +89,7 @@ Your grade will be based on the following three things:
 
 3. **Midterm and final exams**. The final covers the second half of class.
 
+4. **AI-enhanced writing assignment**: You'll have one major research project, assigned in parts in conjunction with the regular assignments. The goal of this assignment is to let you practice using an AI tool during the entire research lifecycle, including idea generation, background reading, topic development, drafting, and editing.
 
 ### Satisfactory Credit
 
@@ -108,6 +109,7 @@ You must make a reasonable attempt on every part of an assignment to receive ful
 
 1. Earn satisfactory credit on all of the regular homework assignments during the entire semester.
 2. Pass the midterm and final exams with a grade of at least 80% on each.
+3. Complete each portion of the research project in a satisfactory fashion.
 
 **If you fail to complete the requirements for a B**, your grade will be adjusted downwards according to the following table:
 
@@ -117,6 +119,8 @@ You must make a reasonable attempt on every part of an assignment to receive ful
 | No credit on an assignment | One full letter grade (e.g., B to C) for each one |
 | Exam score below 80% | Fraction of a letter grade |
 | Exam score below 60% | One full letter grade |
+| Unsatisfactory paper component | Fraction of a letter grade |
+| Missing paper component | One full letter grade |
 
 **To earn a higher grade**, you can complete additional work that shows deeper engagement with the course goals. Each challenge project that you complete will **boost your grade by one part of a letter** (e.g., B to B+). To earn an A, complete all the requirements for a B plus three additional challenge projects.
          
