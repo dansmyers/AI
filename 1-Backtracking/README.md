@@ -1,4 +1,4 @@
-# Assignment 1: Solving Problems by Searching
+# Assignment 1: Backtracking Search
 
 ## Due 
 
@@ -48,6 +48,8 @@ Your goal is to find the combination of button presses that turns all the lights
 - Modify the basic recursive backtracking search to take additional `current_depth` and `max_depth` parameters. If the `current_depth` exceeds the `max_depth`, treat it as a base case and return immediately.
 
 - For a given state, there are *N*<sup>2</sup> possible moves to consider, which correspond to each possible button press.
+
+Consider why iterative deepening is a good strategy for this problem. You're allowed to press each button as many times as you want, so there's no limit on the depth of any path. Left unchecked, you would simply descend the search tree, pressing buttons to create an infinitely long path that might never lead to a solution. Iterative deepening ensures that you consider all button combinations up to a certain depth before exploring deeper paths.
 
 A pseudocode version of the `solve` method is as follows:
 
