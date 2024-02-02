@@ -1,6 +1,6 @@
 # Assignment 1: Backtracking Search
 
-## Due 
+## Due Wednesday, 2/14
 
 ## You can work with a partner to complete this assignment
 
