@@ -14,9 +14,8 @@
 
 </br>
 
-This course is about the development of computation, mathematics, and technology in the ancient world.
 
-In this, our major research project, you’re going to choose one particular aspect of AI and write about why it’s important. This could be a new technology, a tool, a theorem, a computational method, or something else related to the broad themes of the course; I’ll give you some suggestions for choosing a topic below.
+In this, our major research project, you’re going to choose one particular aspect of AI, research it, and write about it. This could be an algorithm, a theorem, a historical event, a person, an issue, or anything else related to the subject of AI, broadly considered.
 
 We’re also using this assignment to practice researching and writing with AI tools. Each phase integrates AI and you will be able to practice using AI in all phases of the writing process.
 
@@ -54,16 +53,20 @@ The overall goal of this assignment is for you to practice using AI in a moderat
 
 </br>
 
-Identify some historical innovation related to computation, math, technology, or a related area and write about why it was significant at the time of its creation and why it still matters to the modern world.
+
+Identify a topic related to the field of artificial intelligence and provide a research-based summary of it.
 
 This is intentionally broad. I want you to explore your own interests and bring in ideas from your other classes. Here are some flexible guidelines to think about when choosing your topic:
 
-- Focus on a **specific innovation**. For example, ideas like “agriculture” or “clocks” are too broad—you’d have to write a survey of thousands of years of history—but you could focus on one particular innovation within those areas, such as the marine chronometer or the singing plow.
+- **Get specific**. There are some lines of inquiry, like "AI ethics", or "AI and business" that are important and relevant, but also too broad. You might start with a broad general topic, but you then want to refine it into something specific that you can realistically write about. Try to be as narrow as possible in your framing. Imagine writing a paper for just one person who is genuinely invested in the subject. For example, writing about Alan Turing's contributions to AI might be a great starting point, but you could try to get even more detailed: dig into his specific contributions, when, where, and why they happened and see if you can refine the initial idea into something even more focused.
 
-- You don’t have to choose a physical thing. You can write about a mathematical result, or a theory, book, or intellectual movement.
+- **Have a real conclusion**. You will get to work more on thesis development later in the process, but it's important to push towards drawing a real conclusion. It's not enough to say, for example, "AI is likely to have a major impact on businesses and the economy". Of course it is! Fake conclusions like that are a waste of everyone's time. As you're considering ideas, ask yourself if your topic is specific enough to have a real conclusion.
 
-- Choose a topic that’s preferably pre-1800. It’s okay to bring in connections from the modern world when they're appropriate, but we'd prefer to focus on older historical innovations, not just the development of well-known industrial-era technologies.
+Here's a tip: think about a topic for which you could take and defend a position, but you could easily imagine someone else defending **the opposite position**. For example, suppose I want to focus on the impact of LLMs on teaching programming.
 
+- I could definitely say, "AI is going to radically change how colleges teach programming classes". That's definitely defensible.
+
+- But it's also possible to say, "AI may change some details about how we teach programming, but the core skills and ways of learning will remain the same". That's also a defensible proposition.
 
 ## Process
 
@@ -117,13 +120,13 @@ To begin, you will use an AI tool to help generate some initial topic ideas that
 
 Open your logbook document. Write the following prompt:
 
-*Please generate 10 potential topics for my research paper in the course 'Ancient Algorithms'. The topics should relate to innovations in ancient technology, mathematics, or computation from before 1800 CE. The subject of the paper should be a specific tool, invention, theory, written work, or intellectual movement. Present each topic idea as a title*.
+*Please generate 10 potential topics for my research paper in the course 'Artificial Intelligence'. The subject of the paper should be a specific method, algorithm, theory, program, written work, prominent figure, or application related to artificial intelligence . Present each topic idea as a title*.
 
 Input the prompt into an AI tool, either Claude or Copilot in Creative mode. Copy the generated list of 10 topic ideas into your logbook.
 
 Write a few sentences reflecting on the topic ideas. Do they seem interesting? Are they appropriate for the scope of this assignment? Would you revise or modify any of them? Note your thoughts in your logbook.
 
-Tip: If you need to, prompt the AI to generate more ideas. Try refining the prompt to make it more restrictive; for example, prompting it to consider only tools related to astronomy.
+Tip: If you need to, prompt the AI to generate more ideas. Try refining the prompt to make it more restrictive; for example, prompting it to consider only algorithms related to two-player games.
 
 Based on the AI generated ideas and your own interests, choose 2-3 topic ideas to explore further. Write a few sentences explaining why you chose them.
 
@@ -131,7 +134,7 @@ Based on the AI generated ideas and your own interests, choose 2-3 topic ideas t
 
 Next, use the Copilot AI in Creative mode to gather some information on your potential topics. Think of this as “pre-research” to give you high-level background on the topics so you can further evaluate them. Here’s an example prompt:
 
-*I’d like to learn more about [insert topic]. Please provide an overview of its historical background and significance. Include information on what it is, when and where it was created, why it was an important innovation in its time period, and its relevance to modern society*.
+*I’d like to learn more about [insert topic]. Please provide an background overview of that topic. Include information on what it is, when and where it was created, and its role within the AI field*.
 
 Repeat the query for each of your potential topics. Review the background summary (keeping in mind that it might contain errors), then write your own assessment of the topic and its suitability for your paper. 
 
