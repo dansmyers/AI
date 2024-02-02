@@ -43,5 +43,50 @@ Another classic puzzle. You're given a N x N grid of button lights, all of which
 
 *Example by K.L. deVries on [Medium](https://medium.com/swlh/programming-puzzle-lights-toggle-f4d27bf3683e)*
 
-Your goal is to find the combination of button presses that turns all the lights *OFF*.
+Your goal is to find the combination of button presses that turns all the lights *OFF*. Write a program that uses **backtracking with iterative deepening** to find the solution.
 
+- Modify the basic recursive backtracking search to take additional `current_depth` and `max_depth` parameters. If the `current_depth` exceeds the `max_depth`, treat it as a base case and return immediately.
+
+- For a given state, there are *N*<sup>2</sup> possible moves to consider, which correspond to each possible button press.
+
+A pseudocode version of the `solve` method is as follows:
+
+```
+def solve(lights, current_depth, max_depth):
+  """
+  Recursive backtracking solution to the lights out puzzle
+  """
+
+  # Depth limit reached
+  if current_depth > max_depth:
+    return
+
+  # Determine if the current state is a solution
+  if all_lights_are_off(lights):
+    print(presses)  # Print the sequence of button presses that led to the solution
+    exit(0)
+
+  # Consider all of the N * N button presses
+  for row in range(N):
+    for col in range(N):
+      # Determine the state of pressing button at position (row, col)
+      lights = flip(lights, row, col)
+
+      # Keep track of the sequence of button presses
+      presses.append((row, col))
+
+      # Recursively search
+      solve(lights, current_depth + 1, max_depth)
+
+      # Undo the effect of flipping (row, col) to prepare for the next option
+      lights = flip(lights, row, col)
+      presses.pop()
+
+  # If you get here, there was no solution on this path: backtrack
+```
+
+You'll need to figure out how to implement the relevant methods (`all_lights_are_off` and `flip`), then write an outer function that runs the search for increasing values of `max_depth` until it finds a solution.
+
+The pseudocode assumes that you're keeping track of the state of the lights using an *N* by *N* list of lists, which is fine. The variables `presses` is a list that keeps track of the sequence of button presses used to find the solution.
+
+Start with a small grid, say 3 x 3, then try solving for larger grids.
