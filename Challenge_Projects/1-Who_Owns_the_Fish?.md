@@ -68,11 +68,11 @@ Here are some tips to help you get started:
 - The owner of the yellow house smokes Dunhills and the Brit lives in the red house.
 
 ```
-House   Nationality    Color    Drinks    Smokes    Pet
------   -----------    -----    ------    ------    ---
-1        Norwegian     Yellow
-2                      Blue
-3        Brit          Red       Milk
+House     Nationality     Color     Drinks     Smokes     Pet
+-----     -----------     -----     ------     ------     ---
+1         Norwegian       Yellow               Dunhills
+2                         Blue
+3         Brit            Red       Milk
 4
 5
 ```
