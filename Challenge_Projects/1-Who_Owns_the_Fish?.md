@@ -1,6 +1,6 @@
 # Who Owns the Fish?
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sander_vitreus.jpg/2560px-Sander_vitreus.jpg" width="33%" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sander_vitreus.jpg/2560px-Sander_vitreus.jpg" width="40%" />
 
 ## Due Friday, 3/8 (the day before Spring Break)
 
