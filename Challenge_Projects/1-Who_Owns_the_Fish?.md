@@ -52,8 +52,13 @@ House    Nationality    Color    Drinks    Smokes    Pet
 5
 ```
 
+<br/>
+<br/>
+
 ***STOP READING HERE IF YOU DON'T WANT ANY MORE HINTS***
 
+<br/>
+<br/>
 
 Here are some tips to help you get started:
 - The first house can't be blue, red (the Brit lives in the red house), green (the green house must be next to the white house), or white (the white house can't be in the first position). Therefore, it must be yellow.
