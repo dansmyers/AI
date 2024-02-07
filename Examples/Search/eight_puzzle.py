@@ -172,7 +172,6 @@ def solve():
             if not previously_visited(new_state, visited):
 
                 # Insert into the priority queue
-                print(new_state.hamming_distance())
                 queue.put(new_state)
 
 
