@@ -4,13 +4,11 @@
 from queue import PriorityQueue  # For priority queues
 from copy import deepcopy
 
-
 class State(object):
 
     def __init__(self, puzzle, path):
         self.puzzle = puzzle
         self.path = path
-
 
     def hamming_distance(self):
         """
@@ -31,7 +29,6 @@ class State(object):
                 distance += 1
 
         return distance
-
 
     def move(self, direction):
 
@@ -78,7 +75,6 @@ class State(object):
         else:
             return None
 
-
     def finished(self):
         for i in range(9):
             row = i // 3
@@ -87,7 +83,6 @@ class State(object):
                 return False
 
         return True
-
 
     def reconstruct_path(self):
         puzzle = [[7, 2, 4],
@@ -105,7 +100,6 @@ class State(object):
                     print(str(state.puzzle[row][col]) + ' ',end='')
                 print('')
             print('')
-
 
     def __lt__(self, other):
       """
