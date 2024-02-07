@@ -33,7 +33,7 @@ Your assignment is to write a program that uses backtracking search to solve the
 
 - Start by solving the puzzle by hand, using the tips below if you want them
 - You can write your solution in either Java or Python, your choice
-- **Develop incrementally**: start by writing the basic solver that can produce any solution with no constraints, then add *one constraint at a time* until you get the final answer
+- **Develop incrementally**: start by writing the basic solver that can produce a solution with no constraints, then add *one constraint at a time* until you get the final answer
 - Use backtracking search; you don't need any other algorithm for this problem
 
 ## Solving the Puzzle
