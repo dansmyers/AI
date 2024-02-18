@@ -1,12 +1,12 @@
 # A* Search
 
-## Due
+## Due Wednesday, February 28
 
 ## You can work with a partner on this project
 
 ## Overview
 
-
+The problems in this assignment will let you practice using dynamic programming and A* search. They're pretty straightforward. Submit your solutions on Canvas.
 
 ## Dynamic programming practice
 
@@ -69,11 +69,10 @@ Here's an example 10x30 grid world. The shortest path is marked in stars. For cl
 ```
 
 Write a program that uses A* search to find the shortest path from the start to the goal in a randomly generated grid world, or discover that no
-path exists. Use the `motion.py` script as a starting point, which includes code to randomly generate ten trial worlds.
+path exists. Use the *Manhattan distance* from the current position to the goal square as your heuristic.
 
-Your program should print out the solution grid, showing the shortest path in stars, as in the example above, or a message that no path exists if the search fails.
+Use the `motion.py` script as a starting point, which includes code to randomly generate ten trial worlds. Your program should print out the solution grid, showing the shortest path in stars, as in the example above, or a message that no path exists if the search fails.
 
-Use the *Manhattan distance* from the current position to the goal square as your heuristic.
 
 Tips:
 
