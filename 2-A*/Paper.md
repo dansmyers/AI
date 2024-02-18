@@ -9,11 +9,11 @@
 
 Use academic search engines and databases to find four relevant scholarly sources on your topic, following the research plan developed in Phase 1.
 
-Tip: you can use Bing AI as a starting point (recall that Bing is connected to the Internet, so it can perform real searches). Here’s an example prompt:
+Tip: you can use Copilot as a starting point (recall that Copilot is connected to the Internet, so it can perform real searches). Here’s an example prompt:
 
 *Please research academic articles giving an overview of scholarship on [insert topic] and recommend three to five accessible papers that I can use to begin researching it in more detail.*
 
-Remember that Bing may return a mixture of references to real papers and made-up results. Carefully evaluate its output. Even if it returns a made-up paper, it may give you ideas for directions that you can explore through a more reliable academic search engine.
+Remember that Copilot may return a mixture of references to real papers and made-up results. Carefully evaluate its output. Even if it returns a made-up paper, it may give you ideas for directions that you can explore through a more reliable academic search engine.
 
 In your logbook, summarize the search process. Explain why you chose the papers that you did. Reflect on the quality of the results you obtained.
 
@@ -21,7 +21,7 @@ At the end of this process, you should have 4-5 promising sources relevant to yo
 
 ## Summarize your sources
 
-Carefully read your articles. This will take some time. For each one—by yourself, without an AI tool—write a list of the key points it makes related to your topic. What arguments does it make or what factual evidence does it supply? How does its content relate to your topic?
+***Carefully read your articles***. This will take some time. For each one—by yourself, without an AI tool—write a list of the key points it makes related to your topic. What arguments does it make or what factual evidence does it supply? How does its content relate to your topic?
 
 Tip: Because you have already done the work of refining your topic and creating a research plan, you should have a general sense of what kinds of information are useful for your paper.
 
