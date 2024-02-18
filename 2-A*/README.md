@@ -8,6 +8,8 @@
 
 The problems in this assignment will let you practice using dynamic programming and A* search. They're pretty straightforward. Submit your solutions on Canvas.
 
+The second phase of the paper project is the literature review, described in `Paper.md`. Complete the tasks described there and then upload your work in a file to the assignment on Canvas that I'll create.
+
 ## Dynamic programming practice
 
 <img src="https://i.pinimg.com/originals/5c/2e/7b/5c2e7b63caf86c3a9a77abd4da2ead0d.jpg" width="30%" />
