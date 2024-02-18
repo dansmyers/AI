@@ -10,7 +10,7 @@
 
 ## Dynamic programming practice
 
-<img src="https://i.pinimg.com/originals/5c/2e/7b/5c2e7b63caf86c3a9a77abd4da2ead0d.jpg" width="25%" />
+<img src="https://i.pinimg.com/originals/5c/2e/7b/5c2e7b63caf86c3a9a77abd4da2ead0d.jpg" width="30%" />
 
 ### 0/1 knapsack
 
