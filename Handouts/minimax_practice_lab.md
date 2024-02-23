@@ -5,12 +5,9 @@ Beginning with a pile of 21 stones, players alternate removing stones until none
 
 A version of this game was played on an episode of Survivor, where they called it Thai 21.
 
+0. Play a few games with your partner by hand.
 
-Steps:
-
-0. Play a few games with your partner.
-
-1. Get the file `subtraction.py` from the `Examples` diretory.
+1. Get the file `subtraction.py` from the `Examples` diretory. Copy it to your repl.it workspace so you can run it.
 
 2. Play a few rounds against the computer with a low depth limit, like 2. Can you win?
 
