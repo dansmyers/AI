@@ -17,8 +17,8 @@ A version of this game was played on an episode of Survivor, where they called i
 
 5. Now increase the depth limit to 20. What happens?
 
-6. Think about and list some other games that would be a good fit for the minimax strategy. What characteristics are we assuming the game has?
+6. Modify the program to use a pile of 100 stones and allow the players to take any number from 1 to 10. How does the winning strategy change?
 
-7. Modify the program to use a pile of 100 stones and allow the players to take any number from 1 to 10. How does the winning strategy change?
+7. What if you have *n* stones and can take any number from 1 to *k*? What is the optimal strategy in that case?
 
-8. What if you have *n* stones and can take any number from 1 to *k*? What is the optimal strategy in that case?
+8. Think about the charateristics of this game. What are some other games that would be a good fit for this version of the minimax algorithm? Think of some games where this version of minimax would not be successful.
