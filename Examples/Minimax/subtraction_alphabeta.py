@@ -38,7 +38,6 @@ def minimax(stones, depth, alpha, beta, is_max_player):
         for remove in [1, 2, 3]:
             value, response = minimax(stones - remove, depth - 1, alpha, beta, False)
 
-
             if value > best_value:
                 best_value = value
                 best_remove = remove
