@@ -139,7 +139,7 @@ The node on the right corresponds to all men, which made up 64.6% of the data se
 
 ## Practice
 
-Use the decision tree to predict whether each of the following three hypothetical passengers did or did not survive the sinking. **Write your predictions in your lab document**.
+Use the decision tree to predict whether each of the following three hypothetical passengers did or did not survive the sinking.
 
 ```
 Pclass    Age    Sex
