@@ -13,7 +13,7 @@ Our data set will be `Titanic.csv` file we worked with last time. We're going to
 This lab contains questions that you'll need to answer as you go. Create a Word document and put your answers to each question in it. When you finish, submit your document and the PDF outputs that you create during the lab to Canvas.
 
 ## Get the Data
-Reopen your `CMS120-Pandas` workspace from the last lab. It should already contain the `Titanic.csv` file.
+On Repl.it, create a "Python Data Science" workspace called `CMS430-Pandas`. Then go on to Canvas and download the `Titanic.csv` data set and upload it to your workspace.
 
 Make a new file called `model.py` and put the following code inside it:
 
@@ -111,8 +111,6 @@ Highlight and copy the output (**make sure to include the final terminating `}` 
 https://dreampuf.github.io/GraphvizOnline/
 
 You can click on the model to download it and then open it up in a larger window.
-
-**Copy your tree into your lab document**.
 
 Start by looking at the root node.
 
@@ -264,7 +262,7 @@ MNIST is built into scikit-learn. The first lines load the data set, then reshap
 
 Accuracy, of course, is a single measurement, but the MNIST problem has **ten classes**, one for each digit 0-9. It would be interesting to learn which digits are at greater risk of being misclassified. For example, it seems more likely that 1 and 7 could be confused for each other than 1 and 0.
 
-Add the following code to generate a **confusion matrix**. Download and open the matrix, then **copy it into your lab document**.
+Add the following code to generate a **confusion matrix**. Look at the matrix image.
 
 ```
 cm = confusion_matrix(y_test, predicted, labels=clf.classes_)
@@ -295,16 +293,3 @@ from sklearn.ensemble import RandomForestClassifier
 A random forest, as the name implies, is a classificaiton model bulit from a **collection** of decision trees (because a forest is a group of trees, get it?). The random forest algorithm builds a large number of small decision trees using a randomized process so that each tree is forced to use different features. Given an input, its classification is determined by the **overall consensus** of the set of decision trees. Usually, the classification is determined by simple majority vote, but more complex weighting schemes are possible. Combining multiple simpler classifers to build a more complex predictor is called an **ensemble model**.
 
 **Question**: What is the impact of random forest classifier on prediction accuracy? Does it lead to any significant changes in the misclassified pairs in the confusion matrix?
-
-## Neural Networks
-
-For your last part, watch the first ~15 minutes of this video on the application of neural networks to the digit classification problem (you can stop watching when you get to the part with a lot of math):
-
-https://www.youtube.com/watch?v=aircAruvnKk&vl=en
-
-~**Question**: Summarize the author's argument for why a multi-layer neural network is well-suited to the digit classification problem? What is each layer in the model doing?~
-
-
-## Submission
-
-Submit your document containing the answers to the questions and the plots to Canvas.
