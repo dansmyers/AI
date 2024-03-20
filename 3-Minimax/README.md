@@ -40,6 +40,10 @@ Write one script called `connect_four.py` that contains all of the code for the 
 - Submit your program to the assignment I'll create on Canvas. If you work with a partner, include their name at the top of your code.
 
 
+## Paper
+
+In addition to this project, complete the next phase of the writing assignment following the instructions in `Paper.md`.
+
 ## Tips
 
 Develop incrementally!
