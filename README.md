@@ -83,7 +83,7 @@ If you achieve satisfactory performance on enough assigments, described in more 
 ### Assignments
 Your grade will be based on the following things:
 
-1. A set of **regular assignments**, about five during the semester. These will focus on a combination of Java programs and short answer questions from the textbook.
+1. A set of **regular assignments**, about five during the semester.
 
 2. **Challenge problems**, three in total, which are somewhat more complex than the regular homework questions and require you to stretch a little bit.
 
