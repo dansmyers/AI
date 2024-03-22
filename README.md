@@ -77,7 +77,7 @@ Grading for this course will be different from your previous classes.
 
 Rather than calculating your score as number of points on a 0-100 scale, your grade will be based on attaining **satisfactory** performance on a bundle of assignments. This approach is called **Specifications Grading** or **Contract Grading** and it has several advantages over the traditional 0-100 based points system.
 
-If you achieve satisfactory performance on enough assigments, described in more detail below, you'll receive a baseline grade of **C** for the course. This demonstrates that you have engaged with the material and met the basic learning outcomes for the class. To get a higher grade, you can do more work that shows greater mastery of the course learning outcomes.
+If you achieve satisfactory performance on enough assigments, described in more detail below, you'll receive a baseline grade of **B** for the course. This demonstrates that you have engaged with the material and met the basic learning outcomes for the class. To get a higher grade, you can do more work that shows greater mastery of the course learning outcomes.
 
 
 ### Assignments
