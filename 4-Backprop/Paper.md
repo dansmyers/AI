@@ -36,6 +36,7 @@ Once you have completed your draft, ask the AI to take on the role of a peer rev
 - *Any sections that need better transitions or more explanation*
 - *The quality of my conclusion in summarizing the main points*
 - *Any grammar/spelling/style issues you noticed*
+
 *Please provide at least 5 specific and actionable suggestions for improving my draft, including identifying any areas that need to be expanded, reorganized, or reworked.*
 
 Enter the AI response into your log and then write a few sentences giving your evaluation of its feedback. Does the AI make good points? Record the changes, if any, that you make in response.
