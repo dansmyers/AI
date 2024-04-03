@@ -32,16 +32,17 @@ Suppose your network has *N* inputs labeled *x<sub>1</sub>* to *x<sub>n</sub>*. 
 
 Notice that the first weight is *w<sub>10</sub>*: this is the bias weight for hidden neuron 1. It's always paired up with an implicit input value of *x<sub>0</sub>* = 1.
 
-Each of the *H* hidden layer neurons has its own vector of *N* + 1 weights for the *N* inputs plus the single bias weight. All of these weights together can be arranged into a *H* row by *N + 1* column matrix.
+Each of the *H* hidden layer neurons has its own vector of *N* + 1 weights for the *N* inputs plus the single bias weight. All of these weights together can be arranged into a *H* row by *N + 1* column list of lists representing the matrix of all weights for the hidden layer neurons:
 
-[*w<sub>10</sub>*, *w<sub>11</sub>*, *w<sub>12</sub>*, ... , *w<sub>1N</sub>* ] </br>
-[*w<sub>20</sub>*, *w<sub>21</sub>*, *w<sub>22</sub>*, ... , *w<sub>2N</sub>* ] </br>
-[*w<sub>30</sub>*, *w<sub>31</sub>*, *w<sub>32</sub>*, ... , *w<sub>3N</sub>* ] </br>
-. </br>
-. </br>
-. </br>
-[*w<sub>H0</sub>*, *w<sub>H1</sub>*, *w<sub>H2</sub>*, ... , *w<sub>HN</sub>* [
+[[*w<sub>10</sub>*, *w<sub>11</sub>*, *w<sub>12</sub>*, ... , *w<sub>1N</sub>* ], </br>
+ [*w<sub>20</sub>*, *w<sub>21</sub>*, *w<sub>22</sub>*, ... , *w<sub>2N</sub>* ], </br>
+ [*w<sub>30</sub>*, *w<sub>31</sub>*, *w<sub>32</sub>*, ... , *w<sub>3N</sub>* ], </br>
+ . </br>
+ . </br>
+ . </br>
+ [*w<sub>H0</sub>*, *w<sub>H1</sub>*, *w<sub>H2</sub>*, ... , *w<sub>HN</sub>* ]]
 
+This is 
 
 ## Setup
 
