@@ -2,7 +2,13 @@
 
 ## Overview
 
-The purpose of this lab is to give you a chance to practice the details of the backpropogation algorithm. You'll start by working through the calculations by hand, then move to a Python implementation.
+The purpose of this lab is to give you a chance to practice the details of the backpropogation algorithm. You'll start by working through the calculations by hand (but only a few examples), then move to a Python implementation.
+
+The second challenge project builds on this assignment to generalize the backpropagation implementation.
+
+## Paper
+
+In addition to these problems, complete the next steps in `Paper.md`. The goal of this fourth phase is to prepare your actual draft. You have more freedom to choose your own prompts, so think about how to use AI effectively as a co-writer. Remember that I want you to submit your complete log with prompts, AI responses, and your reflections as part of the deliverables.
 
 ## Network
 
