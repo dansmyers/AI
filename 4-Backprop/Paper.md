@@ -20,6 +20,8 @@ Here are some other tips:
 
 - You could, of course, start by asking the AI to take your detailed outline and expand it into full sentences. Consider carefully if that’s the best way to begin. You might do better by drafting the introduction and conclusion first to give the AI more context.
 
+- It's often very effective to do your own writing, but use the AI to make suggestions, revise rough phrases, or help you get unstuck. This is how I'm more likely to use AI when I'm working on a major project. Author Ethan Mollick [offers similar suggestions](https://www.oneusefulthing.org/p/i-cyborg-using-co-intelligence). This approach is more likely to preserve your own voice.
+
 - You will need to include references to your cited works and relevant factual information. Remember that AI tools often struggle with this. Carefully check all factual information in your draft. You will probably need to make hand edits to make sure the information you include is correct.
 
 - Maintain your agency! Remember that you are in charge and the AI is there to execute your vision. Don’t outsource your thinking!
