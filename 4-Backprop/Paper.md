@@ -44,4 +44,4 @@ Enter the AI response into your log and then write a few sentences giving your e
 
 ## Submission
 
-Submit your final revised draft and logbook and the deliverable for this phase. Remember that your log should record the AI interactions and your reflective responses that led to the creation of the final draft.
+Submit your final revised draft and logbook as the deliverable for this phase. Remember that your log should record the AI interactions and your reflective responses that led to the creation of the final draft.
