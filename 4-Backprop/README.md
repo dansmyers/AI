@@ -153,4 +153,4 @@ for epoch in range(10):
 
 ## XOR
 
-When you have the code working and training the AND function, modify to train the XOR function.
+When you have the code working and can successfully train a network for the AND function, modify it and create a second script to train the XOR function.
