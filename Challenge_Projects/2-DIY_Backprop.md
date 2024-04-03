@@ -109,8 +109,6 @@ Here's a suggested development plan:
 
 *iris setosa*
 
-<br/>
-
 ### Overview
 
 R.A. Fisher is the most important statistician in history. He made numerous contributions that helped establish the field of statistics as we know it today, including the concept of statistical significance. The following dataset is probably the most famous one in machine learning history. It comes originally from a paper Fisher wrote in 1936 and consists of a collection of measurements taken from iris flower specimens.
@@ -121,20 +119,17 @@ R.A. Fisher is the most important statistician in history. He made numerous cont
 
 - The goal is to predict the species given the four measurements.
 
+The iris data set is a bit of a cliche at this point, and isn't used in serious machine learning research any more, but it endures as part of the history of the field. Your goal in the second part of the project is to use your neural network implementation to learn a model that can classify the iris flowers. The most challenging part: there are ***three classes***.
 
 ### Classifying the Flowers
 
-Your goal in the second part of the project is to use your neural network implementation to learn a model that can classify the iris flowers. The most challenging part: there are *three classes*.
+- Copy the dataset below into a file and read it into your program
 
-First, get the dataset below into your program. How you do this isn't important: copying it to a file and reading the file is a good strategy.
+- Next, create a test set by randomly selecting 30 items (20% of the total 150). The remaining 120 items will be the training set. Remember that the test set should only be used for the final evaluation of the model and can't be part of the training process. It's desirable, but not required, to randomize the order of the training examples.
 
-Next, create a test set by randomly selecting 30 items (20% of the total 150). The remaining 120 items will be the training set. Remember that the test set should only be used for the final evaluation of the model and can't be part of the training process. It's desirable, but not required, to randomize the order of the training examples.
+- Third, create a network with **three output nodes**, one for each class. Each node corresponds to one of the three target classes.
 
-Third, create a network with **three output nodes**, one for each class.
-
-- Each node corresponds to one of the three target classes.
-
-- Each output node has **its own set of weights** connecting it to the hidden layer. The output-layer weights are now a 3 row by *H* column matrix, rather than a single *H* element vector.
+- Each output node has **its own set of weights** connecting it to the hidden layer. The output-layer weights are now a 3 row by *H* + 1 column matrix, rather than a single vector.
 
 - When presented with a point in class 1 (the `Iris-setosa` class), the first output node should be 1 and the other two should be 0. The other two classes are similar: the second node should be 1 for points in the `Iris-versicolor` class and the third should be 1 for points in the `Iris-virginica` class.
 
@@ -327,10 +322,6 @@ The update rules remain the same. Remember: you already had to figure out how to
 
 Start early! Don't wait until the last minute!
 
-Make sure that you are comfortable with all of the details of the backpropgation algorithm. I recommend reviewing this video: 
+Make sure that you are comfortable with all of the details of the backpropgation algorithm. I recommend reviewing [this video](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 
-- https://www.youtube.com/watch?v=Ilg3gGewQ5U
-
-**Develop incrementally** and check everything. ***DO NOT***, under any circumstances, try to write a huge amount of code without testing it.
-
-Start with very small networks and print their outputs and training updates. Verify that the weights are changing the way they should.
+**Develop incrementally** and check everything. ***DO NOT***, under any circumstances, try to write a huge amount of code without testing it. Start with very small networks and print their outputs and training updates. Verify that the weights are changing the way they should.
