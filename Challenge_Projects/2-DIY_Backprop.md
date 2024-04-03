@@ -131,6 +131,8 @@ The iris data set is a bit of a cliche at this point, and isn't used in serious 
 
 - Each output node has **its own set of weights** connecting it to the hidden layer. The output-layer weights are now a 3 row by *H* + 1 column matrix, rather than a single vector.
 
+The number of hidden-layer neurons is at your discretion. Try starting with 5 and increasing it if you need to.
+
 
 ### Working with multiple outputs
 
