@@ -131,6 +131,10 @@ You don't need to train the network to completion each time, just
 monitor the testing accuracy of each epoch.
 
 
+Pause
+-----
+After you run the test file one time, pause and wait for us to discuss some details as a group, then continue with the rest of the lab.
+
 Convolutional Nets
 ------------------
 Although the feed-forward multi-layer perceptron can do a decent job on this type of problem, there are some
