@@ -10,7 +10,7 @@ This project is an extension of Assignment 4. You're going to build a feed-forwa
 
 ## Methods
 
-Write a script called `backpropagation.py` that contains the following methods:
+Your script will contain the following methods:
 
 - `sigmoid(x)`: calculate the sigmoid activation function for input `x`. Used by both the `predict` and `train` functions.
 
@@ -42,52 +42,37 @@ Each of the *H* hidden layer neurons has its own vector of *N* + 1 weights for t
  . </br>
  [*w<sub>H0</sub>*, *w<sub>H1</sub>*, *w<sub>H2</sub>*, ... , *w<sub>HN</sub>* ]]
 
-This is 
+This list of lists is the `hidden_layer_weights` input for the `epoch`, `train`, and `predict` methods.
 
-## Setup
+Likewise, `output_layer_weights` is a *K* row by *H* + 1 column matrix containing all of the weights connecting the *H* hidden layer neurons to the *K* output neurons.
 
-Suppose you want a network with *N* inputs, *H* hidden nodes, and a single output node (representing a system with 2 classes).
-
-The weights and biases connecting the inputs to the hidden layer nodes can be organized in a *N x H* matrix. Each **row** represents the full set of input weights for one hidden-layer node:
+**Initialize all weights to be random values in [-1, 1].** Therefore, you can initialize `hidden_layer_weights` as a sequence of *H* lists, each with *N* + 1 random values:
 
 ```
-[ set of all weights for hidden node 1 ]
-[ set of all weights for hidden node 2 ]
-[                   .                  ]
-[                   .                  ]
-[                   .                  ]
-[ set of all weights for hidden node H ]
+### Example: initializing weight matrices
+
+import random
+
+H = 5  # Number of hidden layer nodes
+N = 3  # Number of inputs
+K = 1  # Number of output layer nodes
+
+hidden_layer_weights = []
+for _ in range(H):
+  hidden_layer_weights.append([random.uniform(-1, 1) for _ in range(N + 1)]) 
 ```
 
-If you set things up like this, then the weighted sums at the hidden layer are conceptually a matrix-vector product *Wx*, where *x* is the input point as a column vector.
+`output_layer_weights` is similarly initialized to be a *K* row by *H* + 1 matrix with random entries.
 
-Note that each row includes a bias value as the "zeroth" weight, which is always paired up with an input of 1.
 
-The output weights are a single vector with *H* elements.
+## More details
 
-Your implementation is going to be built around the following methods:
+You must have parameters that control the number of inputs, number of hidden nodes, and the number of output nodes. You only need to support one hidden layer.
 
-`sigmoid(x)`: calculate the sigmoid value of input `x`. Used by both the `predict` and `train` functions.
-
-`predict(hidden_weights, output_weights, point)`: classify the input point using the given input-to-hidden-layer weight matrix and the given hidden-to-output-layer weights.
-
-`train(hidden_weights, output_weights, point, target_label, learning_rate)`: perform a classification step and then a backpropagation update to all weights using the given point and target label.
-
-`epoch(hidden_weights, output_weights, training_set, training_labels)`: perform a complete training epoch on the given set of training points with their associated labels. Basically a loop that wraps around the `train` method.
-
-`evaluate(hidden_weights, output_weights, testing_set, testing_labels)`: predict the class (without performing any training) on the given set of test points and report the fraction that are classified correctly. This is the final function used to evaluate the performance of the training network.
-
-You can add other methods or structures as you see fit.
-
-The initial values of all the weights and biases should be **randomized** to values in [-1, 1].
-
-**You must have a variable that controls the number of hidden-layer nodes and your code must work for any reasonable number of hidden-layer nodes**.
-
-**You only need to support one hidden layer**.
 
 ## Warm-Up: XOR
 
-Train a network that can learn the XOR function:
+Write a script called `xor.py` that contains the necessary functions described above and learns to classify the XOR function:
 
 ```
 x_1  x_2  |  x_1 XOR x_2
@@ -98,15 +83,38 @@ x_1  x_2  |  x_1 XOR x_2
  1    1   |       0
 ```
 
-Remember that this is one of the classic functions that isn't linearly separable. There is no separate test set for this problem.
+Remember that this is one of the classic functions that isn't linearly separable. There is no separate test set for this problem. You should be able to classify all of the points correctly.
+
+Your network will have two inputs and one output. Try using three hidden layer nodes.
+
+Here's a suggested development plan:
+
+- First complete Assignment 4. This is similar to the training problem there. The difference is that this assignment requires you to make the program more general, so that fewer details of the training set are hard-coded.
+
+- Start by writing the initialization code and verify that you can initialize the weight matrices correctly.
+
+- Then write the `sigmoid` and `predict` functions. Verify that you can call `predict` on each input point and get the correct prediction for the randomly initialized weights.
+
+- Now the big one: Implement the general version of `train` described above. The main challenge here is working through the update process in a structured way. Keep track of all the intermediate computations, since you need those for the backpropagation equations.
+
+- Verify that you can perform an epoch by calling `train` for each data point.
+
+- The implement the `epoch` function to automatically iterate through the training data and call `train` in a loop. See the starter code in Assignment 4.
+
+**Develop incrementally and test each step before moving on to the next one**!
 
 ## Fisher's Irises
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" width=25% />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Blue_Flag%2C_Ottawa.jpg" width=25% />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Iris_virginica_2.jpg/1920px-Iris_virginica_2.jpg" width=25% />
+
+*iris setosa, versicolor, and virginica*
+
+
 ### Overview
 
-R.A. Fisher is the most important statistician in history. He made numerous contributions that helped establish the field of statistics as we know it today, including the concept of statistical significance.
-
-The following dataset is probably the most famous one in machine learning history. It comes originally from a paper Fisher wrote in 1936 and consists of a collection of measurements taken from iris flower specimens.
+R.A. Fisher is the most important statistician in history. He made numerous contributions that helped establish the field of statistics as we know it today, including the concept of statistical significance. The following dataset is probably the most famous one in machine learning history. It comes originally from a paper Fisher wrote in 1936 and consists of a collection of measurements taken from iris flower specimens.
 
 - Each specimen has four measurements: sepal length, sepal width, petal length, and petal width, all in cm. The sepals are the outer green leaves that come up and surround the petals of the flower.
 
@@ -114,17 +122,6 @@ The following dataset is probably the most famous one in machine learning histor
 
 - The goal is to predict the species given the four measurements.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" width=25% />
-
-*iris setosa*
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Blue_Flag%2C_Ottawa.jpg" width=25% />
-
-*iris versicolor*
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Iris_virginica_2.jpg/1920px-Iris_virginica_2.jpg" width=25% />
-
-*iris virginica*
 
 ### Classifying the Flowers
 
