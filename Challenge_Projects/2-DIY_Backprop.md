@@ -2,9 +2,46 @@
 
 ## Due April 17
 
+## You can work with a partner to complete this project
+
 ## Overview
 
 This project is an extension of Assignment 4. You're going to build a feed-forward MLP model that can train on an arbitrary dataset with any number of hidden or output layer nodes.
+
+## Methods
+
+Write a script called `backpropagation.py` that contains the following methods:
+
+- `sigmoid(x)`: calculate the sigmoid activation function for input `x`. Used by both the `predict` and `train` functions.
+
+- `predict(hidden_weights, output_weights, point)`: classify the input point using the given input-to-hidden-layer weight matrix and the given hidden-to-output-layer weights. We'll discuss the structure of the weight inputs below.
+
+- `train(hidden_weights, output_weights, point, target_label, learning_rate)`: perform a classification step and then a backpropagation update to all weights using the given point and target label. This is the main training function. You don't need to implement any batching.
+
+- `epoch(hidden_weights, output_weights, training_set, training_labels)`: perform a complete training epoch on the given set of training points with their associated labels. Basically a loop that wraps around the `train` method and calls it for each point in the training data set.
+
+- `evaluate(hidden_weights, output_weights, testing_set, testing_labels)`: predict the class (without performing any training) on the given set of test points and report the fraction that are classified correctly. This is the final function used to evaluate the performance of the training network.
+
+You can add other methods or structures as you see fit.
+
+## Weights
+
+Suppose your network has *N* inputs labeled *x<sub>1</sub>* to *x<sub>n</sub>*. Each hidden layer node has a set of weights connecting it to all *N* inputs, which can be represented as a Python list. For example, if we're considering hidden node 1, its weight vector contains the entries
+
+`[`*w<sub>10</sub>*, *w<sub>11</sub>*, *w<sub>12</sub>*, ... , *w<sub>1n</sub>* `]`
+
+Notice that the first weight is *w<sub>10</sub>*: this is the bias weight for hidden neuron 1. It's always paired up with an implicit input value of *x<sub>0</sub>* = 1.
+
+Each of the *H* hidden layer neurons has its own vector of *N* + 1 weights for the *N* inputs plus the single bias weight. All of these weights together can be arranged into a *H* row by *N + 1* column matrix.
+
+`[`*w<sub>10</sub>*, *w<sub>11</sub>*, *w<sub>12</sub>*, ... , *w<sub>1N</sub>* `]`
+`[`*w<sub>20</sub>*, *w<sub>21</sub>*, *w<sub>22</sub>*, ... , *w<sub>2N</sub>* `]`
+`[`*w<sub>30</sub>*, *w<sub>31</sub>*, *w<sub>32</sub>*, ... , *w<sub>3N</sub>* `]`
+.
+.
+.
+`[`*w<sub>H0</sub>*, *w<sub>H1</sub>*, *w<sub>H2</sub>*, ... , *w<sub>HN</sub>* `]`
+
 
 ## Setup
 
