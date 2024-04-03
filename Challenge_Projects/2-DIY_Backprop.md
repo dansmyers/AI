@@ -131,7 +131,10 @@ The iris data set is a bit of a cliche at this point, and isn't used in serious 
 
 - Each output node has **its own set of weights** connecting it to the hidden layer. The output-layer weights are now a 3 row by *H* + 1 column matrix, rather than a single vector.
 
-- When presented with a point in class 1 (the `Iris-setosa` class), the first output node should be 1 and the other two should be 0. The other two classes are similar: the second node should be 1 for points in the `Iris-versicolor` class and the third should be 1 for points in the `Iris-virginica` class.
+
+### Working with multiple outputs
+
+When presented with a point in class 1 (the `Iris-setosa` class), the first output node should be 1 and the other two should be 0. The other two classes are similar: the second node should be 1 for points in the `Iris-versicolor` class and the third should be 1 for points in the `Iris-virginica` class.
 
 Suppose, for example, that the first training example is the first point in the dataset:
 
