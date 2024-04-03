@@ -1,5 +1,7 @@
 # Assignment 4: Backpropagation
 
+## You can work with a partner to complete these problems
+
 ## Overview
 
 The purpose of this lab is to give you a chance to practice the details of the backpropogation algorithm. You'll start by working through the calculations by hand (but only a few examples), then move to a Python implementation.
@@ -69,7 +71,7 @@ for each hidden layer node j:
     o_j = sigmoid(y_j)
 
 for the output layer node k:
-    y_k = the weighted sum of hidden layer inputs to node k
+    y_k = the weighted sum of hidden layer o_j values to node k
     o_k = sigmoid(y_k)
 
 if o_k <= .5:
@@ -80,7 +82,7 @@ else:
 
 ## Train
 
-We'll now train the network by hand using the backpropagation update rules. I'm not repeating the update rules here, because they're hard to type, but we have them on the board.
+We'll now train the network by hand using the backpropagation update rules. I'm not repeating the update rules here, because they're hard to type, but you have them in your notes.
 
 Iterate one point at a time. Use a **learning rate of .1**.
 
@@ -90,7 +92,7 @@ Iterate one point at a time. Use a **learning rate of .1**.
 
 - Update the weights and bias at each of the two hidden-layer nodes using their update rules.
 
-- The updates take place even if the assigned class matches the target class: use the value of the output sigmoid function to calculate the error
+- The updates take place even if the assigned class matches the target class. Use the value of the output sigmoid function $o<sub>k</sub>$ to calculate the error
 
 Do one epoch, training over all four points in the logical-AND function, updating the weights after each point.
 
