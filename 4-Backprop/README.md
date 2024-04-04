@@ -2,6 +2,8 @@
 
 ## You can work with a partner to complete these problems
 
+## Due April 18
+
 ## Overview
 
 The purpose of this lab is to give you a chance to practice the details of the backpropogation algorithm. You'll start by working through the calculations by hand (but only a few examples), then move to a Python implementation.
