@@ -25,7 +25,7 @@ total parameters:
 
 - *w<sub>21</sub>*, the weight connecting input 1 to hidden neuron 2
 - *w<sub>22</sub>*, the weight connecting input 2 to hidden neuron 2
-- *w<sub>20</sub>*, the bias for hidden neuron 1, which has an implicit associated input of *x<sub>0</sub>* = 1
+- *w<sub>20</sub>*, the bias for hidden neuron 2, which has an implicit associated input of *x<sub>0</sub>* = 1
 
 - *w<sub>31</sub>*, the weight connecting hidden-layer neuron 1 to the output neuron
 - *w<sub>32</sub>*, the weight connecting hidden-layer neuron 2 to the output neuron
