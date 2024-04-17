@@ -25,6 +25,8 @@ Using these e-mail messages, answer the question: What did Valerie e-mail me abo
 
 The LLM can then use its reasoning powers on the specific information given in the prompt and return an answer to your question.
 
+### Talk to your data
+
 There are *many* startups producing similar "talk to your data" applications that combine an LLM with access to a company's proprietary databases, such as code repositories, documents, sales data, or customer relationship management (CRM) systems. These applications work something like the following:
 
 1. The user submits a query that they want the LLM to answer
@@ -33,6 +35,16 @@ There are *many* startups producing similar "talk to your data" applications tha
 4. This is sent to the LLM, which can draw upon the context-specific information in the prompt to guide the answer
 
 Other applications of RAG include providing up-to-date information after the model's training cutoff.
+
+### Aside: RAG vs. huge contexts vs. fine tuning
+
+RAG is not the only approach to building customized LLM apps.
+
+The current leading models, like Google's Gemini, can work with *extremely large context windows* of 1 million tokens, which is enough to process tens of thousands of pages of text in one query. Therefore, in theory, you could just dump your entire database into the context window for every query: Don't worry about picking the "most relevant" information, just give the LLM everything!
+
+Recall that transformer complexity scales quadratically with the size of the context window. Therefore, using huge windows isn't practical for general applications, because the cost and time per query is too high. 
+
+The other option is to *fine tune* your model, by tweaking its weights directly. This is usually done to guide the model towards a specific part of the output space. The most important fine-tuning technique is called **Low-Rank Augmentation** (LoRA), which is used to customize image generators like Stable Diffusion toward particular styles or subjects. For other applications, the general consensus is that fine-tuning is harder that RAG, but doesn't yield better results.
 
 
 ## Architecture
