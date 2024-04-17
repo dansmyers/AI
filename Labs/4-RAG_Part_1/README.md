@@ -23,7 +23,7 @@ For a simple example, imagine using Microsoft's Copilot with your Outlook e-mail
 Using these e-mail messages, answer the question: What did Valerie e-mail me about last Tuesday?
 ```
 
-The LLM can then use its reasoning powers on the specific information given in the prompt.
+The LLM can then use its reasoning powers on the specific information given in the prompt and return an answer to your question.
 
 There are *many* startups producing similar "talk to your data" applications that combine an LLM with access to a company's proprietary databases, such as code repositories, documents, sales data, or customer relationship management (CRM) systems. These applications work something like the following:
 
