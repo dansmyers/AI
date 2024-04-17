@@ -28,11 +28,8 @@ The LLM can then use its reasoning powers on the specific information given in t
 There are *many* startups producing similar "talk to your data" applications that combine an LLM with access to a company's proprietary databases, such as code repositories, documents, sales data, or customer relationship management (CRM) systems. These applications work something like the following:
 
 1. The user submits a query that they want the LLM to answer
-
 2. The RAG system searches the databases for relevant information, then extracts and formats it
-
 3. The system constructs a prompt that combines the user's original question with the additional information from the DB search
-
 4. This is sent to the LLM, which can draw upon the context-specific information in the prompt to guide the answer
 
 Other applications of RAG include providing up-to-date information after the model's training cutoff.
