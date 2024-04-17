@@ -4,7 +4,7 @@
 
 This lab will let you practice working with **retrieval augmented generation** (RAG), one of the primary techniques for building customized applications on top of generative AI models. There are, literally, thousands of startups using the basic techniques we're going to cover in this lab and in the next project to build their applications.
 
-The code below is closely adapted from Anthropic's [RAG example using Claude](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb). I've converted their code into a single Python script, added some more explanatory comments, and streamlined a few things. Check out the rest of the documentation.
+The code below is closely adapted from Anthropic's [RAG example using Claude](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb). I've converted their code into a Python scripts, added some more explanatory comments, and streamlined a few things. Check out the rest of the documentation.
 
 
 ## Strategy
