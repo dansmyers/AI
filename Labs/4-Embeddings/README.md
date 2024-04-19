@@ -166,3 +166,59 @@ print(index.describe_index_stats())
 
 Run the script. It will take a while to load all the vectors.
 
+
+## Query
+
+Create a new file called `query.py`. The following code queries the example database for words similar to the query. You can run it in another shell window while the previous step is still executing and it will find matches on the set of strings that have already been inserted into the DB.
+
+```
+"""
+Querying the vector database
+"""
+
+#--- Imports
+from pinecone import Pinecone
+from pinecone import ServerlessSpec
+import time
+import voyageai
+from time import sleep
+import os
+import requests
+from tqdm.auto import tqdm
+
+
+#--- API keys
+PINECONE_API_KEY = os.environ['PINECONE_API_KEY']
+VOYAGE_API_KEY = os.environ['VOYAGE_API_KEY']
+
+
+#--- Initialize Voyage
+vo = voyageai.Client(api_key=VOYAGE_API_KEY)
+
+
+#--- Setup Pinecone vector database
+pc = Pinecone(api_key=PINECONE_API_KEY)
+spec = ServerlessSpec(
+    cloud="aws", region="us-east-1"
+)
+
+# connect to index
+index_name = 'words'
+index = pc.Index(index_name)
+time.sleep(1)
+
+
+#--- Query code
+query = "Happy Fox Day"
+
+# Embed the query string
+question_embed = vo.embed([query], model="voyage-2", input_type="document")
+
+# Retrieve the top-k similar vectors from the DB
+results = index.query(
+            vector=question_embed.embeddings, top_k=10, include_metadata=True
+          )
+
+# Print
+print(results)
+```
