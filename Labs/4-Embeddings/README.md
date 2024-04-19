@@ -2,7 +2,7 @@
 
 ## Overview
 
-This lab demonstrates working with text embeddings and vector databases using VoyageAI and Pinecone. It's based on [these examples](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb) developed by Anthropic to illustrate applications of tthe Claude AI.
+This lab demonstrates working with text embeddings and vector databases using VoyageAI and Pinecone. It's based on [these examples](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb) developed by Anthropic to illustrate applications of the Claude AI.
 
 ## Create accounts
 
