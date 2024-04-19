@@ -65,6 +65,99 @@ result = vo.embed(texts, model="voyage-2", input_type="document")
 print(result.embeddings[0])
 ```
 
-## Word list
+## Pinecone
 
+Pinecone is a **vector database**. It's optimized to store numerical vectors and perform quick retrievals and comparisons between numerical vectors.
+
+We're going to use Pinecone to store a collection of word embeddings, then demonstrate that it can take a word or phrase and find related concepts.
+
+
+Add the lines below to initialize Pinecone.
+
+```
+#--- Setup Pinecone vector database
+pc = Pinecone(api_key=PINECONE_API_KEY)
+spec = ServerlessSpec(
+    cloud="aws", region="us-east-1"
+)
+
+
+#--- Create a new vector database
+index_name = 'words'
+existing_indexes = [
+    index_info["name"] for index_info in pc.list_indexes()
+]
+
+# Check if index already exists (it shouldn't if this is first time)
+if index_name not in existing_indexes:
+    # if does not exist, create index
+    pc.create_index(
+        index_name,
+        dimension=1024,  # dimensionality of voyage-2 embeddings
+        metric='dotproduct',
+        spec=spec
+    )
+    # wait for index to be initialized
+    while not pc.describe_index(index_name).status['ready']:
+        time.sleep(1)
+
+# connect to index
+index = pc.Index(index_name)
+time.sleep(1)
+```
+
+Run your program again, then check your Pinecode dashboard. You should see that there is now a database named `words` that's currently empty.
+
+
+## Embed some words
+
+I could not allow you to graduate without doing one more lab using the word list. The code below pulls `words.txt` as a text file from this repo, then splits it into individual words. For each word, it calls Voyage to calculate an embedding, then inserts the embedding vector along with its associated word into the Pinecone DB we created in the previous step.
+
+```
+
+#--- Get the words.txt file
+url = "https://raw.githubusercontent.com/dansmyers/AI/main/Labs/4-Embeddings/words.txt"
+response = requests.get(url)
+words_string = response.text
+words = words_string.split('\n')
+
+
+#--- Populate the vector database with the list of words
+batch_size = 100
+
+for i in tqdm(range(0, len(words), batch_size)):
+  # find end of batch
+  i_end = min(len(words), i+batch_size)
+  words_batch = words[i:i_end]
+  print(words_batch)
+  
+  # create embeddings (try-except added to avoid RateLimitError. Voyage currently allows 300/requests per minute.)
+  done = False
+  while not done:
+      try:
+          res = vo.embed(words_batch, model="voyage-2", input_type="document")
+          done = True
+      except:
+          sleep(5)
+
+  embeds = [record for record in res.embeddings]
+  # create unique IDs for each text
+  ids_batch = [f"word_{idx}" for idx in range(i, i_end)]
+
+  # Create metadata dictionaries for each text
+  metadata_batch = [{'word': word} for word in words_batch]
+
+  to_upsert = list(zip(ids_batch, embeds, metadata_batch))
+
+  # upsert to Pinecone
+  index.upsert(vectors=to_upsert)
+
+
+# After completing the upload, the DB should contain vectors
+print(index.describe_index_stats())
+
+```
+
+
+Run the script. It will take a while to load all the vectors.
 
