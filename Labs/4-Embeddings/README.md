@@ -1,5 +1,9 @@
 # Lab: Embeddings
 
+## Overview
+
+This lab demonstrates working with text embeddings and vector databases using VoyageAI and Pinecone. It's based on [these examples](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb) developed by Anthropic to illustrate applications of tthe Claude AI.
+
 ## Create accounts
 
 Sign up for an account at [Pinecone](https://docs.pinecone.io/guides/getting-started/quickstart) and [VoyageAI](https://www.voyageai.com/). Once you have accounts you can go to the dashboard for each tool and create an API key.
@@ -72,7 +76,7 @@ print(result.embeddings[0])
 
 ## Pinecone
 
-Pinecone is a **vector database**. It's optimized to store numerical vectors and perform quick retrievals and comparisons between numerical vectors.
+Pinecone is a **vector database**. It's optimized to store numerical vectors and perform quick retrievals and comparisons between vectors.
 
 We're going to use Pinecone to store a collection of word embeddings, then demonstrate that it can take a word or phrase and find related concepts.
 
