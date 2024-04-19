@@ -140,7 +140,7 @@ for i in tqdm(range(0, len(words), batch_size)):
   words_batch = words[i:i_end]
   print(words_batch)
   
-  # create embeddings (try-except added to avoid RateLimitError. Voyage currently allows 300/requests per minute.)
+  # Embed each batch of words
   done = False
   while not done:
       try:
