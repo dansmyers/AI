@@ -1,7 +1,10 @@
 # Lab: Embeddings
 
-
 ## Create accounts
+
+Sign up for an account at [Pinecone](https://docs.pinecone.io/guides/getting-started/quickstart) and [VoyageAI](https://www.voyageai.com/). Once you have accounts you can go to the dashboard for each tool and create an API key.
+
+Copy your API keys into a local text file on your computer. Then stop and wait for me to show you how to do the next part.
 
 
 ## Setup secret API keys
