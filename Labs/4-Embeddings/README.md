@@ -32,6 +32,8 @@ The code below sets up the connection to VoyageAI using the API key that you con
 
 Key idea: This embedding, in some sense, captures the holistic essence of the text string. It's a quantitative representation of what the string is "about" in an abstract way. But, beacuse it's now a vector, we can more easily calculate things like distances, similarities, and translations in vector space.
 
+Once you can run the code below, experiment with creating a few more example embeddings.
+
 ```
 """
 Example of embedding a text string using VoyageAI
@@ -61,6 +63,8 @@ texts = ["Happy Fox Day"]
 
 result = vo.embed(texts, model="voyage-2", input_type="document")
 print(result.embeddings[0])
-
-
 ```
+
+## Word list
+
+
