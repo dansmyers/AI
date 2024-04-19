@@ -222,3 +222,98 @@ results = index.query(
 # Print
 print(results)
 ```
+
+## Translations in embedding space
+
+Here's a key idea: Embeddings capture not just a *position* for an item in vector space, but also *relationships* between concepts. Therefore, taking the difference between two embeddings corresponds to the "direction" that moves from one concept to another.
+
+The classic example is the embedding difference
+
+```
+"woman" - "man"
+```
+
+which gives a vector that represents "femaleness" that represents moving in a "feminine" direction within the abstract concept space. Therefore, we should be able to use this translation to change a masculine-coded word to its feminine counterpart. So, for example, in embedding space
+
+```
+"boy" + ("woman" - "man")
+```
+
+should be close the the emebdding for "girl" and
+
+```
+"king" + ("woman" - "man")
+```
+
+should be close to "king".
+
+The code below illustrates this concept.
+
+```#--- Using differences in embedding space for conceptual transformations
+texts = ["man", "woman", "boy"]
+
+# Embed three words
+result = vo.embed(texts, model="voyage-2", input_type="document")
+man_embed = result.embeddings[0]
+woman_embed = result.embeddings[1]
+king_embed = result.embeddings[2]
+
+# Compute element-wise difference between "woman" and "man"
+diff_vector = [woman_embed[i] - man_embed[i] for i in range(len(man_embed))]
+
+# Add the difference vector to list3
+query_embed = [king_embed[i] + diff_vector[i] for i in range(len(king_embed))]
+
+results = index.query(
+            vector=query_embed, top_k=10, include_metadata=True
+          )
+```
+
+Add it to the end of `query.py` and run it to produce output like the following: "girl" is the top match.
+
+```
+{'matches': [{'id': 'word_41056',
+              'metadata': {'word': 'girl'},
+              'score': 1.00318074,
+              'values': []},
+             {'id': 'word_11570',
+              'metadata': {'word': 'boy'},
+              'score': 0.997219622,
+              'values': []},
+             {'id': 'word_112303',
+              'metadata': {'word': 'woman'},
+              'score': 0.991101801,
+              'values': []},
+             {'id': 'word_35568',
+              'metadata': {'word': 'female'},
+              'score': 0.989245355,
+              'values': []},
+             {'id': 'word_41062',
+              'metadata': {'word': 'girls'},
+              'score': 0.972338676,
+              'values': []},
+             {'id': 'word_35595',
+              'metadata': {'word': 'femme'},
+              'score': 0.971944571,
+              'values': []},
+             {'id': 'word_88047',
+              'metadata': {'word': 'schoolgirl'},
+              'score': 0.96950084,
+              'values': []},
+             {'id': 'word_35569',
+              'metadata': {'word': 'females'},
+              'score': 0.969277918,
+              'values': []},
+             {'id': 'word_54188',
+              'metadata': {'word': 'lady'},
+              'score': 0.96848762,
+              'values': []},
+             {'id': 'word_10382',
+              'metadata': {'word': 'blonde'},
+              'score': 0.967908502,
+              'values': []}],
+ 'namespace': '',
+ 'usage': {'read_units': 6}}
+```
+
+Try experimenting with some other starting words like "king", then try coming up with some other concept pairs and see what results you can construct.
