@@ -50,6 +50,8 @@ import time
 import voyageai
 from time import sleep
 import os
+import requests
+from tqdm.auto import tqdm
 
 
 #--- API keys
