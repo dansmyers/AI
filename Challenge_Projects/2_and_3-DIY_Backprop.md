@@ -2,9 +2,19 @@
 
 <img src="https://media.licdn.com/dms/image/C5622AQFpPhXpPwCxCA/feedshare-shrink_800/0/1675095993008?e=2147483647&v=beta&t=u9YZbs0cB4vndu2f8I6a7aSfH0RuAuQU7jcHmAVYNug" width="400px" />
 
-## Due April 22
+## Both projects due April 30
 
 ## You can work with a partner to complete this project
+
+## Update 4/22
+
+This project is now divided into two parts:
+
+- The first section, training the MLP to learn the XOR function, is now Challenge Project 2
+- The second section, using the iris dataset, is now Challenge Poject 3
+
+Complete one or both challenge projects by the updated due date of 4/30.
+
 
 ## Overview
 
