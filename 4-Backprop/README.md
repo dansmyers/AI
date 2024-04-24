@@ -142,9 +142,9 @@ def epoch(w_hidden_1, w_hidden_2, w_output):
 #--- Main
 
 # Initialize weights
-w_hidden_1 = [0, 1, 1]
-w_hidden_2 = [0, 1, 1]
-w_output = [0, 1, 1]
+w_hidden_1 = [random(), random(), random()]
+w_hidden_2 = [random(), random(), random()]
+w_output = [random(), random(), random()]
 
 # Loop for a number of training epochs
 # You might need to adjust this number
