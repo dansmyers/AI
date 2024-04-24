@@ -49,3 +49,9 @@ The other option is to *fine tune* your model, by tweaking its weights directly.
 
 ## Architecture
 
+<img src="https://gradientflow.com/wp-content/uploads/2023/10/newsletter87-RAG-simple.png" width="400px" />
+
+*From "Best Practices in Retrival Augmented Generation", [Gradient Flow Substack](https://gradientflow.substack.com/p/best-practices-in-retrieval-augmented)*
+
+
+The RAG application is built around a vector database like Pinecone that we used in the last lab. The database is populated with embedded "chunks" taken from the raw input documents.
