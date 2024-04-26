@@ -74,6 +74,14 @@ Sign up for an Anthropic account if you haven't done so, then go to the [API con
 
 Once you're there, you can get an API key and insert it into the Secrets menu of your Repl.it workspace, following the same instructions we used last time. Claude offers $5 of free API credits to first-time users, which is enough for hundreds of queries, but they expire after two weeks.
 
+Install the `anthropic` module with
+
+```
+pip install anthropic
+```
+
+in the shell.
+
 ### Populate the database
 
 Put the script below in a file named `advisorbot_setup.py`.
