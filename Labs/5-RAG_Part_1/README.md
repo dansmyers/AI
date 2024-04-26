@@ -134,7 +134,7 @@ chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
 #--- Setup Pinecone vector database
 pc = Pinecone(api_key=PINECONE_API_KEY)
 spec = ServerlessSpec(
-    cloud="aws", region="us-west-2"
+    cloud="aws", region="us-east-1"
 )
 
 
@@ -338,7 +338,7 @@ if __name__ == '__main__':
   # Setup Pinecone vector database
   pc = Pinecone(api_key=PINECONE_API_KEY)
   spec = ServerlessSpec(
-      cloud="aws", region="us-west-2"
+      cloud="aws", region="us-east-1"
   )
 
   # Connect to the database
