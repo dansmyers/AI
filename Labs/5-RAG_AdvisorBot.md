@@ -392,7 +392,7 @@ Once you have the AdvisorBot working and you've explored the code, try making th
 
 Experiment with changing the chunk size in `advisorbot_populate.py`. For each experiment, delete your `catalog` database on the Pinecone dashboard, then rebuild it using `advisorbot_populate.py`.
 
-Try small (100), very small (say, 24), and larger chunks, up to maybe 4096 characters. Ask the same queries for ech What changes do you notice in the quality of the output as you vary the chunk size?
+Try small (100), very small (say, 24), and larger chunks, up to maybe 4096 characters. Ask the same queries for each size. What changes do you notice in the quality of the output as you vary the chunk size?
 
 
 ### Prompts
