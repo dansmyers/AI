@@ -237,7 +237,7 @@ The classic example is the embedding difference
 "woman" - "man"
 ```
 
-which gives a vector that represents "femaleness" that represents moving in a "feminine" direction within the abstract concept space. Therefore, we should be able to use this translation to change a masculine-coded word to its feminine counterpart. So, for example, in embedding space
+which gives a vector that represents moving in a "feminine" direction within the abstract concept space. Therefore, we should be able to use this translation to change a masculine-coded word to its feminine counterpart. So, for example, in embedding space
 
 ```
 "boy" + ("woman" - "man")
@@ -249,7 +249,7 @@ should be close the the emebdding for "girl" and
 "king" + ("woman" - "man")
 ```
 
-should be close to "king".
+should be close to "queen".
 
 The code below illustrates this concept.
 
