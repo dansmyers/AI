@@ -4,9 +4,6 @@
 
 ## You can work with a partner to complete this assignment
 
-## Overview
-
-
 ## Problems
 
 ### Sudoku
