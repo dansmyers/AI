@@ -243,7 +243,7 @@ which gives a vector that represents moving in a "feminine" direction within the
 "boy" + ("woman" - "man")
 ```
 
-should be close the the emebdding for "girl" and
+should be close the the embedding for "girl" and
 
 ```
 "king" + ("woman" - "man")
