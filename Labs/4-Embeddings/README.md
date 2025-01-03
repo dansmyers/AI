@@ -37,7 +37,7 @@ Run this command in the shell to install the necessary libraries.
 
 The code below sets up the connection to VoyageAI using the API key that you configured in the previous step. It then calls `vo.embed` to convert a given text string to a vector. The output is a long list of, in this case, 1024 numbers.
 
-Key idea: This embedding, in some sense, captures the holistic essence of the text string. It's a quantitative representation of what the string is "about" in an abstract way. But, beacuse it's now a vector, we can more easily calculate things like distances, similarities, and translations in vector space.
+Key idea: This embedding, in some sense, captures the holistic essence of the text string. It's a quantitative representation of what the string is "about" in an abstract way. But, because it's now a vector, we can more easily calculate things like distances, similarities, and translations in vector space.
 
 Once you can run the code below, experiment with creating a few more example embeddings.
 
