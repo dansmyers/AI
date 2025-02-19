@@ -394,8 +394,15 @@ Experiment with changing the chunk size in `advisorbot_populate.py`. For each ex
 
 Try small (100), very small (say, 24), and larger chunks, up to maybe 4096 characters. Ask the same queries for each size. What changes do you notice in the quality of the output as you vary the chunk size?
 
-
 ### Prompts
 
 Experiment with editing the query prompts. You can try modifying the output style formatting, or ask the bot to provide a specific perspective. You can ask it to be more concise, or respond to the user in specific ways.
 
+
+### More context
+
+Beyond the fact that it uses a small amount of data, one limitation of this AdvisorBot is that its chunks have no additional **context** that can be used to give the model more information about how each chunk might be relevant to the query.
+
+A more robust RAG implementation would combine the basic text chunks with more metadata or contextual information to explain the document the chunk comes from, when it was created, its intended purpose, and so forth.
+
+Take a look at [this article](https://www.anthropic.com/news/contextual-retrieval) from Anthropic that talks about how they implement this strategy using what they call "contextual retrieval" - at a high level, it's using the LLM to generate and append additional document context to each chunk.
