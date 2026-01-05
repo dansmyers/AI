@@ -1,6 +1,6 @@
 # Sprint 1: Solving Problems by Searching
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Terrace_field_yunnan_china_denoised.jpg" width="400px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Terrace_field_yunnan_china_denoised.jpg" width="600px" />
 
 *Honghe Hani Rice Terraces in Yunnan Province, China*
 
