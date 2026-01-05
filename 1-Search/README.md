@@ -8,6 +8,8 @@
 
 ## Overview
 
+This is it: the first sprint.
+
 ## Topics
 
 - Representing problems as state spaces
