@@ -1,6 +1,6 @@
 # CMS 430 Artificial Intelligence
 
-## Spring 2024 Syllabus
+## Spring 2026 Syllabus
 
 ## Who? Where?
 
@@ -10,8 +10,8 @@ dmyers@rollins.edu
 407-646-2151
 
 ## Office Hours
+- Tuesdays from 10:00 to 11:30
 - Thursdays from 2:00 to 3:00
-- Fridays from 1:00 to 2:00
 
 ## Official Course Description
 
@@ -33,42 +33,86 @@ At the end of this course, you will be able to:
 
 6. Critically evaluate the strengths and weaknesses of current-generation AI models, including large language models like ChatGPT.
 
+## Required AI tools
+
+ Practicing programming using AI tools is a core element of this class. You are *required* to subscribe to a $20 per month plan for [Anthropic's Claude](https://claude.ai/), which we'll use throughout the course.
+
+ - *I already subscribe to a different model, can I use that one instead?* No, you are required to use Claude for this course.
+ - *Can I just use the free plan?* No, you are required to purchase the $20 per month subscription.
+ - *Will I also need to buy a book?* No, there is no required textbook. We'll use a mixture of online resources for course material.
+
+
+## Scrumage
+
+### What?
+This course will be different from other courses you've taken. We'll be using a new course management framework called **Scrumage** ("**Scrum** for **Ag**ile **E**ducation"), originally developed by Dr. Shannon Duvall at Elon University. Scrumage is based on the Scrum project management framework, which you may have used for team-based projects in some of your other courses.
+
+### How does it work?
+Here are the  main features of Scrumage:
+
+1. The course is structured as a series of **sprints**, each lasting about two weeks. Each sprint covers one unit of material. There will be seven sprints in our course.
+
+2. At the beginning of each sprint, you'll be given a list of learning topics for the sprint, a curated list of resources (videos, readings, worked examples, etc.), and a set of required deliverables due at the end of the two-week period.
+
+3. Working with a team, you'll have broad freedom to decide how to use the available resources to learn the required material and complete the sprint deliverables. You can decide on your own meeting schedule, what resources to use, and your own plan for finishing the projects. Scrumage gives you **options** and the freedom to determine your own best learning approach.
+
+4. As your professor, I'll be in the room each day to meet with your teams, answer your questions, and check your work-in-progress. You can make an **expert request** to ask for a short lecture, worked example, or other help with a particular topic.
+
+5. Each sprint ends with an individual quiz.
+
+6. You'll complete a brief reflection at the end of each sprint, which will help you understand your own learning process and make improvements before the next sprint.
+
+### That sounds hard. Why are we doing this?
+Scrumage is based on **student choice**, **flexibility**, and **reflection**.
+
+- In a traditional course, the professor is in charge of every aspect of the class. I get to decide what we learn, in what order, what readings or resoures we use, and how your learning will be assessed. If my choices don't work for you, well, that's tough.
+
+- In this class, you'll have **freedom** to take ownership of your own learning. You'll have the broad ability to make your own schedule, choose your own combination of resources (lectures, readings, videos, examples, etc.), and generally pick the best individualized strategies that help you master the course material.
+
+- Scrumage will let you **learn computer science concepts** by **working like a computer scientist**. Scrum is an industry-standard framework, so you'll be building facility with real software development techniques as you work through this course.
+
+- Finally, Scrumage supports **learning how to learn**, the **single most important skill you can acquire in college**. By taking ownership of your own learning, you'll be able to identify the resources, plans, and strategies that work best for you and build skills that you can take forward into other classes or your professional career.
+
+Some of you have already taken one or more Scrumage courses with me or Dr. Summet. If this is your second or third Scrumage experience, you'll find the rhythms of this course to be similar to your previous courses. If this is your first time, don't worry: the course format may feel a little unusual at first, but you'll adapt to it quickly.
+
+### FAQs
+
+**How big are the teams?** I like teams of 3 as a default choice. We can do teams of 2 or 4 if necessary, but 4 is the maximum size; teams of 5 add lots of overhead for no meaningful benefit.
+
+**How are the teams created?** I have let previous classes choose their initial teams for the first sprint. Almost all teams form at the beginning of the semester and stay together through the end.
+
+**What if I don't want to be on a team?** Working by yourself is allowed, although you should check with me first.
+
+**Does my grade depend on my team?** I approach the deliverables for each sprint as individual assignments that can be completed with the help of your teammates, rather than (shudder) "team projects". Most Scrumage teams operate more like collaborative study groups rather than divide-and-conquer project teams that you might have used in other classes.
+
+**What if I can't work with my teammates? Do I have to stay in the same team?** You're allowed to change teams at the start of each sprint. One goal of Scrumage is to help you think about the kind of collaboration that works best for your learning. It's okay to recognize that some people in the class are your friends, but that you'd be better off working with a different group that's a better fit for your style.
+
 
 ## Schedule
 
-### Planned Weekly Schedule of Topics
-
-| Week of | Topics  |
-|------|---------|
-| 1/17    | AI concepts |
-| 1/22    | State-based searching |
-| 1/29    | Backtracking |
-| 2/5    | A* search |
-| 2/12    | Local search |
-| 2/19    | Game playing and the minimax algorithm |
-| 2/26    | Pruning and Monte Carlo techniques |
-| 3/4    | MIDTERM |
-| 3/11    | SPRING BREAK |
-| 3/18   | Machine learning and perceptrons |
-| 3/25   | Multilayer perceptrons |
-| 4/1   | Deep neural networks |
-| 4/8   | Architectures for specific applications: vision, generation, etc. |
-| 4/15   | Large-language models I |
-| 4/22   | Large-language models II |
-| 4/29   | Finish |
+### Planned schedule of topics
 
 
-### Other Important Dates
+| Sprint | Start | Topic  |  Assignment |
+|------|---------|---------|-------------|
+| 1    |   | Solving problems by searching |  |
+| 2    | | A* and backtracking   | Sokoban and satisfiability |
+| 3    | | Constraint satisfaction problems | Knapsack heuristics |
+| 4    | | Game playing and minimax | Tournament arc |
+| 5    | | Intro to machine learning models   | Churn modeling |
+| 6    | | Neural networks | Backpropagation |
+| 7    | | Large-langugae models | Very tiny baby GPT |
 
-- First day of class: January 17
-- Last day of class: April 30
-- Spring break: March 11 to March 17
-- Last day to drop the class: January 30
-- Last day to withdraw without penalty: March 29
-- Midterm exam: 3/8 (in-class). This is the last class meeting before Spring Break.
-- Final exam: 5/6 at 2 PM to 4 PM. The final exam covers the *second half* of the course.
 
-I'm not able to accommodate requests for alternate exam times other than those scheduled through the official Testing Center. Please plan to take exams at the scheduled time and place and keep this in mind when you're scheduling your travel for the end of the semester and breaks.
+### Other important dates
+
+- First day of class: January 12
+- Last day of class: April 28
+- Spring break: March 16 to March 22
+- Last day to drop the class: January 27
+- Last day to withdraw without penalty: March 27
+- Dr. Myers out of town (no class meeting): January 21 and 23
+
 
 ## The All-Important Grading Section
 
@@ -83,13 +127,7 @@ If you achieve satisfactory performance on enough assigments, described in more 
 ### Assignments
 Your grade will be based on the following things:
 
-1. A set of **regular assignments**, about five during the semester.
 
-2. **Challenge problems**, three in total, which are somewhat more complex than the regular homework questions and require you to stretch a little bit.
-
-3. **Midterm and final exams**. The final covers the second half of class.
-
-4. **AI-enhanced writing assignment**: You'll have one major research project, assigned in parts in conjunction with the regular assignments. The goal of this assignment is to let you practice using an AI tool during the entire research lifecycle, including idea generation, background reading, topic development, drafting, and editing.
 
 ### Satisfactory Credit
 
