@@ -95,14 +95,16 @@ Some of you have already taken one or more Scrumage courses with me or Dr. Summe
 
 | Sprint | Start | Topic  |  Assignment |
 |------|---------|---------|-------------|
-| 1    |   | Solving problems by searching |  |
-| 2    | | A* and backtracking   | Sokoban and satisfiability |
-| 3    | | Constraint satisfaction problems | Knapsack heuristics |
-| 4    | | Game playing and minimax | Tournament arc |
-| 5    | | Intro to machine learning models   | Churn modeling |
-| 6    | | Neural networks | Backpropagation |
-| 7    | | Large-langugae models | Very tiny baby GPT |
+| 1    | 1/12  | Solving problems by searching |  |
+| 2    | 1/30 | A* and backtracking   | Sokoban and satisfiability |
+| 3    | 2/13 | Constraint satisfaction problems | Knapsack heuristics |
+| 4    | 2/27 | Game playing and minimax | Tournament arc |
+| 5    | 3/13 | Intro to machine learning models   | Churn modeling |
+| 6    | 4/3 | Neural networks | Backpropagation |
+| 7    | 4/17 | Large-langugae models | Very tiny baby GPT |
 
+
+Quizzes for each ending sprint will be given in class on the start day of the next sprint. For example, Sprint 1's quiz will be given on 1/30, the same day that Sprint 2 releases.
 
 ### Other important dates
 
@@ -127,6 +129,11 @@ If you achieve satisfactory performance on enough assigments, described in more 
 ### Assignments
 Your grade will be based on the following things:
 
+1. Deliverable projects assigned for each sprint. These are graded individually, but you are allowed to freely collaborate with your teammates to complete them.
+
+2. End-of-sprint quizzes, taken individually in class on the days listed on the schedule above.
+
+3. Challenge projects, which can be used to raise your grade or make up for unsatisfactory work, discussed below.
 
 
 ### Satisfactory Credit
@@ -139,15 +146,14 @@ I will grade your regular assignments and challenge projects on a threshold syst
 
 If you earn a grade between 60% and 79%, you'll receive **partial credit** for an assignment, discussed in more detail below. If you earn a grade below 60%, you receive **no credit** for that assignment.
 
-You must make a reasonable attempt on every part of an assignment to receive full credit for it.
+You must make a reasonable attempt on every part of an assignment to receive credit for it.
 
 ### Letter Grades
 
 **To earn a B**, you must meet the following criteria:
 
 1. Earn satisfactory credit on all of the regular homework assignments during the entire semester.
-2. Pass the midterm and final exams with a grade of at least 80% on each.
-3. Complete each portion of the research project in a satisfactory fashion.
+2. Earn satisfactory credit on each end-of-sprint quiz
 
 **If you fail to complete the requirements for a B**, your grade will be adjusted downwards according to the following table:
 
@@ -155,10 +161,8 @@ You must make a reasonable attempt on every part of an assignment to receive ful
 |------------------------------------------------|------------------------------------------|
 | Partial credit on an assignment (grade of 60% to 79%) | Fraction of a letter grade (e.g. B to B-)       |
 | No credit on an assignment | One full letter grade (e.g., B to C) for each one |
-| Exam score below 80% | Fraction of a letter grade |
-| Exam score below 60% | One full letter grade |
-| Unsatisfactory paper component | Fraction of a letter grade |
-| Missing paper component | One full letter grade |
+| Quiz score below 80% | Fraction of a letter grade |
+| Quiz score below 60% | One full letter grade |
 
 **To earn a higher grade**, you can complete additional work that shows deeper engagement with the course goals. Each challenge project that you complete will **boost your grade by one part of a letter** (e.g., B to B+). To earn an A, complete all the requirements for a B plus three additional challenge projects.
          
