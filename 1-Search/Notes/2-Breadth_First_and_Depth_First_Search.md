@@ -12,7 +12,10 @@ Make sure you've reviewed the previous material, particularly the pseudocode for
 
 Recall that the tree search method uses a data structure called `frontier` to maintain the set of known but still unexpanded search tree nodes. The breadth-first search algorithm uses a **first-in-first-out queue** as the frontier structure. At each step, it chooses the *oldest* known node (that is, the node that was identified earliest in the search process) and expands it.
 
-<img src="../Images/bfs_level_1.png" width="300px" />
+Consider the following abstract map of some major cities in Florida. The edges represent approximate routes.
+
+<img src="../Images/florida_cities.pgn" width="400px" />
+
 
 
 
