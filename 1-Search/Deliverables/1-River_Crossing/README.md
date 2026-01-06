@@ -1,6 +1,6 @@
 # More River Crossing Problems
 
-<img src="https://imgs.xkcd.com/comics/boat_puzzle.png" width="400px" />
+<img src="https://imgs.xkcd.com/comics/boat_puzzle.png" width="600px" />
 
 ## Rage Against the Machine
 
