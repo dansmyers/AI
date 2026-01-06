@@ -115,7 +115,12 @@ The main advantage of DFS is that it only needs to store the current path, plus 
 However, the basic DFS has no way to stop exploring its current path as long as it can continue to generate new nodes. The risk of depth-first search is getting stuck on a very deep path that never leads to a solution. The **iterative deepening** method that we'll examine in a future note addresses this problem.
 
 
-## Uninformed search
+## "Uninformed search"
+
+BFS and DFS always choose the next node in their respectivve data structures to expand. These methods are called "uninformed" in the sense that the sequence of expansions is determined by the order the nodes are inserted and not any property of the nodes themselves. A better solution might try to choose "good" nodes (for some definition of good) so that we can make progress towards the solution without expanding too many unnecessary nodes. The next unit will look at these "informed" search techniques, the most important of which is the **A\* search** algorithm.
+
+The next note will show you how to actually implement BFS and DFS for a real problem, then we'll consider two more uninformed methods: iterative deepening and uniform cost search.
+
 
 
 
