@@ -11,7 +11,7 @@ You've probably seen riddles that involve taking objects across a river, like th
 >
 > Clarifications:
 >
-> - It's acceptable to leave robots alone with no humans
+> - It's permitted to leave robots alone with no human supervision
 > - Robots don't care if a human is in the boat vs. on the bank
 
 This problem was considered in an important [early AI paper from 1968](https://courses.cs.umbc.edu/471/spring23/02/resources/MI3-Ch.10-Amarel.pdf) by Saul Amarel, as the (unwokely named) "missionaries and cannibals problem". Amarel's paper built on earlier research into search-based problems by giving a formal way of defining planning problems.
