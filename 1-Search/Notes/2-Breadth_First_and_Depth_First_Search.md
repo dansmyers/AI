@@ -16,6 +16,7 @@ Consider the following abstract map of some major cities in Florida. The edges r
 
 <img src="../Images/florida_cities.png" width="400px" />
 
+*Made with Claude Opus 4.5. Everything is approximate. This is inspired by a similar example in Russell and Norvig's Artificial Intelligence: A Modern Approach that used a map of cities in Romania.*
 
 
 
