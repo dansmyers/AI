@@ -45,14 +45,16 @@ Suppose that we have a particular state, which we'll denote as *x*. We can defin
 ~~~~~~~~~~~~
     H R
 ```
-One valid action is to move the human from the south side to the north side. Observe that moving the robot would result three robots vs. two humans on the north side, which is impermissible. The *successor states* of *x* are the states that are one action away from *x*. In our current example, the successor state would be
+One valid action is to move the human from the south side to the north side. Observe that moving the robot would result three robots vs. two humans on the north side, which is impermissible.
+
+The *successor states* of *x* are the states that are one action away from *x*. In our current example, the successor state for that action would be
 ```
   HHH RR
 ~~~~~~~~~~~~
      B
      
 ~~~~~~~~~~~~
-      R
+     R
 ```
 The other valid action is to move both the human and robot back to the north side, which would bring us back to the starting state:
 ```
