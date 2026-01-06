@@ -97,7 +97,7 @@ Some of you have already taken one or more Scrumage courses with me or Dr. Summe
 |------|---------|---------|-------------|
 | 1    | 1/12  | Solving problems by searching |  |
 | 2    | 1/30 | A* and backtracking   | Sokoban and satisfiability |
-| 3    | 2/13 | Constraint satisfaction problems | Knapsack heuristics |
+| 3    | 2/13 | Local search | Knapsack heuristics |
 | 4    | 2/27 | Game playing and minimax | Tournament arc |
 | 5    | 3/13 | Intro to machine learning models   | Churn modeling |
 | 6    | 4/3 | Neural networks | Backpropagation |
