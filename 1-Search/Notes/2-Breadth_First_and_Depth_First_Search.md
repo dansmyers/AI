@@ -14,7 +14,7 @@ Recall that the tree search method uses a data structure called `frontier` to ma
 
 Consider the following abstract map of some major cities in Florida. The edges represent approximate routes.
 
-<img src="../Images/florida_cities.pgn" width="400px" />
+<img src="../Images/florida_cities.png" width="400px" />
 
 
 
