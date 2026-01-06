@@ -1,7 +1,7 @@
 # States and State Spaces
 
 
-## A river crossing problem
+## River crossing problem
 
 You've probably seen riddles that involve taking objects across a river, like the one about the farmer who needs to transport his chicken, grain, and fox. Here's another one that we'll use for our starting example.
 
