@@ -37,7 +37,7 @@ The goal state has everything on the opposite side of the river:
 ~~~~~~~~~~~~
   HHH RRR
 ```
-The ***state space*** is the set of all possible valid states that can exist within a particular problem. That is, it's all the ways we can position the humans, robots, and the boat without violating the rule about the numbers of humans and robots.
+The ***state space*** is the set of all possible valid states that can exist within a particular problem. That is, it's all the ways we can position the humans, robots, and the boat without violating the requirements of the problem.
 
 ## Successor states
 
@@ -52,7 +52,7 @@ Suppose that we have a particular state, which we'll denote as *x*. We can defin
 ```
 One valid action is to move the human from the south side to the north side. Observe that moving the robot would result three robots vs. two humans on the north side, which is impermissible.
 
-The *successor states* of *x* are the states that are one action away from *x*. In our current example, the successor state for that action would be
+Taking an action generates a new state. The *successor states* of *x* are the states that are one action away from *x*. In our current example, the successor state for that action would be
 ```
   HHH RR
 ~~~~~~~~~~~~
@@ -90,19 +90,25 @@ A search problem has the following elements:
 
 - *successors(s)*, a function that returns the set of states obtained by applying *actions(s)* to *s*
 
-For now, we're interested in identfying a sequence of actions that move from state *i* to state *g*. We're not necessarily requiring the "best" or "most efficient" solution (however we might define those), just *some* plan that solves the problem.
+The goal of the search problem is to identify a sequence of actions that move from state *i* to state *g*.
 
-Some problems have a cost function, *cost(s, a)*, that returns the cost of applying action *a* in state *s*. If it exists, the cost function captures the fact that some actions are more difficult or expensive that others, and we're usually interested in finding a plan with low total cost. We'll consider cost-aware search problems in the next unit.
 
+### Cost functions and optimality
+
+Some problems have a cost function, *cost(s, a)*, that returns the cost of applying action *a* in state *s*. If it exists, the cost function captures the fact that some actions are more difficult or expensive that others. The river crossing problem doesn't have a cost.
+
+If a cost function exists, we're probably going to be interested in finding the *optimal* plan: the one that achieves the goal with minimum cost. That's harder than simply identifying if a solution exists.
+
+For now, we're only going to consider costless problems, so that optimality isn't a consideration. We just want *some* plan that solves the problem. We'll consider cost-aware search problems in a future note.
 
 
 ## The general solution strategy
 
-The key to solving planning problems is to **explore the state space**.
+The general approach to solving planning problems is to **explore the state space** in an organized way. The basic method is to repeatedly choose a candidate state and generate its successors:
 
 - Begin with the starting state
 - Generate all of its successor states and store them
-- Choose one stored state and generate *its* successors and store them
+- Choose one stored state, generate *its* successors, and store them
 - Continue this process until you either reach the goal state or have no more stored states to explore, which would indicate there is no feasible plan
 
 "But wait!", you shout. "That's way too vague."
@@ -114,11 +120,23 @@ You're right. The top-level description of this process leaves a lot of things u
 - How to choose the next state to expand?
 - How to keep track of states that have already been expanded so we don't get stuck in a loop?
 
-Here's a key point that will come up repeatedly throughout this course: Choosing to use a certain method, like state search, isn't the hard part of solving a problem. The hard parts are working out the practical details of how to represent the problem, generate successors, and choose the next state to expand.
+Here's a key point that will come up repeatedly throughout this course: Choosing to use a certain method, like state search, isn't the hard part of solving a problem. The hard parts are working out the practical details, like how to represent the problem, generate successors, and choose the next state to expand.
 
 ## Representing states
 
-For the river problem, we care about the number of humans and robots on each side and the position of the boat. We could represent the state using three values:
+Solving a problem using this method requires coming up with a representation for the important variables that determine the state. Ideally, this should be compact and allow you to easily generate successors.
+
+There might be multiple options for how to encode the state for a particular problem. For example, we might start the river problem by trying to track the position of each human, robot, and the boat as a seven-element tuple. At the start of the problem, everything is on the north bank:
+```
+initial_state = (N, N, N, N, N, N, N)
+```
+The goal state would have everything on the south bank:
+```
+goal_state = (S, S, S, S, S, S, S)
+```
+If you think about it, though, this representation is not ideal. We don't care about the *individual* humans and robots, only the numbers of each on the two sides. Also, the seven-element vector makes it hard to generate successors, because you'd need logic for deciding which individual humans or robots to move on each step, which is unnecessarily complex.
+
+Amarel's 1968 paper notes that it's sufficient to represent the state by keeping track of the number of humans and robots on a single bank and the position of the boat.  Therefore, we could reduce the essential details of the state to only three values:
 
 - The number of humans on the north bank
 - The number of robots on the north bank
@@ -139,7 +157,7 @@ There are three possible actions we can take from the starting state:
 
 We can't move one or two humans because those actions would leave the remaining human(s) outnumbered on the north bank.
 
-Suppose we choose to expand the `(2, 2, False)` state next.
+Suppose that we then choose to expand the `(2, 2, False)` state next.
 ```
    HH RR
 ~~~~~~~~~~~~
@@ -148,7 +166,6 @@ Suppose we choose to expand the `(2, 2, False)` state next.
 ~~~~~~~~~~~~
     H R
 ```
-
 There are two possible moves:
 
 - Move the human back to the north bank to get `(3, 2, True)`
@@ -175,7 +192,65 @@ You can represent the search process as a tree with the initial state as the roo
 
 Work out the rest of the second level of the tree by expanding the other two nodes on the first level.
 
-## Solve
+## The general tree search method
+
+The following pseudocode method will expand the search tree for a general planning problem until it finds the goal state or exhausts the state space of reachable nodes. It uses a data structure named `frontier` to store the set of discovered but unprocessed nodes and a set called `visited` to keep track of states that have been seen so we don't re-expand them.
+
+```
+Tree Search
+
+input:
+    initial state i
+    goal state g
+    successors function
+
+output:
+    success if the goal state is reachable, failure otherwise
+
+initialize empty frontier structure
+
+// Begin with the starting state
+frontier.insert(i)
+
+while frontier is not empty {
+
+    // Choose the next state to expand
+    x = frontier.pop()
+
+    // If x is the goal state, we're done
+    if x == g {
+        output success and stop
+    }
+
+   // Mark state x as visited so it can't be re-expanded
+   visited[x] = True
+
+   // Generate successors of x
+   s = successors(x)
+
+   // Insert new unvisited successor states into frontier
+   for i in s {
+       if not visited[i] {
+           frontier.insert(i)
+       }
+   }
+}  
+
+// If the loop ends, the state space was exhausted without reaching the goal
+output failure and stop
+```
+
+The choice of the frontier structure determines the order in which nodes are explored.
+
+Notice that this version returns *success or failure* based on whether the goal state is reachable from the initial state. In practice, we'd usually like to have the actual sequence of actions and states required to reach the goal. We'll consider how to keep track of that history and some specific implementations of the tree search method in the next note.
+
+## Summary
+
+State-based search is one of the core techniques of classical AI. The methods that we'll look at over the first part of the course are all elaborations of this basic idea, applied to progressively more complex problems. Therefore, make sure you understand the idea of representing problems as states, generating successors, and exploring the search tree as you're working through the rest of the material in this unit.
+
+
+
+### Solve
 
 Work out the solution to the puzzle, then write out the solution plan using the three-value notation.
 
