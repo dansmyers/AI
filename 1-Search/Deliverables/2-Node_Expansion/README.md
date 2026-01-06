@@ -1,4 +1,4 @@
-# Node Counting
+# Node Expansion
 
 ## Overview
 
