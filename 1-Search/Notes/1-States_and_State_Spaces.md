@@ -119,7 +119,7 @@ For the river problem, we care about the number of humans and robots on each sid
 - The number of robots on the north bank
 - A boolean to specify if the boat is on the north bank
 
-With this setup, the starting state would be `(3, 3, True)`. The goal state would be `(0, 0, False)`. Moving humans or robots from the north bank to the south subtracts from their corresponding numbers and toggles the state of the boat. Likewise for moving from the south to the north.
+With this setup, the starting state would be `(3, 3, True)`. The goal state would be `(0, 0, False)`. Moving humans or robots from the north bank to the south subtracts from their corresponding numbers and sets the boat to False. Moving from the south to the north adds to the corresponding numbers and sets the boat to True.
 
 ### Practice problem
 
