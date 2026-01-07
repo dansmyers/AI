@@ -1,9 +1,9 @@
 # The *N*-Queens Problem
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chessboard480.svg/500px-Chessboard480.svg.png" width="400px" />
+<img src="https://yue-guo.com/wp-content/uploads/2019/02/N_queen.png" width="400px" />
 
-*A solution to the 8-queens problem, from Wikipedia*
+*A solution to the 8-queens problem, from Yue Guo*
 
 
 ## Overview
