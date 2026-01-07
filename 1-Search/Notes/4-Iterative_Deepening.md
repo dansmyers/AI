@@ -31,18 +31,20 @@ It might seem like the iterative process is wasteful, because you end up repeate
 
 Here's an important point about balanced trees: **most of the nodes are at the bottom level**.
 
-Suppose you have a full binary tree (one where every level is full and there are no missing nodes) of *d* levels. This corresponds to a full search tree with a branching factor of 2.
+Suppose you have a perfect binary tree (one where every level is full and there are no missing nodes) with a height of *d*. That is, there are *d* levels below the root.
 
-- Level 0 is 1 node, the root
+- Level 0 is 1 node, the root (recall that the root is considered level 0)
 - Level 1 has 2 nodes
 - Level 2 has 4 nodes
 - Level 3 has 8 nodes, and so forth
 
 The bottom level, *d*, has 2<sup>*d*</sup> nodes.
 
-The total number of nodes in the three is:
+The total number of nodes in the tree is:
 
-$$ 1 + 2 + 4 + 8 + \dots + 2^d $$
+$$ 1 + 2 + 4 + 8 + \dots + 2^d = 2^{d + 1} - 1 $$
+
+So approximately half the nodes are on the bottom level, which means that about half of the work of the search only happens on the final iteration. If *b* is the branching factor and *d* is the depth of the solution, then the complexity if iterative deepening (in terms of the total number of nodes examined) is *O*(*b*<sup>*d*</sup>).
 
 ## Pseudocode
 
