@@ -89,7 +89,7 @@ for depth_limit = 0 to infinity {
             continue
         }
 
-        // x is now being visited, so mark it
+        // x is now being visited, mark it
         visited[x] = True
 
         // Only expand if we haven't reached the depth limit
