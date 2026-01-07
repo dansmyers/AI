@@ -44,7 +44,7 @@ The total number of nodes in the tree is:
 
 $$ 1 + 2 + 4 + 8 + \dots + 2^d = 2^{d + 1} - 1 $$
 
-So approximately half the nodes are on the bottom level, which means that about half of the work of the search only happens on the final iteration. If *b* is the branching factor and *d* is the depth of the solution, then the complexity if iterative deepening (in terms of the total number of nodes examined) is *O*(*b*<sup>*d*</sup>).
+So approximately half the nodes are on the bottom level, which means that about half of the work of the search only happens on the final iteration. If *b* is the branching factor and *d* is the depth of the solution, then the complexity of iterative deepening (in terms of the total number of nodes examined) is *O*(*b*<sup>*d*</sup>).
 
 ## Pseudocode
 
