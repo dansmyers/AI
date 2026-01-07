@@ -25,6 +25,25 @@ This approach has good properties of both breadth- and depth-first search:
 - The memory requirements scale like DFS, since there is still only one primary search path at any moment
 - Like BFS, the method terminates with the solution that is the minimum number of levels from the root
 
+## The number of nodes
+
+It might seem like the iterative process is wasteful, because you end up repeatedly re-searching the lower levels of the tree until you finally hit the appropriate max depth. It turns out, however, that this is not a major problem.
+
+Here's an important point about balanced trees: **most of the nodes are at the bottom level**.
+
+Suppose you have a full binary tree (one where every level is full and there are no missing nodes) of *d* levels. This corresponds to a full search tree with a branching factor of 2.
+
+- Level 0 is 1 node, the root
+- Level 1 has 2 nodes
+- Level 2 has 4 nodes
+- Level 3 has 8 nodes, and so forth
+
+The bottom level, *d*, has 2<sup>*d*</sup> nodes.
+
+The total number of nodes in the three is:
+
+$ 1 + 2 + 4 + 8 + \dots + 2^d $
+
 ## Pseudocode
 
 
