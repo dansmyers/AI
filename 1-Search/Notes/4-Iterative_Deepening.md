@@ -84,7 +84,12 @@ for depth_limit = 0 to infinity {
             output success and stop
         }
 
-        // Mark state x as visited so it can't be re-expanded
+        // Don't expand already visited states
+        if visited[x] {
+            continue
+        }
+
+        // x is now being visited, so mark it
         visited[x] = True
 
         // Only expand if we haven't reached the depth limit
@@ -93,11 +98,9 @@ for depth_limit = 0 to infinity {
             // Generate successors of x
             s = successors(x)
 
-            // Insert new unvisited successor states into frontier
+            // Insert successor states into frontier
             for j in s {
-                if not visited[j] {
-                    frontier.push((j, depth + 1))
-                }
+                frontier.push((j, depth + 1))
             }
         }
     }
