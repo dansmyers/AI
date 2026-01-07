@@ -42,7 +42,7 @@ The bottom level, *d*, has 2<sup>*d*</sup> nodes.
 
 The total number of nodes in the three is:
 
-$ 1 + 2 + 4 + 8 + \dots + 2^d $
+$$ 1 + 2 + 4 + 8 + \dots + 2^d $$
 
 ## Pseudocode
 
