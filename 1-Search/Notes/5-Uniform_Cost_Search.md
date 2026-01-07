@@ -14,4 +14,8 @@ If a cost function exists for a problem want the *minimum cost plan* that minimi
 
 The **uniform-cost search** modifies the basic algorithm in two ways:
 
-- Keep track of the total cost to reach each node in the search tree. For example, if you start in Tallahassee and move to Gainesville and then Orlando, the total cost for that node in the tree would be 
+- Keep track of the total cost to reach each node in the search tree. For example, suppose you're considering a state that represents the route Tallahassee-Gainesville-Orlando. The total distance of that route is 240. Call this the *path cost* of the node.
+
+- When expanding nodes, always choose the **node with the lowest path cost**. This requires using a priority queue data structure sorted by path cost, so that popping from the queue always returns the node with the minimum.
+
+
