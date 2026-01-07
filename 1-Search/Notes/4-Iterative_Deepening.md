@@ -46,7 +46,68 @@ $$ 1 + 2 + 4 + 8 + \dots + 2^d = 2^{d + 1} - 1 $$
 
 So approximately half the nodes are on the bottom level, which means that about half of the work of the search only happens on the final iteration. If *b* is the branching factor and *d* is the depth of the solution, then the complexity of iterative deepening (in terms of the total number of nodes examined) is *O*(*b*<sup>*d*</sup>).
 
+Here's a subtle but important point. If the solution lies at depth *d*, a standard breadth-first search will still expand the nodes at level *d*, which creates new nodes at level *d + 1* These are unnecessary, since the solution occurs at *d*, but the method has no way of knowing that as it executes. Iterative deepening will explore the nodes at *d* **without expanding them** and find the solution without creating any unnecessary nodes.
+
+This more than makes up for the overhead of repeatedly searching the lower levels of the tree, such that ID is actually faster than BFS.
+
+According to Russelland Norvig, **Iterative deepening is the preferrred uninformed search method when the search space is large and the depth of the solution is unknown.**
+
 ## Pseudocode
+
+```
+Iterative Deepening Tree Search
+
+input:
+    initial state i
+    goal state g
+    successors function
+
+output:
+    success if the goal state is reachable, failure otherwise
+
+// Outer loop: progressively increase depth limit
+for depth_limit = 0 to infinity {
+
+    initialize empty frontier stack
+    visited = set()
+
+    // Begin with the starting state at depth 0
+    frontier.push((i, 0))  // (state, depth)
+
+    while frontier is not empty {
+
+        // Choose the next state to expand
+        (x, depth) = frontier.pop()
+
+        // If x is the goal state, we're done
+        if x == g {
+            output success and stop
+        }
+
+        // Mark state x as visited so it can't be re-expanded
+        visited[x] = True
+
+        // Only expand if we haven't reached the depth limit
+        if depth < depth_limit {
+
+            // Generate successors of x
+            s = successors(x)
+
+            // Insert new unvisited successor states into frontier
+            for j in s {
+                if not visited[j] {
+                    frontier.push((j, depth + 1))
+                }
+            }
+        }
+    }
+    
+    // Current depth exhausted; try deeper
+}
+
+// If no solution exists at any depth
+output failure and stop
+```
 
 
 
