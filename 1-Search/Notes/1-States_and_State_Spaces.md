@@ -222,18 +222,21 @@ while frontier is not empty {
         output success and stop
     }
 
-   // Mark state x as visited so it can't be re-expanded
-   visited[x] = True
+    // Check if x has already been visited; if so, don't expand it again
+    if visited[x] {
+      continue
+    }
 
-   // Generate successors of x
-   s = successors(x)
+    // We're now visiting x, so mark it
+    visited[x] = True
 
-   // Insert new unvisited successor states into frontier
-   for i in s {
-       if not visited[i] {
-           frontier.insert(i)
-       }
-   }
+    // Generate successors of x
+    s = successors(x)
+
+    // Insert new unvisited successor states into frontier
+    for j in s {
+        frontier.insert(j)
+    }
 }  
 
 // If the loop ends, the state space was exhausted without reaching the goal
@@ -242,7 +245,7 @@ output failure and stop
 
 The choice of the frontier structure determines the order in which nodes are explored.
 
-Notice that this version returns *success or failure* based on whether the goal state is reachable from the initial state. In practice, we'd usually like to have the actual sequence of actions and states required to reach the goal. We'll consider how to keep track of that history and some specific implementations of the tree search method in the next note.
+Notice that this version returns *success or failure* based on whether the goal state is reachable from the initial state. In practice, we'd usually like to have the actual sequence of actions and states required to reach the goal. We'll consider how to keep track of that history and some specific implementations of the tree search method later.
 
 ## Summary
 
