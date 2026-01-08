@@ -15,7 +15,9 @@ This is it: the first sprint.
 - Representing problems as state spaces
 - The basic tree search algorithm
 - Breadth-first and depth-first searching
-- Iterative deepening and other variations
+- Iterative deepening
+- Uniform-cost search
+- Returning the history of actions leading to the solution
 - Examples of standard planning problems
 
 ## Deliverables
