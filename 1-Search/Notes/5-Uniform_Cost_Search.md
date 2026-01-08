@@ -18,6 +18,14 @@ The **uniform-cost search** modifies the basic algorithm in two ways:
 
 - When expanding nodes, always choose the **node with the lowest path cost**. This requires using a priority queue data structure sorted by path cost, so that popping from the queue always returns the node of minimum value.
 
+### About the name
+
+I dislike criticizing my forebearers in the field, but I hate the name "uniform-cost search".
+
+It's supposed to indicate that all paths of the same cumulative cost are being considered "uniformly"; e.g., all paths of cost = 5 would be considered at the same point in the search before trying more expensive paths. However, the name makes it sound like we're requiring that *the costs themselves be uniform*, which is absolutely not the case.
+
+Better names would be *lowest-cost-first search* or *cheapest-first search*.
+
 ## Pseudocode
 
 The basic approach shown below should be familiar by this point. This version assumes that the `successors` function calculates the incremental step cost of moving to each successor state and returns its results as a `(state, step cost)` tuple.
@@ -69,7 +77,14 @@ while frontier is not empty {
 
 // If the loop ends, the state space was exhausted without reaching the goal
 output failure and stop
-
 ```
+
+## Optimality
+
+**Uniform-cost search will find the optimal minimum cost solution**, provided that all costs are strictly greater than 0. In this case, the method is essentially the same as Dijkstra's shortest path algorithm applied to the graph of states, where the costs correspond to edge weights.
+
+Note that UCS doesn't care about a node's depth, only its cost. It also only cares about *cumulative cost* up to each point in the search. Because you're perceptive you might wonder, "What if we also considered the estimated distance to the solution and used that to pick good nodes?" That turns out to be a very good thing to wonder about, which we'll consider in the next unit.
+
+## Example: 
 
 
