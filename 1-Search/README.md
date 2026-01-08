@@ -4,11 +4,21 @@
 
 *Honghe Hani Rice Terraces in Yunnan Province, China*
 
-## Finishes 1/30
+## Deliverables due and in-class quiz: 1/30
 
 ## Overview
 
-This is it: the first sprint.
+In 2019, the AI researcher Rich Sutton wrote a short blog post that's become famous in the AI field, ["The Bitter Lesson"](http://www.incompleteideas.net/IncIdeas/BitterLesson.html). In it, he argues that progress in AI has come not from humans developing more sophisticated algorithms and domain-specific problem-solving techniques, but instead from **more computation**. As Moore' Law has increased the amount of computational power available to AI systems, the complexity of problems that researchers have been able to solve has also increased. 
+>Seeking an improvement that makes a difference in the shorter term, researchers seek to leverage their human knowledge of the domain, but the only thing that matters in the long run is the leveraging of computation.
+This is the bitter lesson: In the long run, progress in AI has almost always been due to scaling up general methods with more compute, rather than crafting sophisticated domain-specific algorithms.
+
+Sutton says that the two most important general-purpose algorithms are *search* and *learning*, because they benefit directly from increasing computational power:
+>One thing that should be learned from the bitter lesson is the great power of general purpose methods, of methods that continue to scale with increased computation even as the available computation becomes very great. The two methods that seem to scale arbitrarily in this way are search and learning.
+
+These are going to be the themes of our class. In the first half, we'll look at searching - the core technique of old-time AI. The second half will focus on machine learning, neural networks, and language models.
+
+For the first sprint, we're going to start by solving plannig problems using **state-based search**. We'll talk about how to represent as a sequence of states, and then use structured search techniques to explore the graph of state relationships, with the goal of finding an efficient plan to move from a starting state to a goal. After this unit, we'll look at variations on the basic search idea: constraints and logic problems, heuristics, and adversarial game-playing.
+
 
 ## Topics
 
