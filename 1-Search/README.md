@@ -17,7 +17,7 @@ Sutton says that the two most important general-purpose algorithms are *search* 
 
 These are going to be the themes of our class. In the first half, we'll look at searching - the core technique of classical AI. The second half will focus on machine learning, neural networks, and language models.
 
-For the first sprint, we're going to start by solving plannig problems using **state-based search**. We'll talk about how to represent as a sequence of states, and then use structured search techniques to explore the graph of state relationships, with the goal of finding an efficient plan to move from a starting state to a goal. After this unit, we'll look at variations on the basic search idea: constraints and logic problems, heuristics, and adversarial game-playing.
+For the first sprint, we're going to start by solving planning problems using **state-based search**. We'll talk about how to represent as a sequence of states, and then use structured search techniques to explore the graph of state relationships, with the goal of finding an efficient plan to move from a starting state to a goal. After this unit, we'll look at variations on the basic search idea: constraints and logic problems, heuristics, and adversarial game-playing.
 
 
 ## Topics
