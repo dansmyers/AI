@@ -81,6 +81,6 @@ reconstruct_path(goal, parent) {
 
 *From [The Artificial Intelligence Applications Institute](https://www.aiai.ed.ac.uk/~gwickler/eightpuzzle-uninf.html). Follow the link for a playable version.*
 
-The eight-puzzle is sliding block game using a 3x3 grid. There are eight tiles numbered 1-8, and one tile missing. The goal is slide the blocks and arrange the numbers in sorted order. It's a classic AI search demonstration problem. Larger variants with 15 or more blocks exist.
+The eight-puzzle is sliding block game using a 3x3 grid. There are eight tiles numbered 1-8 and one tile missing. The goal is slide the blocks and arrange the numbers in sorted order. It's a classic AI search demonstration problem. Larger variants with 15 or more blocks exist.
 
 
