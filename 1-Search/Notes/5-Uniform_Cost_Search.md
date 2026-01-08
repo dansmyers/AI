@@ -26,6 +26,55 @@ It's supposed to indicate that all paths of the same cumulative cost are being c
 
 Better names would be *lowest-cost-first search* or *cheapest-first search*.
 
+## Example search tree
+
+The method needs to keep track of the cumulative total cost for each node in the tree. The root node has a cost of 0.
+
+Suppose that we want to find the shortest path from Orlando to Miami. The first step expands Orlando to create four children with the distances to each:
+```
+                                (Orlando, 0)
+                                      |
+      -----------------------------------------------------------------
+     |                  |                     |                        | 
+(Tampa, 85)    (Gainesville, 110)    (Daytona Beach, 55)    (West Palm Beach, 170)
+```
+The method chooses the frontier node with the minimum cost, which is Daytona Beach at 55. This opens up a path to Jacksonville with a cumulative cost of 55 + 90 = 145.
+```
+                                (Orlando, 0)
+                                      |
+      -----------------------------------------------------------------
+     |                  |                     |                        | 
+(Tampa, 85)    (Gainesville, 110)    (Daytona Beach, 55)    (West Palm Beach, 170)
+                                              |
+                                     (Jacksonville, 145)
+```
+The next node of minimum cost is Tampa at 85. Expanding it creates new nodes for St. Petersburg at a cost of 110 and Naples at 255.
+```
+                                             (Orlando, 0)
+                                                   |
+                     -----------------------------------------------------------------
+                    |                  |                     |                        | 
+               (Tampa, 85)    (Gainesville, 110)    (Daytona Beach, 55)    (West Palm Beach, 170)
+                    |                                         |
+                    |                               (Jacksonville, 145) 
+                    |
+          --------------------
+         |                    |  
+(St. Petersburg, 110)    (Naples, 255)
+```
+Observe that St. Petersburg and Gainesville have the same cost, so the method will expand both before it considers any higher-cost nodes.
+
+## Optimality
+
+**Uniform-cost search will find the optimal minimum cost solution**, provided that all costs are strictly greater than 0. In this case, the method is essentially the same as Dijkstra's shortest path algorithm applied to the graph of states, where the costs correspond to edge weights.
+
+Note that UCS doesn't care about a node's depth, only its cost. It also only cares about *cumulative cost* up to each point in the search. 
+
+As the example above shows, the method might spend time expanding nodes that are close to the start state, but don't actually move toward the goal. Because you're perceptive you might wonder, "What if we also considered the estimated distance *to* the solution and used that to help pick nodes that are likely to lead in the right direction?"
+
+That turns out to be a very good thing to wonder about, which we'll consider in the next unit.
+
+
 ## Pseudocode
 
 The basic approach shown below should be familiar by this point. This version assumes that the `successors` function calculates the incremental step cost of moving to each successor state and returns its results as a `(state, step cost)` tuple.
@@ -78,13 +127,3 @@ while frontier is not empty {
 // If the loop ends, the state space was exhausted without reaching the goal
 output failure and stop
 ```
-
-## Optimality
-
-**Uniform-cost search will find the optimal minimum cost solution**, provided that all costs are strictly greater than 0. In this case, the method is essentially the same as Dijkstra's shortest path algorithm applied to the graph of states, where the costs correspond to edge weights.
-
-Note that UCS doesn't care about a node's depth, only its cost. It also only cares about *cumulative cost* up to each point in the search. Because you're perceptive you might wonder, "What if we also considered the estimated distance to the solution and used that to pick good nodes?" That turns out to be a very good thing to wonder about, which we'll consider in the next unit.
-
-## Example: 
-
-
