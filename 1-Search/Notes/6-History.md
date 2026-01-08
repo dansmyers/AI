@@ -2,6 +2,7 @@
 
 <img  src="https://github.com/user-attachments/assets/53333ee5-cfd1-4944-a619-4651c20fed5b" width = "400px" />
 
+Ellsworth Kelly, *Spectrum of Colors Arranged By Chance III* (1951)
 
 ## Overview
 
