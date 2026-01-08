@@ -81,6 +81,10 @@ reconstruct_path(goal, parent) {
 
 *From [The Artificial Intelligence Applications Institute](https://www.aiai.ed.ac.uk/~gwickler/eightpuzzle-uninf.html). Follow the link for a playable version.*
 
-The eight-puzzle is sliding block game using a 3x3 grid. There are eight tiles numbered 1-8 and one tile missing. The goal is slide the blocks and arrange the numbers in sorted order. It's a classic AI search demonstration problem. Larger variants with 15 or more blocks exist.
+The eight-puzzle is sliding block game using a 3x3 grid. There are eight tiles numbered 1-8 and one tile missing. The goal is slide the blocks and arrange the numbers in sorted order, with the empty space at the front (or in some versions, at the end). It's a classic AI search demonstration problem. Larger variants with 15 or more blocks exist.
+
+This is another case where deciding to use search is not the challenge. Instead, the problem is coming up with a representation for the solution, generating successors, and keeping track of the sequence of states. For this example, let's combine the path tracking idea with iterative deepening.
+
+
 
 
