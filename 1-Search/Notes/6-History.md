@@ -1,5 +1,8 @@
 # Maintaining the History of the Search
 
+<img  src="https://github.com/user-attachments/assets/53333ee5-cfd1-4944-a619-4651c20fed5b" width = "400px" />
+
+
 ## Overview
 
 We know how to use search to explore a search tree and find the goal state. We also know how to use uniform-cost search to find a solution with minimum total cost. However, we've only considered *discovering* that the solution exists. We also need to **return the sequence of states** on the solution path, so we can construct the plan of actions that moves from the start state to the goal.
