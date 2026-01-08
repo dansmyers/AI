@@ -1,8 +1,10 @@
 # Uniform-Cost Search
 
-<img src="../Images/florida_cities.png" width="400px" />
 
 ## Overview
+
+<img src="../Images/florida_cities.png" width="400px" />
+
 
 Let's return to our earlier example of finding routes between cities in Florida.
 
