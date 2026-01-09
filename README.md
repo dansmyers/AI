@@ -108,7 +108,8 @@ Quizzes for each ending sprint will be given in class on the start day of the ne
 
 ### Other important dates
 
-- First day of class: January 12
+- First day of class: January 14
+- MLK day (no class): January 19
 - Last day of class: April 28
 - Spring break: March 16 to March 22
 - Last day to drop the class: January 27
