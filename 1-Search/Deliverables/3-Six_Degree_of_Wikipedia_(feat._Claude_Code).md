@@ -32,7 +32,18 @@ The other major part of this project is using **Claude Code**, an AI programming
 
 ### Chat about the design
 
-###
+### `claude.md`
+
+### Make a plan
+
+### Develop incrementally
+
+### End-to-end testing
+
+
+## Extension: Adding a database that caches links
+
+
 
 
 
