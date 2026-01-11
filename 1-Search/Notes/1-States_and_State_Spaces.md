@@ -1,5 +1,7 @@
 # States and State Spaces
 
+<img src="https://imgs.xkcd.com/comics/boat_puzzle.png" width="600px" />
+
 
 ## River crossing problem
 
