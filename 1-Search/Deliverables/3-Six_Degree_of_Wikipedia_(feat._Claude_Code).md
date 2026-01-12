@@ -22,17 +22,70 @@ In this project you're going to write a web app that can solve Wikipedia connect
 
 The other major part of this project is using **Claude Code**, an AI programming tool made by Anthropic. Claude Code is an *agentic AI*, meaning that it runs in a loop, can use tools, make plans, and evaluate its own progress. As we'll see, it has the ability to take a general spec for a program and convert it to code in a frankly mind-blowing way.
 
-***Agentic software development is the future of programming***.
+The instructions below will show you how to set up Claude Code and work through a basic project. You'll then get to work on adding some more features on your own.
+
+## Details
+
+- Create a web application that can complete Wikipedia article chains.
+
+- The front end is simple: two input boxes for the titles of the start and end articles. Use HTML, CSS, vanilla JavaScript. Complex frameworks are unnecessary.
+
+- The backend shoud be written in Python Flask. It will define an API to receive inputs from the front end and return the results of searches. Working out the design of this API is part of the project.
+
+- Use the Wikimedia API to retrieve the content of Wikipedia pages. When you retrieve a page, parse its content to extract its links, which become part of the frontier set of the search. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
+
+- Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but you have to be able to work backwards from the goal in order to implement it.
+
+- Make whatever other reasonable choices seem necessary in order to implement the project.
 
 ## Claude Code setup
 
+1. Create a new GitHub Codespace
+
+2. Run the following command in your terminal to install the Claude Code application in your workspace
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+3. Type `claude` in the terminal to start the program
+
+4. You will have to authenticate your account. To do this in Codespaces, I had to follow the link that Claude prints in the terminal, which will prompt you to log in to your Anthropic account. Once you've done that, you should get a key that you can paste back into your terminal.
+
+5. Answer the other setup questions. The defaults should be fine.
+
+At the end, you should see a prompt in your terminal waiting for you to input a command for the agent.
+
+Note: you have two other options for running Claude Code:
+
+- By downloading Claude Desktop and running on your local computer. Depending on the permissions you set, this would allow Claude Code to interact with your personal files. I don't recommend this right now - it's safer to run in a sandboxed environment - but there are many people experimenting with productivity apps built by running agents on their local computers.
+
+- By using the web interface. This is sandboxed, but it doesn't have the full features of the terminal version right now.
+
+I'm using the terminal version in this class because it has some useful features that we'll be able to explore in future projects.
 
 
 ## Process
 
 ### Chat about the design
 
+A good strategy is to start by chatting about the project. The goal of this step is to clarify your design and produce a spec document that you'll then use to drive the development process within Claude Code.
+
+I prefer to do this in the regular chat window. Open up a new Claude chat and prompt it to discuss the project with you. Here's an example:
+> I want to create a web application that completes Wikipedia chains. It should have the following features:
+> 
+> *LIST OF FEATURES FROM ABOVE GOES HERE*
+>
+> Discuss this project with me and help me clarify the design and produce a spec that I can give to my automated coding agent. You don't need to write any code yet, just discuss the project so that we can create a spec.
+
+This should kick off a few rounds of discussion as you work through some design details.
+
+At the end of the discussion, ask Claude to output the spec in Markdown format so you can copy it to your agent.
+
 ### `claude.md`
+
+In Claude Code, `claude.md` is the project overview file. It's *automatically loaded* with every request, so it's the place for putting essential information about the project goal, code structure, desired behaviors, style, etc. that you want Claude to have as context.
+
+
 
 ### Make a plan
 
