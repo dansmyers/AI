@@ -29,6 +29,11 @@ The other major part of this project is using **Claude Code**, an AI programming
 
 The instructions below will show you how to set up Claude Code and work through a basic project. You'll then get to work on adding some more features on your own.
 
+Claude Code is not the only powerful AI agent. OpenAI's has one called [Codex](https://chatgpt.com/codex) (using GPT-5.2) and Google has [Antigravity](https://antigravity.google/) (powered by Gemini 3). All three tools are broadly similar, although one agent may be better than another for some kinds of problems.
+
+**For this class, we're going to use Claude Code**.
+
+
 ## Details
 
 - Create a web application that can complete Wikipedia article chains.
@@ -37,9 +42,9 @@ The instructions below will show you how to set up Claude Code and work through 
 
 - The backend shoud be written in Python Flask. It will define an API to receive inputs from the front end and return the results of searches. Working out the design of this API is part of the project.
 
-- Use the Wikimedia API to retrieve the content of Wikipedia pages. When you retrieve a page, parse its content to extract its links, which become part of the frontier set of the search. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
+- Use the Wikimedia API to retrieve the content of Wikipedia pages. When you retrieve a page, parse its content to extract its links, which become part of the frontier set of the search. You only need to use article links in the main Wikipedia space; don't follow links to admin pages, discussions, images, etc. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
 
-- Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but you have to be able to work backwards from the goal in order to implement it.
+- Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but requires working backwards from the goal, which isn't possible for some problems.
 
 - Don't implement any caching of results for the first version.
 
@@ -66,16 +71,28 @@ At the end, you should see a prompt in your terminal waiting for you to input a 
 
 Note: you have three other options for running Claude Code:
 
-- By downloading Claude Desktop and running on your local computer. Depending on the permissions you set, this would allow Claude Code to interact with your personal files. I don't recommend this right now - it's safer to run in a sandboxed environment - but there are many people experimenting with productivity apps built by running agents on their local computers.
+- By downloading [Claude Desktop](https://code.claude.com/docs/en/desktop) and running on your local computer. Depending on the permissions you set, this would allow Claude Code to interact with your personal files. I don't recommend this right now - it's safer to run in a sandboxed environment - but there are many people experimenting with productivity apps built by running agents on their local computers.
 
-- You could also do the terminal install within the Terminal app of your personal computer. This has the same tradeoffs as using the desktop version with a little more power due to running in the terminal.
+- You could also do the terminal install within the Terminal app of your personal computer. This has the same tradeoffs as using the desktop version with a little more power via the command line interface.
 
-- By using the web interface. This is sandboxed, but it doesn't have the full features of the terminal version right now.
+- By using the [web interface](https://code.claude.com/docs/en/claude-code-on-the-web). This is sandboxed, but it doesn't have the full features of the terminal version right now.
 
 I'm using the terminal version in this class because it has some useful features that we'll be able to explore in future projects. 
 
 
 ## Process
+
+<img src="https://www.staugustine.com/gcdn/authoring/2016/04/20/NSAR/ghows-LK-dcc0634b-f43a-4659-b025-d059371857a0-d477868b.jpeg" width="400px" />
+
+*Gomek the crocodile being fed a whole nutria at the St. Augustine Alligator Farm. Gomek was one of the largest saltwater crocodiles ever kept in captivity. He was surprisingly docile: Gomek was "tame" enough to allow his handlers to feed him from 1 meter away, which Wikipedia calls, "a normally suicidal proximity".*
+
+You probably could throw a short prompt into Claude Code and have it build this project in one shot - which is ***completely insane*** - but it will be better in the long run if you cultivate a *structured development process*.
+
+Coding with AI agents is very much an evolving art, but here are a few principles that I've read:
+
+- Claude Code is not your friend. Do not anthropomorphize it. It is like Gomek the crocodile: incredibly strong, surprisingly docile, but fundamentally wild. It will usually help you, but also might decide to delete your production database.
+
+- 
 
 ### Chat about the design
 
