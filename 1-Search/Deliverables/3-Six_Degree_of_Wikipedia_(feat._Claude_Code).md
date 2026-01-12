@@ -46,6 +46,8 @@ Claude Code is not the only powerful AI agent. OpenAI's has one called [Codex](h
 
 - Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but requires working backwards from the goal, which isn't possible for some problems.
 
+- Cut off the search and return failure if it doesn't complete within a chain of seven articles, corresponding to a max search depth of four.
+
 - Don't implement any caching of results for the first version.
 
 - Using a single thread to manage the search is fine; you don't need multiple threads running in parallel.
@@ -84,15 +86,21 @@ I'm using the terminal version in this class because it has some useful features
 
 <img src="https://www.staugustine.com/gcdn/authoring/2016/04/20/NSAR/ghows-LK-dcc0634b-f43a-4659-b025-d059371857a0-d477868b.jpeg" width="400px" />
 
-*Gomek the crocodile being fed a whole nutria at the St. Augustine Alligator Farm. Gomek was one of the largest saltwater crocodiles ever kept in captivity. He was surprisingly docile: Gomek was "tame" enough to allow his handlers to feed him from 1 meter away, which Wikipedia calls, "a normally suicidal proximity".*
+*Gomek the crocodile being fed a whole nutria at the St. Augustine Alligator Farm. He was one of the largest saltwater crocodiles ever kept in captivity, measuring almost 18 feet long and nearly 2000 pounds. Gomek was surprisingly docile: he was "tame" enough to allow his handlers to enter his habitat and feed him from only 1 meter away. He died of heart disease in 1997 at an estimated age of 70. His preserved body is on permanent display at the Alligator Farm.*
 
 You probably could throw a short prompt into Claude Code and have it build this project in one shot - which is ***completely insane*** - but it will be better in the long run if you cultivate a *structured development process*.
 
-Coding with AI agents is very much an evolving art, but here are a few principles that I've read:
+Coding with AI agents is very much an evolving art, but here are a few principles: 
 
-- Claude Code is not your friend. Do not anthropomorphize it. It is like Gomek the crocodile: incredibly strong, surprisingly docile, but fundamentally wild. It will usually help you, but also might decide to delete your production database.
+- Claude Code is not your friend. Do not anthropomorphize it. It is like Gomek the crocodile: incredibly strong, surprisingly docile, but fundamentally wild. It will fix your trickiest bug, but also might decide to delete your production database.
 
-- 
+- The Dark Power of AI models is generating huge amounts of code quickly. This Power will tempt you, *but you must resist it*. Keep control of your generations so that you're never too far from a well-understood working version.
+
+- The keys to AI-powered development are the same as regular pre-AI development: Have a clear design, document your choices, keep components encapsulated, think about interfaces, etc. We've talked about all of these things in previous classes.
+
+- Automated testing is essential. Adopt the Cold War strategy of [*Trust, but verify*](https://en.wikipedia.org/wiki/Trust,_but_verify) in your interactions.
+
+- Human review and merging, rather than code generation, becomes the bottleneck.
 
 ### Chat about the design
 
@@ -121,15 +129,48 @@ Copy the project spec from your chat into the file.
 
 ### Make a plan
 
+The spec is a description of what you want to build. The next step is to turn that into a plan, with phases a steps that Claude can execute.
+
+In the terminal, prompt Claude Code to read the project description in `claude.md` and generate a step-by-step plan to build it. Output the plan to a file called `plan.md` so you can review it. The plan should break the implementation up into distinct phases that correspond to implementing major features. Make sure that each phase includes testing steps that the project must pass before going on to the next phase.
+
+Read the plan and make sure it looks reasonable before proceeding.
 
 
 ### Develop incrementally
 
-### End-to-end testing
+As we said above, you must resist the temptation to one-shot everything. Instead, you want to **build one phase at a time**. Each generation should never be too far from a well-understood version that you can roll back to if necessary.
 
+Start prompting Claude to build the project using the phases in `plan.md`. Make sure to test each phase before moving on to the next.
+
+As you're working, Claude will prompt you to grant permissions for tools like `python3` and `curl`. Go ahead and approve these for the current project. There is an option to `--dangerously-skip-permissions` (aliased to `--yolo`) that lets Claude have full access to the current environment with no checks, but you want to keep control over what it's doing on each step.
+
+If you run into problems, it's often easier to just regenerate the misbehaving component with clearer instructions, rather than trying to fix what you have.
+
+### User testing
+
+You still have to verify that the app works! Run it, and experiment with some article chains. It will be slow, but that's okay for the first version. Fix any problems that come up and make any changes that you want.
 
 ## Extension: Adding a database that caches links
 
+Most articles have dozens to hundreds of links. If each link requires a separate API call, then you can easily end up making tens of thousands of requests for even a small search.
+
+Let's improve performance by *caching* page links in a permanent backend database. Every time you read a new page, extract its links and store them in the DB. Then, if you need that page again, you can read its links from the local DB rather than making API requests. In more detail:
+
+- When you need a page, first check if it's in the DB
+- If so, query its linked pages from the DB and put them in the frontier
+- If not, fetch the page using the API, parse its links, then add them as new entries in the DB so they're now cached for future requests
+
+Note that you're only caching the *links* on a page for the purposes of the search, not the complete page content. Don't worry about checking for page updates or timeliness.
+
+Use Claude Code to modify your app to implement link caching. Use SQLite as the relational database. Follow the same process:
+
+- Chat about the design, DB schema, and other details
+
+- Produce a revised spec that includes information on the database
+
+- Prompt Claude to update the `plan.md` document to include DB caching using the information in the spec
+
+- Build and test incrementally, then test yourself. Try contructing a chain, then running it again to verify that the second version uses the cache and completes much faster.
 
 
 
