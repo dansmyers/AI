@@ -2,7 +2,7 @@
 
 <img src="https://substackcdn.com/image/fetch/$s_!PAxG!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa137509b-3774-4b96-8727-66f4cf7ae376_1920x1080.png" width="600px" />
 
-*Retro-futurism is when you run a powerful AI in the plain text terminal. Via [The Discourse](https://thediscourse.co/p/claude-code).*
+*Retro-futurism is when the AI runs in the terminal. Via [The Discourse](https://thediscourse.co/p/claude-code).*
 
 ## Overview
 
