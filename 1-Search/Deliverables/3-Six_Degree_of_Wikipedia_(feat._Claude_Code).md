@@ -1,5 +1,9 @@
 # Six Degrees of Wikipedia (feat. Claude Code)
 
+<img src="https://substackcdn.com/image/fetch/$s_!PAxG!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa137509b-3774-4b96-8727-66f4cf7ae376_1920x1080.png" width="600px" />
+
+*Retro-futurism is when you run the world's most powerful AI in the plain text terminal. Via [The Discourse](https://thediscourse.co/p/claude-code).
+
 ## Overview
 
 It's a bit old-fashioned at this point, but you might have heard of the [Six Degrees of Kevin Bacon](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon): the idea that any actor can be linked to Kevin Bacon through shared film roles. The general concept is the **six degrees of separation**, which theorizes that almost everyone on Earth is separated by at most six personal connections. Similar ideas exist in other fields:
@@ -12,11 +16,12 @@ It's a bit old-fashioned at this point, but you might have heard of the [Six Deg
 
 A more recent version of the game is the Six Degrees of Wikipedia: connect one article to another by following a chain of links. This leads directly to the [Wikipedia speedrun](https://wikispeedruns.com/) where the goal is to connect articles as fast as possible.
 
-In this project you're going to write a web app that can solve Wikipedia connections. This will let us practice using state-based search on a bigger application. Along the way, you'll get to practice:
+In this project you're going to write a web app that can solve Wikipedia connections. This will let us practice using state-based search on a bigger application. Along the way, you'll also get to try:
 
 - Making a basic web application with a front-end, back-end, and API
 - Making API calls to retrieve Wikipedia pages
 - Using *bidirectional iterative deepening* to make the search more efficient
+- Caching search results
 
 ## Claude Code
 
@@ -35,6 +40,10 @@ The instructions below will show you how to set up Claude Code and work through 
 - Use the Wikimedia API to retrieve the content of Wikipedia pages. When you retrieve a page, parse its content to extract its links, which become part of the frontier set of the search. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
 
 - Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but you have to be able to work backwards from the goal in order to implement it.
+
+- Don't implement any caching of results for the first version.
+
+- Using a single thread to manage the search is fine; you don't need multiple threads running in parallel.
 
 - Make whatever other reasonable choices seem necessary in order to implement the project.
 
@@ -55,9 +64,11 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 At the end, you should see a prompt in your terminal waiting for you to input a command for the agent.
 
-Note: you have two other options for running Claude Code:
+Note: you have three other options for running Claude Code:
 
 - By downloading Claude Desktop and running on your local computer. Depending on the permissions you set, this would allow Claude Code to interact with your personal files. I don't recommend this right now - it's safer to run in a sandboxed environment - but there are many people experimenting with productivity apps built by running agents on their local computers.
+
+- You could also do the terminal install within the Terminal app of your personal computer. This has the same tradeoffs as using the desktop version with a little more power due to running in the terminal.
 
 - By using the web interface. This is sandboxed, but it doesn't have the full features of the terminal version right now.
 
