@@ -61,7 +61,7 @@ Note: you have two other options for running Claude Code:
 
 - By using the web interface. This is sandboxed, but it doesn't have the full features of the terminal version right now.
 
-I'm using the terminal version in this class because it has some useful features that we'll be able to explore in future projects.
+I'm using the terminal version in this class because it has some useful features that we'll be able to explore in future projects. 
 
 
 ## Process
@@ -85,9 +85,15 @@ At the end of the discussion, ask Claude to output the spec in Markdown format s
 
 In Claude Code, `claude.md` is the project overview file. It's *automatically loaded* with every request, so it's the place for putting essential information about the project goal, code structure, desired behaviors, style, etc. that you want Claude to have as context.
 
-
+Create `claude.md` in your Codespace:
+```
+touch claude.md
+```
+Copy the project spec from your chat into the file.
 
 ### Make a plan
+
+
 
 ### Develop incrementally
 
