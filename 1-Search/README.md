@@ -36,6 +36,10 @@ Complete the projects in the `Deliverables` directory
 
 ## Resources
 
-Start with my notes on the basic concepts in the `Notes` directory.
+Materials for this unit are pretty minimal:
 
-After you've read those, look sections 1.1-1.3 of the [free Berkeley AI text](https://inst.eecs.berkeley.edu/~cs188/textbook/search/). We'll return to this book over the course of the semester.
+- Start with my notes on the basic concepts in the `Notes` directory.
+
+- After you've read those, look sections 1.1-1.3 of the [free Berkeley AI text](https://inst.eecs.berkeley.edu/~cs188/textbook/search/). We'll return to this book over the course of the semester.
+
+- If you'd like to see a video discussion of the breadth-first and depth-first search algorithms, [this one is pretty good](https://www.youtube.com/watch?v=pcKY4hjDrxk).
