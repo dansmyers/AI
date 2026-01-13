@@ -165,7 +165,7 @@ You must make a reasonable attempt on every part of an assignment to receive cre
 | Quiz score below 80% | Fraction of a letter grade |
 | Quiz score below 60% | One full letter grade |
 
-**To earn a higher grade**, you can complete additional work that shows deeper engagement with the course goals. Each challenge project that you complete will **boost your grade by one part of a letter** (e.g., B to B+). To earn an A, complete all the requirements for a B plus three additional challenge projects.
+**To earn a higher grade**, you can complete additional work that shows deeper engagement with the course goals. Each challenge project that you complete will **boost your grade by one part of a letter** (e.g., B to B+). To earn an A, complete all the requirements for a B and three additional challenge projects.
          
 If your grade drops, you can still complete extra work to boost it up. For example, you could get partial credit on a regular assignment, but complete a challenge project. The two would cancel each other out and your grade would remain a B.
 
