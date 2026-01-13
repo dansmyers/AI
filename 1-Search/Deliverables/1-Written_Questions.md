@@ -35,4 +35,4 @@ Consider a problem with branching factor *b* and a solution that occurs as the l
 
 How many nodes will be created and expanded by iterative deepening, inclusive of all depths considered during the search? Assume that the method always moves to the leftmost unexplored node on the deepest possible level when choosing the next path to explore.
 
-Suppose that expanding a node takes 1 ms and each node consumes 100 bytes of memory. Calculate the total time and memory requirements of the two searches for a problem with *b* = 100 and *d* = 5.
+Suppose that expanding a node takes 1 ms and each node consumes 100 bytes of memory. Calculate the total time and memory requirements of the two searches for a problem with *b* = 100 and *d* = 5. Repeat for a problem with *b* = 5 and *d* = 100.
