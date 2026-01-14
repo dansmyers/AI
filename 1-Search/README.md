@@ -1,8 +1,8 @@
 # Sprint 1: Solving Problems by Searching
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Terrace_field_yunnan_china_denoised.jpg" width="600px" />
+<img src="https://user-images.githubusercontent.com/775050/62004829-79b29400-b12a-11e9-98f7-45de227e8c73.png" width="600px" />
 
-*Honghe Hani Rice Terraces in Yunnan Province, China*
+*SHRDLU, created by Terry Winograd in the early 1970s, was an important early AI system. SHRDLU used a model "blocks world" with blocksof different sizes, shapes, and colors arranged on a table. The system had the ability to take commands in natural language, solve planning problems to rearrange the blocks into a desired configuration, and answer questions about their spatial relationships. The name SHRDLU comes from the printing industry. The old hot type printing systems organized letters in frequency order, which led to ETAOIN SHRDLU becoming a nonsense phrase that was sometimes accidentally printed in newspapers.*
 
 ## Deliverables due and in-class quiz: 1/30
 
