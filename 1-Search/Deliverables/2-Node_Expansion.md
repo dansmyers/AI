@@ -1,5 +1,10 @@
 # Nodes
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Terrace_field_yunnan_china_denoised.jpg" width="600px" />
+
+*Honghe Hani Rice Terraces in Yunnan Province, China*
+
+
 ## Overview
 
 These questions ask you to implement search algorithms for some classic problems. For each problem, you'll count the number of nodes created and expanded by each method, then show how those quantities change as a choice of the algorithm and the size of the problem.
