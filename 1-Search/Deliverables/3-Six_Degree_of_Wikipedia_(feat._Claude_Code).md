@@ -132,7 +132,7 @@ Create `claude.md` in your Codespace:
 touch claude.md
 ```
 
-Guides recommend keeping `claude.md` relatively short. Edit it when you identify problems that you want to clarify. Here's an exmaple that I asked Claude to generate from the spec:
+Guides recommend keeping `claude.md` relatively short. Edit it when you identify problems with Claude's understanding of the project/guidelines/style. Here's an example that I asked Claude to generate from the spec:
 ```
 # Wikipedia Chain Finder
 
