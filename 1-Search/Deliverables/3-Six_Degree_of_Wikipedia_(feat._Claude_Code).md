@@ -94,6 +94,8 @@ Coding with AI agents is very much an evolving art, but here are a few principle
 
 - Claude Code is not your friend. Do not anthropomorphize it. It is like Gomek the crocodile: incredibly strong, surprisingly docile, but fundamentally wild. It will fix your trickiest bug, but also might decide to delete your production database.
 
+- Therefore, **downside protection** is a key part of AI programming. You need to avoid situations where one bad generation can ruin your code. Use version control: start each session with a fresh branch and use frequent commits.
+
 - The Dark Power of AI models is generating huge amounts of code quickly. This Power will tempt you, *but you must resist it*. Keep control of your generations so that you're never too far from a well-understood working version.
 
 - The keys to AI-powered development are the same as regular pre-AI development: Have a clear design, document your choices, keep components encapsulated, think about interfaces, etc. We've talked about all of these things in previous classes.
@@ -117,6 +119,10 @@ This should kick off a few rounds of discussion as you work through some design 
 
 At the end of the discussion, ask Claude to output the spec in Markdown format so you can copy it to your agent.
 
+### Specs document
+
+Make a new file called `specs.md`. Copy the complete project spec from your chat into the file. This is the record of the top-level design.
+
 ### `claude.md`
 
 In Claude Code, `claude.md` is the project overview file. It's *automatically loaded* with every request, so it's the place for putting essential information about the project goal, code structure, desired behaviors, style, etc. that you want Claude to have as context.
@@ -125,13 +131,46 @@ Create `claude.md` in your Codespace:
 ```
 touch claude.md
 ```
-Copy the project spec from your chat into the file.
+
+Guides recommend keeping `claude.md` relatively short. Edit it when you identify problems that you want to clarify. Here's an exmaple that I asked Claude to generate from the spec:
+```
+# Wikipedia Chain Finder
+
+## Project Summary
+A web app that finds the shortest path of links between two Wikipedia articles using bidirectional search. Flask backend with vanilla JS frontend.
+
+## Core Requirements
+- User enters start/end article titles, app finds the shortest link path connecting them
+- Maximum search depth: 7 links
+- Uses Wikipedia MediaWiki API (no local database)
+- Only mainspace articles (namespace 0)—no File:, Wikipedia:, Help:, etc.
+- Bidirectional iterative deepening search algorithm
+
+## Architecture
+- **Backend**: Python/Flask with background threading for search jobs
+- **Frontend**: Vanilla HTML/CSS/JS (no frameworks)
+- **Communication**: Polling pattern—POST creates job, GET polls for status every 1-2 seconds
+
+## API Endpoints
+- `POST /api/search` — Start search, returns `job_id`
+- `GET /api/search/<job_id>` — Poll status, returns progress or results
+
+## Coding Standards
+- Keep dependencies minimal (Flask, requests only)
+- No classes where simple functions suffice
+- Type hints on all function signatures
+- Docstrings on public functions
+- Handle Wikipedia API pagination (continuation tokens)
+- Include reasonable error handling for API failures
+- Set a polite User-Agent header for Wikipedia requests
+```
+
 
 ### Make a plan
 
 The spec is a description of what you want to build. The next step is to turn that into a plan, with phases a steps that Claude can execute.
 
-In the terminal, prompt Claude Code to read the project description in `claude.md` and generate a step-by-step plan to build it. Output the plan to a file called `plan.md` so you can review it. The plan should break the implementation up into distinct phases that correspond to implementing major features. Make sure that each phase includes testing steps that the project must pass before going on to the next phase.
+In the terminal, prompt Claude Code to read the project description in `specs.md` and generate a step-by-step plan to build it. Output the plan to a file called `plan.md` so you can review it. The plan should break the implementation up into distinct phases that correspond to implementing major features. Make sure that each phase includes testing steps that the project must pass before going on to the next phase.
 
 Read the plan and make sure it looks reasonable before proceeding.
 
