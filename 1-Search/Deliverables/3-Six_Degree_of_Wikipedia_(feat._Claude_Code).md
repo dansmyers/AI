@@ -168,7 +168,7 @@ A web app that finds the shortest path of links between two Wikipedia articles u
 
 ### Make a plan
 
-The spec is a description of what you want to build. The next step is to turn that into a plan, with phases a steps that Claude can execute.
+The spec is a description of what you want to build. The next step is to turn that into a plan, with phases and steps that Claude can execute.
 
 In the terminal, prompt Claude Code to read the project description in `specs.md` and generate a step-by-step plan to build it. Output the plan to a file called `plan.md` so you can review it. The plan should break the implementation up into distinct phases that correspond to implementing major features. Make sure that each phase includes testing steps that the project must pass before going on to the next phase.
 
