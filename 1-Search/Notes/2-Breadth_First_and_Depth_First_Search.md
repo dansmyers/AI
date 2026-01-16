@@ -93,17 +93,17 @@ DFS uses a **last-in-first-out stack** as its data structure. This corresponds t
 
 In our Florida example, we'd start by expanding Tallahassee, as before. The frontier stack looks like the following:
 ```
- Jacksonville
-   Pensacola
   Gainesville
+   Pensacola
+  Jacksonville
 ---------------
 ```
-The next step chooses the top of the stack, Jacksonville in this case, and pushes its successors on top:
+The next step chooses the top of the stack, Gainesville in this case, and pushes its successors on top:
 ```
      Tampa
     Orlando
    Pensacola
-  Gainesville
+  Jacksonville
 ---------------
 ```
 The next step will expand Tampa, which will lead to finding the path to Naples and then Miami.
