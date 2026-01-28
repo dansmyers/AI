@@ -14,7 +14,7 @@ These questions ask you to implement search algorithms for some classic problems
 
 Return to the *n*-queens problem from the notes.
 
-Implement the solution to the lights out puzzle using BFS, then use your method to solve for progressively larger grids of *N* = 3, 4, 5, etc. Record the *number of nodes created* and the *number of nodes expanded* to find the solution for each value of *N*. Run up to a value of *N* that takes ~1 minute to solve using BFS.
+Implement the solution to the *n*-queens puzzle using BFS, then use your method to solve for progressively larger grids of *N* = 3, 4, 5, etc. Record the *number of nodes created* and the *number of nodes expanded* to find the solution for each value of *N*. Run up to a value of *N* that takes ~1 minute to solve using BFS.
 
 Code a second solution using iterative deepening. Repeat your experiment, again recording the number of nodes created and expanded.
 
