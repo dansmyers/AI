@@ -42,9 +42,11 @@ Claude Code is not the only powerful AI agent. OpenAI's has one called [Codex](h
 
 - The backend shoud be written in Python Flask. It will define an API to receive inputs from the front end and return the results of searches. Working out the design of this API is part of the project.
 
-- Use the Wikimedia API to retrieve the content of Wikipedia pages. When you retrieve a page, parse its content to extract its links, which become part of the frontier set of the search. You only need to use article links in the main Wikipedia space; don't follow links to admin pages, discussions, images, etc. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
+- Use the Wikimedia API to retrieve the outgoing links on a particular page. You only need to use article links in the main Wikipedia space; don't follow links to admin pages, discussions, images, etc. Fetching pages dynamically using the API is slower than using a pre-computed database of page links, but the database of page-to-page links for Wikipedia is too large for us to feasibly use for this project.
 
 - Use the *bidirectional iterative deepening* search algorithm. The method runs two iterative deepening searches, one starting at the source and the other at the end, looking for a node where they meet in the middle. Bidirectional search can be significantly faster than a single-direction search but requires working backwards from the goal, which isn't possible for some problems.
+
+- To run the backwards search, you need to find the *incoming* links for a page - the pages that link to it. The Wikimedia API has a feature that returns the backlinks for a given page.
 
 - Cut off the search and return failure if it doesn't complete within a chain of seven articles, corresponding to a max search depth of four.
 
