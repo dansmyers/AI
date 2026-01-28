@@ -42,6 +42,6 @@ Let's consider a heuristic for the grid-based motion planning problem. A basic s
 
 Therefore, let's define the heuristic as follows. Let (*g*<sub>*x*</sub>, *g*<sub>*y*</sub>) be the coordinates of the goal and (*r*<sub>*x*</sub>, *r*<sub>*y*</sub>) be the coordinates of the robot. The heuristic is the sum of the horizontal and vertical distances from the robot to the goal:
 
-$$h(x, y) = \abs{g_x - r_x} + \abs{g_y - r_y}$$ 
+$$h(x, y) = |g_x - r_x| + |g_y - r_y|$$ 
 
 ## 
