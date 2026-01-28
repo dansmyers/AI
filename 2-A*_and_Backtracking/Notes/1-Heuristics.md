@@ -38,7 +38,9 @@ We'll also have to define (in the next note), some properties that make a heuris
 
 ## Manhattan distance
 
-Let's consider a heuristic for the grid-based motion planning problem. A basic strategy for designing heuristics is to **relax the constraints**. Imagine that the grid world had no walls: then you could just move directly to the solution without having to go around any barriers.
+Let's consider a heuristic for the grid-based motion planning problem. A basic strategy for designing heuristics is to **relax the constraints**. That is, think about how you could easily solve the problem if your choices weren't restricted. That approach is guaranteed to give you a *lower bound* on the real cost to reach the solution.
+
+Imagine that you could ignore the walls in the grid world: then you could just move directly to the solution without having to go around any barriers. The shortest path would be the direct horizontal and vertical lines that connect the start to the destination.
 
 Therefore, let's define the heuristic as follows. Let (*g*<sub>*x*</sub>, *g*<sub>*y*</sub>) be the coordinates of the goal and (*r*<sub>*x*</sub>, *r*<sub>*y*</sub>) be the coordinates of the robot. The heuristic is the sum of the absolute horizontal and vertical distances from the robot to the goal:
 
@@ -46,19 +48,39 @@ $$h(r_x, r_y) = |g_x - r_x| + |g_y - r_y|$$
 
 This is called the **Manhattan distance**, or *city-block distance*, because it measures the distance between two points in terms of their horizontal and vertical distance on a grid.
 
-Here's a visual example.
+Here's a visual example. Normally `O` would have to go around the walls, but the heuristic allows you to consider the shortest path as if the walls didn't exist. The `/` denotes places where the direct path cuts through walls.
 ```
 ##############################
 #                     #      #
 #    #####            #      #
-#####                 ########
-#        ###############     #
-#                      O     #
-#     ######           .     #
-#                      .     #
-#        X..............     #
+#####      O          ########
+#        ##/############     #
+#          .                 #
+#     #####/                 #
+#          .                 #
+#        X..                 #
 ##############################
 ```
-The Manhattan distance from `O` to `X` is 17 moves.
+The Manhattan distance from `O` to `X` is 7 moves.
+
+### Some heuristics are better than others
+
+You could choose to relax the constraints by letting the robot immediately jump to the target in 1 move. This would be equivalent to a function *h*(*n*) = 1 for all *n* that aren't the goal state.
+
+This is a valid heuristic, in the sense that it gives a lower bound on the real cost to reach the solution, but it's not a *useful* one. Every state has the same heuristic cost, so the function gives you no information to prioritize one path over another.
+
+The "jump to the solution" heuristic is *a* lower bound, but it's a very weak lower bound compared to the city-block distance. If a problem admits multiple choices of heuristics, we're going to prefer the one that gives the *tightest* possible lower bound; that is, the one that gives results closest to the true path cost.
+
 
 ## Greedy search
+
+Our first informed search algorithm is **greedy search**. At each step, greedy search chooses to expand the node with the minimum heuristic distance to the goal. Intuitively, it picks what seems to be the most promising solution path at each step. 
+
+Greedy search is *forward looking*. It doesn't consider the accumulated cost to reach a state, only the estimated distance to reach the goal; it always tries to take the step that *appears* to move most aggressively toward the goal. Uniform-cost search, by contrast, was backward looking: it always expanded the node with the minimum distance from the start.
+
+On some problems, greedy search can perform well. If the heuristic reliably guides the algorithm towards the goal, it will probably find a good path without expanding very many extra nodes. However,
+
+- Greedy search isn't guaranteed to find the optimal solution
+- It can perform like a bad DFS, where it gets lost on unproductive paths
+
+We'd like to have method that uses a heuristic to guide the search, but offers better guarantees than pure greedy search. The next note decribes the algorithm that does exactly that: **A\* search**.
