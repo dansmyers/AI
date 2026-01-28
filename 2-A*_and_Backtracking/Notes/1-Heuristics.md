@@ -40,8 +40,25 @@ We'll also have to define (in the next note), some properties that make a heuris
 
 Let's consider a heuristic for the grid-based motion planning problem. A basic strategy for designing heuristics is to **relax the constraints**. Imagine that the grid world had no walls: then you could just move directly to the solution without having to go around any barriers.
 
-Therefore, let's define the heuristic as follows. Let (*g*<sub>*x*</sub>, *g*<sub>*y*</sub>) be the coordinates of the goal and (*r*<sub>*x*</sub>, *r*<sub>*y*</sub>) be the coordinates of the robot. The heuristic is the sum of the horizontal and vertical distances from the robot to the goal:
+Therefore, let's define the heuristic as follows. Let (*g*<sub>*x*</sub>, *g*<sub>*y*</sub>) be the coordinates of the goal and (*r*<sub>*x*</sub>, *r*<sub>*y*</sub>) be the coordinates of the robot. The heuristic is the sum of the absolute horizontal and vertical distances from the robot to the goal:
 
-$$h(x, y) = |g_x - r_x| + |g_y - r_y|$$ 
+$$h(r_x, r_y) = |g_x - r_x| + |g_y - r_y|$$ 
 
-## 
+This is called the **Manhattan distance**, or *city-block distance*, because it measures the distance between two points in terms of their horizontal and vertical distance on a grid.
+
+Here's a visual example.
+```
+##############################
+#                     #      #
+#    #####            #      #
+#####                 ########
+#        ###############     #
+#                      O     #
+#     ######           .     #
+#                      .     #
+#        X..............     #
+##############################
+```
+The Manhattan distance from `O` to `X` is 17 moves.
+
+## Greedy search
