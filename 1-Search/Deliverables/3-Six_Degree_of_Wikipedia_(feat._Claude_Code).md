@@ -199,9 +199,11 @@ Let's improve performance by *caching* page links in a permanent backend databas
 
 - When you need a page, first check if it's in the DB
 - If so, query its linked pages from the DB and put them in the frontier
-- If not, fetch the page using the API, parse its links, then add them as new entries in the DB so they're now cached for future requests
+- If not, fetch the page's links using the API, then add them as new entries in the DB so they're now cached for future requests
 
 Note that you're only caching the *links* on a page for the purposes of the search, not the complete page content. Don't worry about checking for page updates or timeliness.
+
+You'll also want a way to apply this to the bidirectional search, so that you can retrieve the backlinks for a page you've seen before. Chat about how to incorporate that into your design. You should be able to do this without creating a separate database of backlinks.
 
 Use Claude Code to modify your app to implement link caching. Use SQLite as the relational database. Follow the same process:
 
