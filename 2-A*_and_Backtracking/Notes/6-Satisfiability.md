@@ -42,7 +42,7 @@ You can specify the satisfiability problem using any boolean formula you like. I
 
 - A formula is a conjunction (logical-AND) of clauses, such as $$(x_1 \vee \lnot x_3 \vee x_4) \wedge (\lnot x_1 \vee x_2) $$
 
-Therefore, the basic SAT-CNF problem is to find an assignment that makes every clause true, such that the AND of all clauses is also true.
+Therefore, the basic SAT-CNF problem is to find an assignment that makes every clause true, which makes the logical-AND of all the clauses true as well.
 
 ### 2-CNF-SAT
 **2-CNF-SAT** is a more restricted version that restricts each clause to having exactly two literals. For example,
