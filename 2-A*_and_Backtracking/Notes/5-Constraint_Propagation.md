@@ -6,7 +6,7 @@
 
 ## Overview
 
-This note is short. After you read the basic concepts below, work through Peter Norvig's classic article, ["Solving Every Sudoku Puzzle"](https://norvig.com/sudoku.html), which will show you how to implement the actual Sudoku solver using the optimization techniques described below.
+This note is short. After you read the basic concepts below, work through Peter Norvig's classic article, ["Solving Every Sudoku Puzzle"](https://github.com/norvig/pytudes/blob/main/ipynb/Sudoku.ipynb), which will show you how to implement the actual Sudoku solver using the optimization techniques described below.
 
 
 ## The order of variables
