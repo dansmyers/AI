@@ -4,9 +4,7 @@ Soundtrack: [The Otis Redding version](https://www.youtube.com/watch?v=gmnZRBTPz
 
 ## Overview
 
-In this project, you're going to play around with randomized versions of the 3-CNF-SAT problem and demonstrate evidence of its *phase transition* behavior.
-
-It turns out that the difficulty of a randomized 3-CNF instance isn't determined by the number of variables but by the **clause-to-variable** ratio.
+In this project, you're going to play around with randomized versions of the 3-CNF-SAT problem and demonstrate evidence of its *phase transition* behavior. It turns out that the difficulty of a randomized 3-CNF instance isn't determined by the number of variables but by the **clause-to-variable** ratio.
 
 - Problems with relatively few clauses for their number of variables (low ratio) tend to be *underconstrained*. There are few conflicts that make the problem difficult, so solvers are usually able to quickly identify a solution.
 
