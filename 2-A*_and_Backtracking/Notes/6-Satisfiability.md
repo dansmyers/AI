@@ -13,3 +13,17 @@ For example, consider the formula
 $$ (x_1 \vee x_2) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_3) \wedge (\lnot x_3) $$
 
 One possible satisfying assignment is (false, true, false).
+
+### Notation
+
+It might have been a while since you've seen logical notation.
+
+- $$\wedge$$ is the logical-AND operator, or *conjunction*
+- $$\vee$$ is the logical-OR operator, or *disjunction*
+- $$\lnot$$ is the logical-NOT operator, or *negation*
+
+## Conjunctive normal form
+
+
+
+
