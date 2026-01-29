@@ -10,7 +10,7 @@ In this project, you're going to play around with randomized versions of the 3-C
 
 It turns out that the difficulty of a randomized 3-CNF instance isn't determined by the number of variables but by the **clause-to-variable** ratio.
 
-- Problems with relatively few clauses for their number variables (low ratio) are *underconstrained*. There are few conflicts that make the problem difficult, so solvers are usually able to quickly identify a solution.
+- Problems with relatively few clauses for their number of variables (low ratio) tend to be *underconstrained*. There are few conflicts that make the problem difficult, so solvers are usually able to quickly identify a solution.
 
 - Problems with a high ratio of clauses to variables are likely to have unsatisfiable conflicts and be *overconstrained*. The solver quickly prunes the solution space and discovers that there's no satisfying solution.
 
