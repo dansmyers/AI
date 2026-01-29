@@ -12,7 +12,7 @@ It's a bit old-fashioned at this point, but you might have heard of the [Six Deg
 
 - The Sabbath number connects musicians to the members of Black Sabbath, which had a huge number of lineup changes during the 70s and 80s. Members of Black Sabbath have a number of 0. Anyone who collaborated with a member on a recording or performance has a number of 1, and so forth.
 
-- For the true Rennaisance man or woman, there's the [Erdős-Bacon-Sabbath number](https://news.asu.edu/20160126-creativity-lawrence-krauss-erdos-bacon-sabbath-score), which adds the three scores. Physicist Stephen Hawking and futurist Ray Kurzweil both have an 8 (Hawking appeared as a guest voice overdub on a Pink Floyd album and Kurzweil appeared at a concert with Tori Amos). Brian May, guitarist of Queen, has a 9.
+- For the true Rennaisance man or woman, there's the [Erdős-Bacon-Sabbath number](https://news.asu.edu/20160126-creativity-lawrence-krauss-erdos-bacon-sabbath-score), which adds the three scores. Physicist Stephen Hawking and futurist Ray Kurzweil both have an 8 (Hawking appeared as a guest voice overdub on a Pink Floyd album and Kurzweil appeared at a concert with Tori Amos). Brian May, guitarist of Queen and Cambridge astrophysics PhD, has a 9.
 
 A more recent version of the game is the Six Degrees of Wikipedia: connect one article to another by following a chain of links. This leads directly to the [Wikipedia speedrun](https://wikispeedruns.com/) where the goal is to connect articles as fast as possible.
 
