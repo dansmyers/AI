@@ -42,14 +42,16 @@ Here's the pseudocode implementation:
 Backtracking search
 
 input:
+    values  // set of variable values
     valid function  // tests if an assignment is valid in current state
+    choose function  // returns the next unassigned variable, or null if none exists
 
 output:
     solution state if one is found, failure otherwise
 
 search(state) {
 
-  v = choose the next unassigned variable
+  v = choose(state)
 
   // All variables assigned: this is a solution
   if (v == null) {
@@ -57,7 +59,7 @@ search(state) {
   }
 
   // Recursively explore all valid assignments to v
-  for each value s {
+  for s in values {
 
     // Test if assigment s is allowed for v in the current state
     if valid(s, v, state) {
@@ -72,4 +74,6 @@ search(state) {
   state[v] = null
 }
 ```
+
+Notice how backtracking is implemented by simply returning from the method. The program stack maintains the history of recursive function calls, so returning from `search` will return back to the previous decision point, where the program will try another value if one is available.
 
