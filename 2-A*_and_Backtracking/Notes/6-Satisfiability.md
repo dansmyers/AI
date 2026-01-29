@@ -1,5 +1,9 @@
 # Satisfiability
 
+<img src="https://i.discogs.com/Hyz_O2vakSGGguvFpqmxxWPvyh_Li0J6pCGAzis9DJo/rs:fit/g:sm/q:90/h:527/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0NTk2/MzQtMTI4NTI1NDY4/OC5qcGVn.jpeg" width="300px" />
+
+*Extremely predictable header image choice*, via [Discogs](https://www.discogs.com/release/2459634-Rolling-Stones-Satisfaction)
+
 ## Overview
 
 Boolean satisfiability is one of the most important constraint satisfaction problems in theoretical computer science. The general satisfiability problem, often abbreviated as **SAT** is as follows: 
@@ -24,6 +28,7 @@ It might have been a while since you've seen logical notation.
 
 ## Conjunctive normal form
 
+You can specify the satisfiability problem using any 
 
 
 
