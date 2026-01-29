@@ -49,7 +49,7 @@ Therefore, the basic SAT-CNF problem is to find an assignment that makes every c
 
 $$(x_1 \vee \lnot x_2) \wedge (\lnot x_1 \vee x_3) \wedge (\lnot x_2 \vee \lnot x_3) $$
 
-2-SAT-CNF version can be solved in polynomial time.
+2-SAT-CNF is "easy" in the sense that every instance of the problem can be solved in polynomial time.
 
 ### 3-CNF-SAT
 
@@ -57,11 +57,13 @@ The **3-CNF-SAT** problem requires each clause to have three literals. For examp
 
 $$(x_1 \vee \lnot x_2 \vee x_4) \wedge (\lnot x_1 \vee x_3 \vee \lnot x_5) \wedge (\lnot x_2 \vee \lnot x_3 \vee x_4) $$
 
-3-CNF-SAT is the most common form used in theoretical computer science.
+3-CNF-SAT is the most common form used in theoretical computer science:
 
 - Unlike the 2-literal version, it's NP-complete. This small shift, where moving from two variables to three radically changes the complexity of the problem is the kind of thing that drives theorists bonkers (in a good way).
 
 - It's not obvious, like at all, but it turns out that *any* boolean satisfiability problem [can be transformed](https://en.wikipedia.org/wiki/Tseytin_transformation) into an equisatisfiable 3-CNF-SAT version in polynomial time. That is, the 3-CNF version has the same satisfiability result as the original formula.
+
+- 3-CNF is one of the standard problems used to prove that another problem is NP-complete. See my notes above for more on the reduction concept if you're interested.
 
 
 
