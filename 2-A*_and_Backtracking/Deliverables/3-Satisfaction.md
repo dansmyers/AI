@@ -1,6 +1,6 @@
 # Fun with Randomized 3-CNF-SAT
 
-<img src="https://i.etsystatic.com/51104290/r/il/610878/6616339541/il_340x270.6616339541_e90r.jpg" width="400px" />
+<img src="https://i.etsystatic.com/51104290/r/il/610878/6616339541/il_340x270.6616339541_e90r.jpg" width="200px" />
 
 Dr. Seuss, *Hop on Pop* (1963)
 
