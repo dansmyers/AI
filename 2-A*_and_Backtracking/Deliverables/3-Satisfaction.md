@@ -1,8 +1,6 @@
 # Fun with Randomized 3-CNF-SAT
 
-<img src="https://i.etsystatic.com/51104290/r/il/610878/6616339541/il_340x270.6616339541_e90r.jpg" width="300px" />
-
-Dr. Seuss, *Hop on Pop* (1963)
+Soundtrack: [The Otis Redding version](https://www.youtube.com/watch?v=gmnZRBTPzg0) of (I Can't Get No) Satisfaction.
 
 ## Overview
 
@@ -41,8 +39,6 @@ Your overall result will be a plot showing the fraction of solvable instances vs
 The parameters above should be a good starting point. Once you have the experiment working, try increasing the number of trials to get a smoother estimate. You can also add upper and lower confidence limits around your data.
 
 ## Process
-
-<img src="https://static.wikia.nocookie.net/seuss/images/3/30/No_pat_no%21.PNG/revision/latest/scale-to-width-down/250?cb=20130121174017" width="200px" />
 
 The key to this project is *developing incrementally* and testing as you go. Use Claude Code. I recommend that you start by chatting about the problem and producing a guiding document before you jump into generation.
 
