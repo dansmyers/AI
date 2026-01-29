@@ -44,7 +44,7 @@ The parameters above should be a good starting point. Once you have the experime
 
 <img src="https://static.wikia.nocookie.net/seuss/images/3/30/No_pat_no%21.PNG/revision/latest/scale-to-width-down/250?cb=20130121174017" width="200px" />
 
-The key to this project is **developing incrementally* and testing as you go. Use Claude Code. I recommend that you start by chatting about the problem and producing a guiding document before you jump into generation.
+The key to this project is *developing incrementally* and testing as you go. Use Claude Code. I recommend that you start by chatting about the problem and producing a guiding document before you jump into generation.
 
 ### Randomized instances
 
