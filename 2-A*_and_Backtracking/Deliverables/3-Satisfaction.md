@@ -6,7 +6,7 @@ Dr. Seuss, *Hop on Pop* (1963)
 
 ## Overview
 
-In this project, you're going to play around with randomized versions of the 3-CNF-SAT problem and demonstrate evidence of its *phrase transition* behavior.
+In this project, you're going to play around with randomized versions of the 3-CNF-SAT problem and demonstrate evidence of its *phase transition* behavior.
 
 It turns out that the difficulty of a randomized 3-CNF instance isn't determined by the number of variables but by the **clause-to-variable** ratio.
 
