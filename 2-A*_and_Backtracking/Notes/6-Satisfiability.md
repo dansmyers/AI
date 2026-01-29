@@ -10,6 +10,6 @@ Boolean satisfiability is one of the most important constraint satisfaction prob
 
 For example, consider the formula
 
-$$ (x_1 \vee x_2) \wedge (\not x_1 \vee \not x_2 \vee x_3) \wedge (\not x_3) $$
+$$ (x_1 \vee x_2) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_3) \wedge (\lnot x_3) $$
 
 One possible satisfying assignment is (false, true, false).
