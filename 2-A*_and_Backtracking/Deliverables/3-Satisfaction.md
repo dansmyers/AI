@@ -1,5 +1,9 @@
 # Fun with Randomized 3-CNF-SAT
 
+<imf src="https://i.ytimg.com/vi/b-cA_YuBr4w/maxresdefault.jpg" width="400px" />
+
+Dr. Seuss, *Hop on Pop* (1963)
+
 ## Overview
 
 In this project, you're going to play around with randomized versions of the 3-CNF-SAT problem and demonstrate evidence of its *phrase transition* behavior.
