@@ -48,7 +48,7 @@ This is going to be the key part. I'm going to say it again: **develop step-by-s
 
 Chat with Claude Code about a phased implementation plan with tests for each step. Make sure that you understand what's being tested and that the tests pass before you move on to the next phase. Other than that, I don't have a lot of concrete suggestions for this process: it's mostly going to be implementing the plan you developed in the first stage, while avoiding the temptation to let things rip and generate so much code that you can't understand it.
 
-At the final step, make sure that you solve simple puzzles end-to-end and output the solution steps to verify that they're correct.
+At the final step, make sure that you can solve simple puzzles end-to-end and output the solution steps to verify that they're correct.
 
 ### Web interface
 
@@ -58,7 +58,7 @@ Use Python Flask for the back-end and create an API function that the front-end 
 
 For this version, I recommend having a simple choice to load one of a small number of pre-designed puzzles.
 
-**Make sure the solver works** before you try this part. If you have that component encapsulated, then you can focus on the front-end/back-end interactions without having to touch the solver code.
+**Make sure the solver works** before you try this part. Think about our key idea of *encapsulation*. If the solver is its own self-contained component, then you can focus on the front-end/back-end interactions without having to touch the solver code.
 
 Use the standard strategy of designing a specs document for the interface, then building it step-by-step.
 
