@@ -1,3 +1,0 @@
-# Sokoban
-
-Coming soon...
