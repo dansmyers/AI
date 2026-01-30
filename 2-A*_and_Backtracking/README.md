@@ -1,4 +1,4 @@
-# Sprint 2: A* and Backtracking Searches
+# Sprint 2: A*, Constraint Satisfaction, and Backtracking
 
 ## Overview
 
