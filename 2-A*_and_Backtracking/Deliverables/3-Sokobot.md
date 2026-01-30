@@ -2,6 +2,8 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sokoban_ani.gif" width="300px" />
 
+*Example Sokoban puzzle from Wikipedia*
+
 ## Overview
 
 *Sokoban* ("warehouse keeper") is a puzzle game where the object is to push boxes onto storage locations. The original game was created by Hiroyuki Imabayashi in 1984 and published by the Thinking Rabbit company.
