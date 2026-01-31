@@ -67,7 +67,3 @@ $$(x_1 \vee \lnot x_2 \vee x_4) \wedge (\lnot x_1 \vee x_3 \vee \lnot x_5) \wedg
 
 
 
-## Solving SAT problems
-
-
-
