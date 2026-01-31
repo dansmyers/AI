@@ -2,7 +2,7 @@
 
 ## Overview
 
-We looked at the eight puzzle in the last unit. Slide the tiles to put them into the correct order. That version of the problem used iterative deepening. Let's updated it to use A* search.
+We looked at the eight puzzle in the last unit - slide the tiles to put them into the correct order. That version of the problem used iterative deepening. Let's update it to use A* search.
 
 The main challenge of using A* search is coming up with a reasonable heuristic. Recall that the heuristic is usually created by *relaxing* constraints on the problem to come up with an easier problem that gives a lower bound on the real solution cost.
 
