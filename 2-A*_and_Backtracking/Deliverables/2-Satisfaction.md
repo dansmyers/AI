@@ -22,7 +22,7 @@ The key parameter you'll be varying is *m*, the clause-to-variable ratio for the
 
 - Fix the number of variables at **100**
 
-- Generate a random instance of 3-CNF that has **100*m**** clauses. Information on the random generation process is given below.
+- Generate a random instance of 3-CNF that has **100*m*** clauses. Information on the random generation process is given below.
 
 - Try to solve the instance, again discussed in more detail below. Report the result as true or false.
 
