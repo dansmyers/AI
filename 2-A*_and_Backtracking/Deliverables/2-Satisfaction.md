@@ -22,7 +22,7 @@ The key parameter you'll be varying is *m*, the clause-to-variable ratio for the
 
 - Fix the number of variables at **100**
 
-- Generate a random instance of 3-CNF that has **100*m*** clauses. Information on the random generation process is given below.
+- Generate a random instance of 3-CNF that has **100*m*** clauses. That is, if the clause-to-variable ratio *m* = 4, you would generate 400 clauses using the 100 variables. Information on the random generation process is given below.
 
 - Try to solve the instance, again discussed in more detail below. Report the result as true or false.
 
@@ -45,7 +45,7 @@ The key to this project is *developing incrementally* and testing as you go. Use
 Start by writing a fuction named `generate(n, m)`, where `n` is the number of variables and `m` is the desired clause-to-variable ratio.
 
 - Determine the number of clauses
-- Each clause has three literals, chosen *randomly* from the set of all variables and their negations
+- Each clause has three literals, chosen *randomly* from the set of all variables *and their negations*
 - There is no limit on how many times a variable can be chosen. Sample with replacement.
 
 Think about how you're going to return the result! You'll need it in a form that the solver in the next step can use as input.
