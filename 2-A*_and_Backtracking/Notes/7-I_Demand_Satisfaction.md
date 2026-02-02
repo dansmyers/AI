@@ -36,9 +36,9 @@ Each variable can be in one of three states: `True`, `False`, or currently unass
 
 ## Basic procedure
 
-The backtracking search chooses one variable and tries to set it `True`, then recursively continues the search to find the next variable. If that path fails, the method backtracks and tries assigning `False`. T
+The backtracking search chooses one variable and tries to set it `True`, then recursively continues the search to find the next variable. If that path fails, the method backtracks and tries assigning `False`.
 
-he basic solution routine is below. Notice that it starts by checking the current assignment for a conflict, discussed in more detail below, and abandons the search path immediately if one is found. This version doesn't do any fancy variable choosing, it just works through the variables in numerical order.
+The basic solution routine is below. Notice that it starts by checking the current assignment for a conflict, discussed in more detail below, and abandons the search path immediately if one is found. This version doesn't do any fancy variable choosing, it just works through the variables in numerical order.
 
 ```
 def solve(clauses, n_vars, assignment=None):
@@ -91,7 +91,9 @@ def solve(clauses, n_vars, assignment=None):
 The `has_conflict` method is the key to checking if a variable assignment is valid. Recall that the 3-CNF form requires that every clause evaluate to `True`, so if we ever find an assignment that makes any clause `False`, we know that the current path has a conflict. The functions below carry out the checking actions:
 
 - `has_conflict` checks for any clause that evaluates to `False` in the current assignment
+
 - `evaluate_clause` checks the three literals for a given clause. If any literal evaluates to `True`, the clause is satisfied. If all variables have been assigned and all three literals evaluate to `False`, then the clause is also `False`.
+
 - `evaluate_literal` gets the value of an individual literal, negating it if necessary
 
 ```
