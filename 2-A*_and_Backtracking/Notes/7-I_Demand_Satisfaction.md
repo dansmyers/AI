@@ -4,7 +4,7 @@
 
 ## Overview
 
-Let's demonstrate the backtracking concept by implementing a basic satisfiability solver.
+Let's demonstrate the backtracking concept by implementing a basic satisfiability solver. For this problem, we're going to demonstrate using the basic backtracking algorithm. You can experiment with adding optimizations as part of the deliverable assignment if you need to.
 
 As with our previous search programs, the challenge isn't in deciding to use backtracking, it's in thinking about how to represent the solution and encode the constraints. Ideally, we want achieve a few things with our representation:
 
@@ -14,7 +14,7 @@ As with our previous search programs, the challenge isn't in deciding to use bac
   
 - If we're using contraint propagation, it should be easy to identify how a variable's value set changes based on the assignment of a neighbor variable
 
-For this problem, we're going to focus on the basic backtracking solver. You can experiment with adding optimizations as part of the deliverable assignment if you need to.
+- In some cases, including satisfiability, it's useful to be able to modify the set of constraints; if a constraint is satisfied, we can remove it from further consideration to speed up the rest of the search
 
 ## Solution representation
 
