@@ -23,3 +23,9 @@ If you haven't done so, move your Sprint 1 project into its own directory. Creat
 ## Resources
 
 - Start with the notes in the `Notes` directory
+
+- Look at section 1.4 of the [Berkeley text](https://inst.eecs.berkeley.edu/~cs188/textbook/search/informed.html). Pay attention to the proof of the optimality of A* using admissible heuristics. You don't need to read section 1.5 on local search yet.
+
+- Chapter 2 covers constraint satisfaction problems. Look at sections 2.1 and 2.2. You can skim 2.3 and 2.4: they both discuss strategies for optimizing the basic backtracking solution algorithm. The core concepts (filtering and ordering) are pretty easy to understand. We're not going to discuss the specific methods they describe (arc consistency and tree structure).
+
+- [This is another nice overview of A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html). It uses a similar motivating example as the first note.
