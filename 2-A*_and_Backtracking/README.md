@@ -29,3 +29,5 @@ If you haven't done so, move your Sprint 1 project into its own directory. Creat
 - Chapter 2 covers constraint satisfaction problems. Look at sections 2.1 and 2.2. You can skim 2.3 and 2.4: they both discuss strategies for optimizing the basic backtracking solution algorithm. The core concepts (filtering and ordering) are pretty easy to understand. We're not going to discuss the specific methods they describe (arc consistency and tree structure).
 
 - [This is another nice overview of A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html). It uses a similar motivating example as the first note.
+
+- If you want to read more about NP-completeness (not required for this sprint, but an important application of satisfiability), check out my old [COVID-era notes](https://github.com/dansmyers/Algorithms/blob/master/Challenge_Projects/2-The_Lost_Sprint.md) from the Algorithm Analysis class.
