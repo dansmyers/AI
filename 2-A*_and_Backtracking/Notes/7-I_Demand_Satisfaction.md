@@ -1,5 +1,7 @@
 # I Demand Satisfaction
 
+<img src="https://i.redd.it/o2y6ecet12q81.gif" width="400px" />
+
 ## Overview
 
 Let's demonstrate the backtracking concept by implementing a basic satisfiability solver.
