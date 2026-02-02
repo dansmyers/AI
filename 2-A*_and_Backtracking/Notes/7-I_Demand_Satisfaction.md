@@ -325,12 +325,16 @@ if __name__ == "__main__":
 
 The canonical method for solving CNF-SAT problems is the Davis–Putnam–Logemann–Loveland (DPLL) algorithm, first developed in the early 1960s. The method uses backtracking search with two main optimizations: *literal elimination* and *unit propagation*.
 
-**Literal elimination** If a variable occurs in only positive form throughout the formula, you can automatically assign it True. Likewise, if a variable only appears in negative form, you can automatically assign it False. Both cases allow you to remove the variable and any clauses containing it from the problem. For example, the formula 
+### Literal elimination
+
+If a variable occurs in only positive form throughout the formula, you can automatically assign it True. Likewise, if a variable only appears in negative form, you can automatically assign it False. Both cases allow you to remove the variable and any clauses containing it from the problem. For example, the formula 
 
 $$ (x_1 \vee \lnot x_2 \vee x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_4) \wedge (\lnot x_3 \vee \lnot x_4 \vee x_5) $$
 
 has only $$\lnot x_2$$ in every place where $$x_2$$ appears. Therefore, we can immediately set $$x_2$$ to False, which then satisfies the first two clauses.
 
-**Unit propagation**. This optimization applies to clauses that have only one unassigned variable. Suppose that a clause has two literals that are `False` and one that's unassigned: you're forced to choose the assignment that makes the third literal True. Setting that variable may cause other clauses to become units, which can trigger additional forced variable assignments and quickly reduce the search space.
+### Unit propagation
+
+This optimization applies to clauses that have only one unassigned variable. Suppose that a clause has two literals that are `False` and one that's unassigned: you're forced to choose the assignment that makes the third literal True. Setting that variable may cause other clauses to become units, which can trigger additional forced variable assignments and quickly reduce the search space.
 
 Unit propagation also helps identify infeasible paths. If you're forced to assign a variable to a certain value, but that assignment makes another clause False, then its infeasible and you can backtrack immediately.
