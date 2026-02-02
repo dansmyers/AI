@@ -1,6 +1,6 @@
 # I Demand Satisfaction
 
-<img src="https://i.redd.it/o2y6ecet12q81.gif" width="400px" />
+<img src="https://i.etsystatic.com/11368234/r/il/9b4490/6690085128/il_570xN.6690085128_qyj7.jpg" width="300px" />
 
 ## Overview
 
