@@ -2,6 +2,16 @@
 
 ## Overview
 
+This unit continues our investigation of search algorithms. The last sprint looked at BFS and DFS and some important variations. These methods could solve problems optimally, but they were not always efficent.
+
+We're going to look at two more strategies:
+
+- **A\***, which uses a heuristic function to estimate the distance to the goal and guide the search in productive directions. A* is guaranteed to find an optimal solution if one exists and to do so efficiently.
+
+- **Backtracking search**, which is used to solve **constraint satisfaction problems**. Backtracking is essentally a recursive formulation of depth-first search.
+
+- We'll also look at one particular CSP: **boolean satisfiability**, which is one of the most important problems in theoretical computer science.
+
 ## Topics
 
 - Heuristic functions
@@ -11,7 +21,7 @@
 - Proof of the optimality of A*
 - Constraint satisfaction problems
 - Backtracking for CSPs
-- Constraint propgation
+- Constraint propagation
 - Boolean satisfiability and 3-CNF-SAT
 
 ## Deliverables
