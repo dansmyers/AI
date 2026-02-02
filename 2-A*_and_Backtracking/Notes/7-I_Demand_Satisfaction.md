@@ -36,7 +36,9 @@ Each variable can be in one of three states: `True`, `False`, or currently unass
 
 ## Basic procedure
 
-The backtracking search chooses one variable and tries to set it `True`, then recursively continues the search to find the next variable. If that path fails, the method backtracks and tries assigning `False`. The basic solution routine is below. Notice that it starts by checking the current assignment for a conflict, discussed in more detail below, and abandons the search path immediately if one is found.
+The backtracking search chooses one variable and tries to set it `True`, then recursively continues the search to find the next variable. If that path fails, the method backtracks and tries assigning `False`. T
+
+he basic solution routine is below. Notice that it starts by checking the current assignment for a conflict, discussed in more detail below, and abandons the search path immediately if one is found. This version doesn't do any fancy variable choosing, it just works through the variables in numerical order.
 
 ```
 def solve(clauses, n_vars, assignment=None):
