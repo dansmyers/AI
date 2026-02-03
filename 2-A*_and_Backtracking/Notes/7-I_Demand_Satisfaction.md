@@ -331,10 +331,10 @@ If a variable occurs in only positive form throughout the formula, you can autom
 
 $$ (x_1 \vee \lnot x_2 \vee x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_4) \wedge (\lnot x_3 \vee \lnot x_4 \vee x_5) $$
 
-has only $$\lnot x_2$$ in every place where $$x_2$$ appears. Therefore, we can immediately set $$x_2$$ to False, which then satisfies the first two clauses.
+has only $$\lnot x_2$$ in every place where $$x_2$$ appears. Therefore, we can immediately set $$x_2$$ to False, which satisfies the first two clauses. The problem reduces to only the third clause, which is now underdetermined and easy to satisfy.
 
 ### Unit propagation
 
-This optimization applies to clauses that have only one unassigned variable. Suppose that a clause has two literals that are `False` and one that's unassigned: you're forced to choose the assignment that makes the third literal True. Setting that variable may cause other clauses to become units, which can trigger additional forced variable assignments and quickly reduce the search space.
+This optimization applies to clauses that have only one unassigned variable. Suppose that a clause has two literals that are False and one that's unassigned: you're forced to choose the assignment that makes the third literal True. Setting that variable may cause other clauses to become units, which can trigger additional forced variable assignments and quickly reduce the search space.
 
-Unit propagation also helps identify infeasible paths. If you're forced to assign a variable to a certain value, but that assignment makes another clause False, then its infeasible and you can backtrack immediately.
+Unit propagation also helps identify infeasible paths. If you're forced to assign a variable to make a clause True, but that assignment forces a different clause to become False, then you know the current path is infeasible and you can backtrack immediately.
