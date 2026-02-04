@@ -26,7 +26,7 @@ The key parameter you'll be varying is *m*, the clause-to-variable ratio for the
 
 - Try to solve the instance, again discussed in more detail below. Report the result as true or false.
 
-- Repeat for 100 trials, recording the fraction of randomized instances that were solvable for the chosen value of *m*
+- Repeat for 25 trials, recording the fraction of randomized instances that were solvable for the chosen value of *m*. 25 repetitions should give a smooth curve, but you can experiment with more if the curve seems too jumpy.
 
 - Repeat for values of *m* from 1.0 to 8.0 in units of .25.
 
