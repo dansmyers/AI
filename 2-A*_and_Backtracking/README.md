@@ -41,3 +41,7 @@ If you haven't done so, move your Sprint 1 project into its own directory. Creat
 - [This is another nice overview of A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html). It uses a similar motivating example as the first note.
 
 - If you want to read more about NP-completeness (not required for this sprint, but an important application of satisfiability), check out my old [COVID-era notes](https://github.com/dansmyers/Algorithms/blob/master/Challenge_Projects/2-The_Lost_Sprint.md) from the Algorithm Analysis class.
+
+Claude Code stuff:
+
+- [This article](https://blog.sshh.io/p/how-i-use-every-claude-code-feature) is a nice overview of the main features of Claude Code with very practical tips for using them effiectively. You don't need to start using these yet (except `/plan` mode, which I like for discussing before generating), but it's good info to keep filed away for future projects
