@@ -10,7 +10,7 @@ In this project, you're going to play around with randomized versions of the 3-C
 
 - Problems with a high ratio of clauses to variables are likely to have unsatisfiable conflicts and be *overconstrained*. The solver quickly prunes the solution space and discovers that there's no satisfying solution.
 
-- There's a specific ratio at which the transition from "mostly satisfiable" to "mostly unsatistfiable" problems happens. We want to determine this ratio through empirical investigation.
+- There's a specific ratio at which the transition from "almost always satisfiable" to "almost always unsatistfiable" problems happens. We want to determine this ratio through empirical investigation.
 
 You're going to experimentally investigate the behavior of randomized 3-CNF as a function of the clause-to-variable ratio. Along the way, you'll practice using Claude Code to develop a multi-step program where you have to validate correctness at each step.
 
@@ -22,15 +22,15 @@ The key parameter you'll be varying is *m*, the clause-to-variable ratio for the
 
 - Fix the number of variables at **100**
 
-- Generate a random instance of 3-CNF that has **100*m*** clauses. That is, if the clause-to-variable ratio *m* = 4, you would generate 400 clauses using the 100 variables. Information on the random generation process is given below.
+- Generate a random instance of 3-CNF that has **100*m*** clauses. That is, if the clause-to-variable ratio is *m* = 4, you would generate 400 clauses using the 100 variables. Information on the random generation process is given below.
 
 - Try to solve the instance, again discussed in more detail below. Report the result as true or false.
 
 - Repeat for 25 trials, recording the fraction of randomized instances that were solvable for the chosen value of *m*. 25 repetitions should give a smooth curve, but you can experiment with more if the curve seems too jumpy.
 
-- Repeat for values of *m* from 1.0 to 8.0 in units of .25.
+- Repeat for values of *m* from 1.0 to 8.0 in steps of .25.
 
-Your overall result will be a plot showing the fraction of solvable instances vs. *m*. You should see that low values of *m* have a high fraction of solvable instances and vice-versa. We're looking for the transition point where the phase change occurs.
+Your overall result will be a plot showing the fraction of solvable instances vs. *m*. You should see that low values of *m* have a very high fraction of solvable instances and vice-versa. We're looking for the transition point where the phase change occurs.
 
 ### Parameters
 
