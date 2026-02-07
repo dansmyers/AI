@@ -40,7 +40,7 @@ You'll also want to think about the puzzle representation: do you want to use a 
 
 A simple strategy is to compute the Manhattan distance from each box to its nearest storage space. That's a lower bound on the real solution distance, but there are some other heuristics that will be better. Consider precomputing distances from each square on the map to each goal to speed up the heuristic evaluation.
 
-- **Tip**: Chat about the [Hungarian algorithm](https://en.wikipedia.org/wiki/Hungarian_algorithm) as a heuristic. It will allow you to match each box to a storage location such that the overall cost of all the matches is minimized. This is still a lower bound on the real solution distance because it ignores the need to make extra moves to avoid blocking situations as you move the boxes around.
+- **Tip**: Chat about the [Hungarian algorithm](https://en.wikipedia.org/wiki/Hungarian_algorithm) as a heuristic. It will allow you to match each box to a storage location such that each assignment is unique and the overall cost of all the matches is minimized. This is still a lower bound on the real solution distance because it ignores the need to make extra moves to avoid blocking situations as you move the boxes around.
 
 Claude may suggest ideas like precomputing subproblem solutions. I don't think you need to do this; you can try it as an extension later if you want.
 
