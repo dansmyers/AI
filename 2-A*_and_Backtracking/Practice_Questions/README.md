@@ -40,9 +40,9 @@ Give a definition for the 3-CNF-SAT problem.
 
 ### Test
 
-Is the following formula satisfiable? If so, give an assignment that makes it true?
+Is the following formula satisfiable? If so, give an assignment that makes it true.
 
-$$(x_1 \vee x_2 \vee x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_3) \wedge (x_1 \vee x_2 \vee \not x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee \lnot x_3) $$
+$$(x_1 \vee x_2 \vee x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee x_3) \wedge (x_1 \vee x_2 \vee \not x_3) \wedge (\lnot x_1 \vee \lnot x_2 \vee \lnot x_3)  \wedge (\lnot x_1 \vee x_2 \vee x_3)$$
 
 ### Propagation
 
