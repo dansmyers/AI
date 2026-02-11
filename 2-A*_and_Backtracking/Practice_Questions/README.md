@@ -20,7 +20,7 @@ Give concise definitions for each of the following properties:
 
 ### Application
 
-<img src="./astar_graph.png" width="400px" />
+<img src="./astar_graph.png" width="500px" />
 
 Consider the graph above with the given approximate point-to-point heuristic distances.
 
