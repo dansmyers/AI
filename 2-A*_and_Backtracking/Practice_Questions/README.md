@@ -20,17 +20,17 @@ Give concise definitions for each of the following properties:
 
 ### Application
 
-Consider the graph below.
+<img src="./astar_graph.png" width="400px" />
 
-
-The approximate point-to-point distances are given by:
-
+Consider the graph above with the given approximate point-to-point heuristic distances.
 
 Suppose that you use A* to find the optimal path from A to G.
 
 - What are the *f*(*n*) values obtained after expanding A on the first iteration?
 - What vertex is expanded second?
 - What vertex is expanded third?
+
+Finish the search and verify that A* finds the shortest path from A to G.
 
 ## Constraint Satisfaction
 
