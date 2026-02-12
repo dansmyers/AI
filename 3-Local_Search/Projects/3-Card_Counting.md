@@ -102,3 +102,36 @@ Encode count values for 11 card values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, and 10. All
     +2 to +4      |  3
       >= +5       |  3
 ```
+
+### Counts
+
+The running count is maintained by adding the encoded count value for each card as it is revealed (player cards, dealer cards, and any other visible cards).
+
+The true count normalizes the running count by the number of decks remaining:
+```
+decks_remaining = remaining_cards / 52
+true_count = round(running_count / decks_remaining)
+```
+For example, with 156 cards remaining (3 decks) and a running count of +6:
+```
+true_count = round(6 / 3) = +2
+```
+
+### Bet sizing
+At the start of each hand, the player determines the bet as follows:
+
+- Calculate the true count
+- Look up the bet multiplier for the corresponding true count range
+- `bet = multiplier × $1`
+
+The bet is capped at the player's current bankroll (i.e., the player cannot bet more than they have).
+
+### Fitness Function
+Fitness is the player's final bankroll after playing 1000 simulated hands. If the player's bankroll reaches $0 before completing 1000 hands, fitness is 0.
+
+## Outputs
+
+- The fitness plot and strategy heat map, as in the first project
+- Evolved count values for each card rank and their comparison to the hi-lo system
+- Display the evolved bet multipliers for each true count range as a table
+- For the best-performing individual in the final generation, plot bankroll over the course of a sample 1,000-hand session. This helps visualize variance and the effect of bet sizing.
