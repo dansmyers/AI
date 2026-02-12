@@ -26,6 +26,6 @@ For this project, we're going to focus on *single-deck blackjack*, which is gene
 
 The Wizard's basic blackjack strategy is given in the table above. Observe that each entry corresponds to a player hand value and the dealer's face-up card. For example, if the player has a hand value of 12, he should hit if the dealer shows a 2 or 3, stand if the dealer has a 4-6, and hit on all higher-valued cards.
 
-The second table is for "soft" hands where the player has an 11-valued Ace. These can be played more aggressively, since it isn't possible to bust by hitting a soft hand - if the player draws a card that would make the score greater than 21, then the value of the Ace changes to 1.
+The second table is for "soft" hands where the player has an 11-valued Ace. These can be played more aggressively, since it isn't possible to bust by hitting a soft hand - if the player draws a card that would make the score greater than 21, then the value of the Ace changes to 1. The tables specify cases where the player should double if allowed; we're not implementing doubling, so these should revert to the basic hit/stand choices.
 
 The third table is for paired hands. Many casinos allow the player to "split" pairs, doubling the bet to play two hands. We're not implementing splitting, so ignore this table.
