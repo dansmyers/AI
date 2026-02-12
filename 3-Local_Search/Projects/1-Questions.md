@@ -6,7 +6,22 @@ Complete the questions below. Write your answers legibly and turn in a scan or p
 
 ## Knapsack
 
-###
+### Practice
+
+Solve the 0/1 knapsack problem with the following data:
+```
+Weight limit = 20
+
+Item    Weight    Value
+----    ------    -----
+ 1        2         10
+ 2        3         12
+ 3        5         25 
+ 4        7         36 
+ 5        8         44 
+ 6        9         51
+```
+Use the bottom-up table-based strategy.
 
 ### 0/1/2 
 
@@ -16,9 +31,11 @@ Derive a solution to the 0/1/2 problem, where you may take up to two of each ite
 - The 0 and 1 cases are the same as the standard knapsack problem
 - Think about how the total value and available capacity change in the 2 item case
 
+Write your solution as a pseudcode function.
+
 ### Subset sum
 
-You’re given an array of integers (each of which might be positive or negative) and a target value T. Design a method to verify if a subset of the integers sums to exactly T.
+You’re given an array of integers (each of which might be positive or negative) and a target value *T*. Design a method to verify if a subset of the integers sums to exactly *T*.
 
 For example, if the array is
 ```
@@ -32,10 +49,38 @@ Sometimes things that seem different are almost the same. This feels very simila
 
 Suppose you’re considering the last item, the 13. There are three possibilities:
 
-13 by itself is the target. You can return True immediately.
+- 13 by itself is the target. You can return True immediately.
 
-13 is not the target but is included in the sum. In this case, you need to check the other items to see if you can find a subset that adds to T - 13.
+- 13 is not the target but is included in the sum. In this case, you need to check the other items to see if you can find a subset that adds to *T* - 13.
 
-13 is not included in the sum. In this case, check the other items for a sum of T.
+- 13 is not included in the sum. In this case, check the other items for a sum of *T*.
 
-Use these ideas to write down the recursive relationship and base cases, then work out a bottom-up strategy for solving the problem.
+Use these ideas to write down the recursive relationship and base cases, then work out a bottom-up strategy (in pseudcode) for solving the problem.
+
+## Edit distance
+
+### Practice
+
+Use the edit distance algorithm to find the distance between `network` and `worth`.
+
+### Keyboard distance
+
+A standard variation on the basic edit distance is to make costs non-uniform, so that “easy” edits are cheaper than “hard” ones. Think about typed text: errors caused by hitting an adjacent key are common, like “live” instead of “love”, so maybe they should be penalized less than random key substitutions.
+
+Modify the bottom-up pseudocode method to change the distance calculations as follows:
+
+- Changing between cases (like “a” to “A”) costs only .5
+
+- Changing to an adjacent character costs 1
+
+- Changing to a non-adjacent character costs 2
+
+- Deleting to match an adjacent character costs only 1 (it’s common to hit other keys next to the one you meant to type)
+
+- Deleting to match non-adjacent characters costs 2
+
+- Inserts cost 3
+
+Assume you have a function called `adjacent` that takes two characters and returns True if they’re considered adjacent on the keyboard and False otherwise.
+
+Once you have the pseudcoode, work with Claude to implement the keyboard-aware distance function and try it out on some practice strings to verify that it works correctly.
