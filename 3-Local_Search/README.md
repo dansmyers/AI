@@ -30,4 +30,15 @@
 
 ### Local search and genetic algorithms
 
+- Read my notes in the directory above
+
+- [The Berkeley textbook section](https://inst.eecs.berkeley.edu/~cs188/textbook/search/local.html) is also good
+
+### Specs-driven development
+
+- Read the first half of [this description from GitHub](https://github.com/github/spec-kit/blob/main/spec-driven.md). It gives a good overview of the motivation and concept for spec-driven development. The second part goes over some commands for a specific library they've built.
+
+- [Spec-driven development doesn't work if you're too confused to write the spec](https://publish.obsidian.md/deontologician/Posts/Spec-driven+development+doesn't+work+if+you're+too+confused+to+write+the+spec). Makes the important point that much of coding is making arbitrary but binding choices about how things will be represented/named/encoded so they can be processed by the application logic, then shoving data around between those various representations. The spec has to provide enough information to help the model understand these representations, or you end up with systems that have incompatible parts. This ties into why we talk so much about encapsulation, with clear boundaries and well-defined interfaces between components.
+
+- Listen to the first half of [this podcast](https://www.lennysnewsletter.com/p/getting-paid-to-vibe-code) with Lazar Jovanovic (*professional vibe coder*). There is some chit-chat, but he gets into a great overview of the process of prototyping, then building specifications, then turning them into detailed plans.
 
