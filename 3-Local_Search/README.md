@@ -16,6 +16,7 @@
 - The bottom-up solution strategy for DP problems
 - Example problems: 0/1 knapsack, rod cutting, edit distance, longest increasing subsequence
 - Determining the complexity of a bottom-up DP algorithm
+- More on the spec-driven development approach
 
  
 ## Resources
