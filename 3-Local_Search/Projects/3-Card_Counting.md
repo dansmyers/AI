@@ -1,5 +1,9 @@
 # Card Counting Strategy
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Caravaggio_%28Michelangelo_Merisi%29_-_The_Cardsharps_-_Google_Art_Project.jpg/1920px-Caravaggio_%28Michelangelo_Merisi%29_-_The_Cardsharps_-_Google_Art_Project.jpg" width="400px" />
+
+*The Cardsharps*, Caravaggio (c. 1594)
+
 ## Overview
 
 This project is the extension of the previous one. We're going to extend the basic blackjack strategy to include **card counting**.
