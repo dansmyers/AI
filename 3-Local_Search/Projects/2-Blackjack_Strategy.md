@@ -1,5 +1,9 @@
 # Evolving Blackjack Strategy
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Salon_d%27Or_Firth.jpg" width="500px" />
+
+*Salon d'Or, Homburg*, William Powell Frith (1871)
+
 [I also like to live dangerously.](https://www.youtube.com/watch?v=JVwEf7xSjwY)
 
 ## Overview
