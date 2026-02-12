@@ -14,7 +14,7 @@ These projects are for educational purposes only. They are not an endorsement of
 
 ## Rules
 
-If the rules of blackjack aren't familiar to you, first spend some time learning the game. I recommend the [rules summary](https://wizardofodds.com/games/blackjack/basics/) from the Wizard of Odds, my go-to source for gaming knowledge. You can find a free practice game online, or just ask Claude to code one for you.
+If the rules of blackjack aren't familiar to you, first spend some time learning the game. I recommend the [rules summary](https://wizardofodds.com/games/blackjack/basics/) from the Wizard of Odds, my go-to source for gaming knowledge. You can ask Claude to code a practice game for you.
 
 Our version will only allow the player to **hit or stand**. We won't consider alternative moves like doubling, splitting or surrendering, or side best like insurance. This means that at every decision in the game is a binary choice to either hit or stand.
 
