@@ -1,5 +1,7 @@
 # Evolving Blackjack Strategy
 
+[I also like to live dangerously.](https://www.youtube.com/watch?v=JVwEf7xSjwY)
+
 ## Overview
 
 *Blackjack*, sometimes known as 21, is the most popular table game played in American casinos. The object is to obtain a hand of cards that scores higher than the dealer's hand without going over a score of 21.
@@ -8,7 +10,7 @@ In this project, you're going to use genetic programming to **evolve a strategy 
 
 ## Disclaimer
 
-These projects are for educational purposes only. They are not an endorsement of the cool vice of gambling at cards.
+These projects are for educational purposes only. They are not an endorsement of the extremely cool vice of gambling.
 
 ## Rules
 
