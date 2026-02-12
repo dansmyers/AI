@@ -40,9 +40,7 @@ The running total is updated to +1. Notice that positive scores are favorable to
 
 #### The true count
 
-Some Vegas casinos still offer single-deck blackjack, but it's more common to play out of a *shoe* of six or eight decks shuffled together.
-
-When dealing out of a shoe, the count needs to adjust for the number of remaining cards. Intuitively, a count of +5 is amazing for the player in a single deck, but not as impressive if there are still six decks of cards to work through.
+Some Vegas casinos still offer single-deck blackjack, but it's more common to play out of a *shoe* of six or eight decks shuffled together. When dealing out of a shoe, the count needs to adjust for the number of remaining cards. Intuitively, a count of +5 is amazing for the player in a single deck, but not as impressive if there are still six decks of cards to work through.
 
 The *true count* is calculated as
 ```
@@ -54,11 +52,53 @@ For example, if the running count is currently +6 and there are about 3 decks re
 
 The last step is to adjust the bet amount based on the true count. As the count goes higher, the player should bet more. In the real world, this has to be done subtly, to avoid attracting heat from casino managers who are suspicious of suddenly aggressive bets.
 
-There are also some strategic plays that change based on the count. If there are more tens and aces:
+There are also some strategic plays that change based on the count. When the count is positive, there are more tens and aces:
 
 - Blackjacks are more common, for both the player and the dealer. This is overall helpful to the player, since a win on a blackjack pays 3:2.
-
 - The insurance side bet, if it's offered, has a positive expected value when the count is high enough
+- The dealer is required to hit on scores of 12-16 and is therefore more likely to bust in a ten-rich deck. This creates some situations where it's better for the player to stand when the basic strategy says to hit.
 
-- The dealer is required to hit on scores of 12-16 and is therefore more likely to bust in a ten-rich deck. This creates some situations where the player should stand when the basic strategy says to hit.
+## Implementation
 
+### Objective
+Extend the basic version to evolve a card counting system and betting strategy. The player now tracks cards as they are dealt from a multi-deck shoe and adjusts bet sizes based on the count.
+
+### Game Rules
+The following rules replace or extend the basic version:
+
+- Hands are dealt from a 6-deck shoe (312 cards)
+- Each fitness evaluation begins with a freshly shuffled shoe
+- Cards are dealt from the shoe until reaching 75% penetration (234 cards dealt)
+- When penetration is reached, the dealer completes the current hand, then reshuffles to begin a new shoe
+- The player has a starting bankroll of $1,000
+- Minimum bet is $1; maximum bet is $8
+- Blackjacks pay 3:2 (e.g., a $2 bet wins $3 on a natural 21)
+- If the player's bankroll reaches $0, the round ends immediately
+
+### Strategy encoding
+
+The chromosome now consists of three components.
+
+**Component 1: Play strategy (260 bits)**. Identical to the basic version—a 17×10 hard hands matrix plus a 9×10 soft hands matrix encoding hit/stand decisions.
+
+**Component 2: Card count values (22 bits)**. For each card rank, encode a count value from the set {−1, 0, +1} using 2 bits:
+```
+ Encoding |  Value
+-------------------
+    00    |    -1
+    01    |     0
+    10    |    +1
+    11    |   unused (treat as 0)
+```
+Encode count values for 11 card values: Ace, 2, 3, 4, 5, 6, 7, 8, 9, and 10. All ten-valued cards use the same count value.
+
+
+**Component 3: Bet multipliers (12 bits)**. Encode a bet multiplier (1–8) for each of four true count ranges. Each multiplier requires 3 bits:
+```
+ True count range |  Bits
+--------------------------
+      <= -2       |  3 (values 0-7 map to multipliers 1-8)
+    -1 to +1      |  3
+    +2 to +4      |  3
+      >= +5       |  3
+```
