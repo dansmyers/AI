@@ -12,7 +12,6 @@
 - Simulated annealing
 - Genetic algorithm concepts: populations, fitness, crossover, mutation
 - Particle swarm optimization
-
 - Recursively formulating dynamic programming problems
 - The bottom-up solution strategy for DP problems
 - Example problems: 0/1 knapsack, rod cutting, edit distance, longest increasing subsequence
