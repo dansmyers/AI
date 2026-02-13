@@ -27,7 +27,7 @@ and vice-versa.
 
 Not every function has a maximizer or minimizer - for example, *f*(*x*) = *e*<sup>*x*</sup>. A function like *f*(*x*) = sin *x* has infinitely many global maxima and minima.
 
-As the figure shows, the basic challenge of local search is that it's impossible to determine if a maximum is really a global maximizer or only a local maximum. Unless you have extra information about the problem, you generally can't tell. Also observe that local methods can get confused by features like plateaus and ridges in objective space.\
+As the figure shows, the basic challenge of local search is that it's impossible to determine if a maximum is really a global maximizer or only a local maximum. Unless you have extra information about the problem, you generally can't tell. Also observe that local methods can get confused by features like plateaus and ridges in objective space.
 
 ## Running up that hill
 
