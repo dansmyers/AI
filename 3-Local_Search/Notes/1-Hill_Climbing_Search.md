@@ -60,3 +60,42 @@ while (true) {
 }
 ```
 The main loop checks the neighbors of *s* and keeps the one with the highest objective. If that neighbor is better than *s*, move to it. Otherwise, the search has reached a local maximum and it's time to stop.
+
+## Example: 0/1 knapsack
+
+Suppose we want to apply hill climbing to the following knapsack problem:
+```
+capacity = 10
+
+Item   Weight   Value
+----   ------   -----
+ 1        2       10
+ 2        3       15
+ 3        5       15
+ 4        7       20
+```
+Let the starting state be an empty knapsack: `[0, 0, 0, 0]`. The first iteration generates the neighbor states and scores each one. If we define neighbor to mean a state that's one bit flip away, there are four options:
+
+- `[1, 0, 0, 0]`, which has a value of 10
+- `[0, 1, 0, 0]`, which has a value of 15
+- `[0, 0, 1, 0]`, also with 15
+- `[0, 0, 0, 1]`, with a value of 20
+
+The best neighbor is `[0, 0, 0, 1]`, so the method moves there. The second iteration will generate the successors of that state and discover that `[0, 1, 0, 1]` is the best option with a score of 35. The method then terminates: there are no more items that can fit in the knapsack.
+
+So pure hill climbing finds a solution with value 35. The true optimal solution is `[1, 1, 1, 0]` with a value of 40.
+> Try starting from a different state and see what results you get.
+
+This example is simple but illustrates some of the challenges of local search:
+
+- Methods are sensitive to the initial conditions. Small differences in the start can lead to radically different paths and outcomes.
+- The requirement to always move up can lead to getting blocked
+
+## Variations
+
+It's easy to come up with some variations that might make hill climbing better. For example,
+
+- Don't always take the steepest upward move. Maybe pick a random move from among the set of uphill moves.
+- Try randomly restarting from different locations
+- Rather than enumerating all successors, generate them randomly until you find a better one; this is useful if a state has a huge number of successors
+- *Maybe*, just maybe, we could allow some sideways, or even downward, moves to help break out of local minima or off of plateaus?
