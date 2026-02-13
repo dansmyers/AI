@@ -55,4 +55,4 @@ This line calculates a probability of accepting the move using the exponential f
 - If `a` is close to 0, the numerator becomes large, which makes the exponential close to zero and makes all moves harder to accept
 
 ## Cooling schedule
-It turn out that if `schedule(t)` decreases slowly enough this method almost always works, but the required cooling may require too many iterations to be practical. There are no fixed rules for choosing the cooling schedule. Advanced versions can use an adaptive approach where the temperature is adjusted dynamically based on how the search is progressing.
+It turn out that if `schedule(t)` decreases slowly enough this method almost always works, but the required cooling may take too many iterations to be practical. There are no fixed rules for choosing the cooling schedule. Advanced versions can use an adaptive approach where the temperature is adjusted dynamically based on how the search is progressing.
