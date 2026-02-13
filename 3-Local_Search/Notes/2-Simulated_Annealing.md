@@ -28,7 +28,7 @@ for t = 1 to infinity {
     }
 
     // Choose a random neighbor
-    next = random_successor(s)
+    neighbor = random_successor(s)
 
     // Change in objective value
     delta = f(neighbor) - f(s)
