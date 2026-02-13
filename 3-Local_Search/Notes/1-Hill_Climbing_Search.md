@@ -31,7 +31,7 @@ As the figure shows, the basic challenge of local search is that it's impossible
 
 ## Running up that hill
 
-The simplest local search method is **hill climbing**, or *steepest ascent**. At each, step move to the neighbor state with the highest objective value. Continue making moves until no further ascent is possible, then stop.
+The simplest local search method is **hill climbing**, or *steepest ascent*. At each, step move to the neighbor state with the highest objective value. Continue making moves until no further ascent is possible, then stop.
 ```
 Hill climbing search
 
