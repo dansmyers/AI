@@ -12,7 +12,7 @@ The **local search** approach begins with a starting state, which might be rando
 
 ## Local and global maxima
 
-<img src="https://inst.eecs.berkeley.edu/~cs188/textbook/assets/images/maxima_global_local.png" width="400px" />
+<img src="https://inst.eecs.berkeley.edu/~cs188/textbook/assets/images/maxima_global_local.png" width="500px" />
 
 *From the Russell and Norvig book and the online Berkeley text*
 
