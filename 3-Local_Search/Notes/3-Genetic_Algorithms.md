@@ -1,12 +1,15 @@
 # Genetic Algorithms
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Gustav_Klimt_032.jpg/960px-Gustav_Klimt_032.jpg" width="300px" />
+
+*Tree of Life, Stoclet Frieze*, Gustav Klimt (1909)
 
 
 ## Overview
 
 Charles Darwin published *On the Origin of Species* in 1859. One of the most important books in scientific history, it proposed the theory of evolution by natural selection as the dominant explanation for the diversity of life and a unifying concept underlying all of biology. Some concepts of evolutionary theory existed in natural science before Darwin's time, but they were mostly speculative and the mechanism of change was not well-understood. Darwin explained how natural selection of heritable traits leads to gradual, continuous change within populations, and marshalled an overwhelming amount of evidence for his theory based upon twenty years of research. *On the Origin of Species* also supported the then-radical concept of the branching descent of all species from a common ancestor - the Tree of Life.
 
-Genetic algorithms apply the concept of survival-of-the-fittest to optimization. The method maintains a "population" of candidate solutions. At each step, the best current solutions - as determined by a fitness function - are used to produce a new generation of candidates. The overall fitness of the population increases over time. The technique includes analogues of genetic crossover and mutation.
+Genetic algorithms apply the concept of survival-of-the-fittest to optimization. The method maintains a "population" of candidate solutions. At each step, the best current individuals, as determined by a fitness function, are used to produce a new population of candidates that should, on average, have higher fitness. The process of producing the next generation uses genetic concepts of selection, crossover, and mutation.
 
 ## Procedure
 
@@ -143,13 +146,13 @@ parent_2 = 100101110
 ```
 The crossover step picks a random *crossover point* to split the parents and then exchanges their left and right sides to create two children, each with part of the chromosome material of each parent.
 
-If the random crossover position is 4, we'd split the parents into two parts: the first four bits and the last five bits.
+For example, if the random crossover position is 4, we'd split the parents into two parts: the first four bits and the last five bits.
 ```
   parent_1         parent_2
   --------         --------
 0010 | 10011     1001 | 01110
 ```
-Notice that there's one crosover point that applies to both parents.
+Notice that there's one crossover point that applies to both parents.
 
 The method then combines the left side of one parent with the right side of the other to create a child solution:
 ```
@@ -177,6 +180,8 @@ The second child is constructed from the other pair:
       v       v
      1001 | 10011
 ```
+Notice that, in both cases, the left side of the parent becomes the left side of the child and likewise for the right side. Never use the right side of a parent as the left side of a child!
+
 The result is two new vectors:
 ```
 child_1 = 001001110
