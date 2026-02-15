@@ -1,6 +1,6 @@
 # Genetic Algorithms
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Gustav_Klimt_032.jpg/960px-Gustav_Klimt_032.jpg" width="300px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Gustav_Klimt_032.jpg/960px-Gustav_Klimt_032.jpg" width="200px" />
 
 *Tree of Life, Stoclet Frieze*, Gustav Klimt (1909)
 
