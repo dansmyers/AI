@@ -10,7 +10,7 @@ Simulated annealing is a variation of the hill-climbing search that allows the s
 
 The term *annealing* comes from metalworking and refers to heating a metal and then cooling it slowly. Heat puts energy into the metal's atoms, which allows them to move around a bit within the metal's chemical lattice structure. Cooling gradually settles the atoms back down into a lower energy state, which results in a better crystalline structure that makes the metal easier to work.
 
-Simulated annealing starts the search with a "high energy" state where lots of random moves are allowed. Over time, it transitions to a "low energy" state where random moves are harder to make, which eventually transitions into pure hill climbing to finish the search. The rate of transition from high- to low- energy is governed by a function called the *cooling schedule*.
+Simulated annealing starts the search with a "high energy" state where lots of random moves are allowed. Over time, it transitions to a "low energy" state where random moves are harder to make, which eventually transitions into pure hill climbing to finish the search. The rate of transition from high- to low-energy is governed by a function called the *cooling schedule*.
 
 ## Pseudocode
 
