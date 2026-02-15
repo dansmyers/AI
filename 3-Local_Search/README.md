@@ -2,6 +2,8 @@
 
 <img src="https://preview.redd.it/hungry-ghost-trapped-in-a-jar-v0-641pzke2r5dg1.png?auto=webp&s=483e7fc7359ec9344af7f06ebda0521c1eb8caec" width="500px" />
 
+## Ending date and quiz, 2/27
+
 ## Overview
 
 Our two previous units covered variations of *tree search*, where we explored the space of problems states searching for an optimal plan that connected a starting state to a desired goal.
