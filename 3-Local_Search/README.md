@@ -3,7 +3,7 @@
 
 <img src="https://preview.redd.it/hungry-ghost-trapped-in-a-jar-v0-641pzke2r5dg1.png?auto=webp&s=483e7fc7359ec9344af7f06ebda0521c1eb8caec" width="500px" />
 
-*This military drone swarm is controlled by a hungry ghost trapped in a jar? This hungry ghost trapped in a jar does my taxes? My therapist is a hungry ghost trapped in a jar?*
+*This hungry ghost trapped in a jar does my taxes? Seems okay. My therapist is a hungry ghost trapped in a jar? Probably unwise. This military drone swarm is controlled by a hungry ghost trapped in a jar?*
 
 
 ## Deliverables due and in-class quiz: 2/27
