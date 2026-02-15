@@ -1,5 +1,9 @@
 # Hill Climbing Search
 
+<img src-"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg/1280px-Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg' width="400px" />
+
+*Wanderer above the sea of fog*, Caspar David Friedrich (1818)
+
 ## Local search
 
 Our previous units considered variations on tree search. All of the various algorithms we studied - BFS, DFS, A*, etc. - maintained a tree of states in memory and explored the space of problem states in a structured way. These algorithms could be complete and optimal and also allowed us to reconstruct the sequence of states from the start to the goal.
