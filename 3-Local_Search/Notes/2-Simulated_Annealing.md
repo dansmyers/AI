@@ -46,6 +46,9 @@ for t = 1 to infinity {
     else if random() < exp(delta / a) {
         s = neighbor
     }
+
+    // If the neighbor is worse but wasn't accepted, the loop will repeat
+    // and sample a different neighbor
 }
 ```
 The most complex line is
@@ -58,7 +61,9 @@ Note that the function *e*<sup>-*x*</sup> < 1 when *x* > 0, so as *x* becomes mo
 
 - If `delta` is close to 0, then the move is easier to accept, which makes sense: these correspond to moves to neighbors that are only a little worse than the current state
 - If `delta` has a large negative value, then the probability of acceptance is low; these correspond to moves to significantly worse neighbors
-- If `a` is large, then the numerator is close to 0, which makes the exponential close to 1 and makes all moves easier to accept
+
+The cooling parameter `a` controls the overall difficulty of accepting any change at all:
+- If `a` is large, then the numerator will be close to 0, which makes the exponential close to 1 and makes all moves easier to accept
 - If `a` is close to 0, the numerator becomes large, which makes the exponential close to zero and makes all moves harder to accept
 
 ## Cooling schedule
