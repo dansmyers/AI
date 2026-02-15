@@ -1,5 +1,9 @@
 # Simulated Annealing
 
+<img src="https://donoughe.com/wp-content/uploads/2018/02/WhiteHotSteel-copy-2000.jpg" width="400px" />
+
+*White Hot Steel*, Ron Donoughe ([link](https://donoughe.com/portfolio-items/white-hot-steel/?portfolioCats=44))
+
 ## Overview
 
 Simulated annealing is a variation of the hill-climbing search that allows the search to occasionally make moves that are neutral or negative to break out of local minima.
