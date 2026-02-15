@@ -1,8 +1,19 @@
 # Local Search
 
+<img src="https://preview.redd.it/hungry-ghost-trapped-in-a-jar-v0-641pzke2r5dg1.png?auto=webp&s=483e7fc7359ec9344af7f06ebda0521c1eb8caec" width="400px" />
+
 ## Overview
 
-**Under construction**. The content here is likely to change. Don't work on anything yet.
+Our two previous units covered variations of *tree search*, where we explored the space of problems states searching for an optimal plan that connected a starting state to a desired goal.
+
+This unit introduces one more family of search techniques: **local search**. Unlike tree search, these methods don't maintain a frontier of states that are waiting to be explored. Instead, we simply move from the start state to a neighbor, then to the next neighbor, and so forth, until the search satisfies a stopping criterion. These methods are used for general optimization problems, where there isn't a specific goal state, but there is an objective function that we desire to maximize or minimize.
+
+Combinatorial optimization problems - where you're trying to pick the best collection of things - are often well-suited to local search.
+
+The second major topic for this unit is **dynamic programming**, an important algorithmic concept that is often used to find exact solutions to combinatorial problems. Dynamic programming is broader than AI, but it's a fundamental building block of many advanced algorithms, so I include it here so you'll have a chance to practice it even if you don't take an advanced algorithms course.
+
+The third topic is reading about **specs-driven development**. This is the formalization of the development procedure we've been doing so far: chat about a problem to develop a specification document, then develop that into a detailed implementation with step-by-step tasks and tests.
+
 
 ## Topics
 
@@ -10,6 +21,7 @@
 - Local vs. global minima and maxima
 - Hill-climbing search
 - Simulated annealing
+- Beam search
 - Genetic algorithm concepts: populations, fitness, crossover, mutation
 - Particle swarm optimization
 - Recursively formulating dynamic programming problems
