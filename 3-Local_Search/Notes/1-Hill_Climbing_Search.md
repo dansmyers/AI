@@ -91,7 +91,20 @@ This example is simple but illustrates some of the challenges of local search:
 - Methods are sensitive to the initial conditions. Small differences in the start can lead to radically different paths and outcomes.
 - The requirement to always move up can lead to getting blocked
 
-## Variations
+## Beam search
+
+It's intuitive that running multiple hill climbing searches from multiple starting points might do a better job of finding a global maximizer. **Beam search** is a method based on that idea.
+
+Rather than running independent hill-climbs, beam search maintains a set of the top-*k* states it knows about at each iteration:
+
+- Begin with *k* random starting states
+- Generate the neighbors of all *k* states and calculate the objective of each one
+- Keep the top-*k* scorers out of the entire set of neighbors
+- Continue this process, generating more neighbors and always keeping the top-*k* at each iteration
+
+Beam search behaves like a broader hill climbing: it moves towards higher objective scores, but allows some lower-performing areas to stay in the search for longer, which can allow the method to avoid being stuck at a single local maximizer.
+
+## More variations
 
 It's easy to come up with some variations that might make hill climbing better. For example,
 
