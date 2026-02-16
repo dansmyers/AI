@@ -126,7 +126,7 @@ The main genetic step selects two "parent" chromosomes and uses them to generate
 
 The selection procedure is weighted by fitness, so that higher-performing members of the population are more likely to be selected. A standard method is *roulette wheel* selection, where parents are chosen randomly and the probability of selection is proportional to fitness.
 
-Suppose that we have three candidates with fitness scores of 2, 4, 5 and 9. The total fitness of the population is 20. The selection procedure generates a random number and uses it to choose the parent as follows:
+Suppose that we have four candidates with fitness scores of 2, 4, 5 and 9. The total fitness of the population is 20. The selection procedure generates a random number and uses it to choose the parent as follows:
 
 - Candidate 1 is selected with probability 2/20
 - Candidate 2 is selected with probability 4/20
