@@ -57,7 +57,7 @@ else if random() < exp(delta / a) {
 ```
 This line calculates a probability of accepting the move using the exponential function, `exp(delta / a)`.
 
-Note that the function *e*<sup>-*x*</sup> < 1 when *x* > 0, so as *x* becomes more negative the function result decays exponentially towards 0.  Therefore, if `delta` is negative - that is, the neighbor is worse than the current state - then the probability of accepting the move decreases exponentially as the gap increases. This has the following effects:
+Note that the function *e*<sup>*x*</sup> < 1 when *x* is negative.  Therefore, if `delta` is negative - that is, the neighbor is worse than the current state - then the probability of accepting the move decreases exponentially as the gap increases. This has the following effects:
 
 - If `delta` is close to 0, then the move is easier to accept, which makes sense: these correspond to moves to neighbors that are only a little worse than the current state
 - If `delta` has a large negative value, then the probability of acceptance is low; these correspond to moves to significantly worse neighbors
