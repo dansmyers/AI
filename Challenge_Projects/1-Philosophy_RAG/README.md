@@ -34,7 +34,7 @@ The back-end has four major components:
 
 You may choose any philosopher or thinker whose primary works are available in the public domain. Good sources include Project Gutenberg and the Internet Classics Archive. There are *many* possible choices, for example, Plato, Aristotle, Kant, Karl Marx, John Locke, Friedrich Nietzsche, and Mary Wollstonecraft.
 
-For the thinker that you select, you should be able to choose works totaling at least 10,000 words, and then identify at least **three major concepts** discussed in those works. These ideas will become the major topics of the conversation.
+For the thinker that you select, you should be able to choose works totaling at least 10,000 words, and then identify at least **four major concepts** discussed in those works. These ideas will become the major topics of the conversation.
 
 ## Crafting the character
 
@@ -86,8 +86,10 @@ I recommend working with Claude to build a minimal viable example to practice wo
 
 ## State machine
 
+<img src="kant_visual_novel.png" width="400px" />
+
 The heart of your application is a state machine that tracks the structure of the conversation and drives the philosopher's behavior. The state has three components:
-- Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least three nodes (concepts from the work) and meaningful edges between them.
+- Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least four nodes (concepts from the work) and meaningful edges between them.
 
 - Stage — the current mode of engagement within a topic. You must implement at least the following four stages:
   - Introduction: the philosopher raises the topic and orients the student
