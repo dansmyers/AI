@@ -50,8 +50,53 @@ It's important to clarify that you are creating a *character*, a fictional intep
 
 We can't really know, after all, what Socrates was really like, whether Nietzsche had a sense of humor (probably not), or whether Kant was actually good at explaining his own ideas. Historians do agree, though, that [Kierkegaard](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard) was a total bishōnen.
 
-Many companies have created "chat with a historical person" apps, and they are usually somewhere between cringe and grotesque. Your philosopher is a construction — an interpretation that *you've created* based on your understanding of their work. Rather than pretending to be an objective discussion with "the real" historical person, we're embracing creative interpretation to motivate you to engage more deeply with your chose author's works.
+Many companies have created "chat with a historical person" apps, and they are usually somewhere between cringe and grotesque. Your philosopher is a construction — an interpretation that *you've created* based on your understanding of their work. Rather than pretending to be an objective discussion with "the real" historical person, we're embracing creative interpretation to motivate you to engage more deeply with your chosen author's works.
 
 ## Components
 
-## 
+## The vector database
+
+Start by doing some background reading on RAG. [Here's a good starting overview](https://www.pinecone.io/learn/retrieval-augmented-generation/).
+
+The basic building blocks of an RAG system are a **text encoder** and a **vector database**.
+
+The encoder takes chunks of text and turns them into vectors in a high-dimensional abstract *latent space*. The abstract vector representation of a text is called its *embedding*. The embedding captures the underlying meaning of the text chunk, and does so in a way that reflects relationships among texts:
+
+- Similar texts map to the same region of latent space
+- Distances between vectors correspond to distances between concepts
+- [Directions in latent space represent conceptual relationships](https://www.youtube.com/shorts/FJtFZwbvkI4).
+
+A vector database is a just a database optimized to store and retrieve numeric vectors. In particular, it allows you to quickly search for nearest neighbors of a given input vector.
+
+The basic RAG flow starts by chunking and then encoding the source material. The chunk size is a key parameter, so you'll want to do some research about choosing a good value. Then, given a query,
+
+- Convert it to a vector
+- Search the database for similar vectors
+- Retrieve their associated text chunks from the database
+- Incorporate that text into the LLM prompt
+
+### Tools
+
+I recommend using [ChromaDB](https://docs.trychroma.com/docs/overview/getting-started) as your database. You can install it locally.
+
+Use [sentence-transformers](https://github.com/huggingface/sentence-transformers) for embedding.
+
+I recommend working with Claude to build a minimal viable example to practice working with these tools before you continue with the rest of the project.
+
+
+## State machine
+
+The heart of your application is a state machine that tracks the structure of the conversation and drives the philosopher's behavior. The state has three components:
+- Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least three nodes (concepts from the work) and meaningful edges between them.
+
+- Stage — the current mode of engagement within a topic. You must implement at least the following four stages:
+  - Introduction: the philosopher raises the topic and orients the student
+  - Examination: the philosopher probes the student's understanding through questions
+  - Challenge: the philosopher introduces tension, a counterargument, or a harder question
+  - Resolution: the conversation arrives at a conclusion, or deliberately rests in productive uncertainty
+ Stage progression within a topic is roughly sequential, but transitions may be triggered early or late by the student's responses.
+
+- Tone — the philosopher's current affective or rhetorical register. You must define at least four tone states (examples: warm, probing, skeptical, delighted, disappointed, playful) and specify how tone transitions are triggered. Tone should reflect both the philosopher's fixed character and the dynamics of the current conversation.
+
+The full state at any moment is the combination of topic × stage × tone.
+
