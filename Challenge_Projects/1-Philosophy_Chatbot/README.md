@@ -1,6 +1,6 @@
 # Philosophy Chatbot
 
-<img src="Images/kant_visual_novel.png" width="400px" />
+<img src="./Images/kant_visual_novel.png" width="400px" />
 
 ## Due on or before 3/13 (the last day of class before Spring Break)
 
