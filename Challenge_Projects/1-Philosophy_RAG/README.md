@@ -1,6 +1,6 @@
 # Philosophy and RAG
 
-<img src="kant_visual_novel.png" />
+<img src="kant_visual_novel.png" width="500px" />
 
 ## Overview
 
