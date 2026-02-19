@@ -53,7 +53,9 @@ It's important to clarify that you are creating a *character*, a fictional intep
 
 We can't really know, after all, what Socrates was really like, whether Nietzsche had a sense of humor (probably not), or whether Kant was actually good at explaining his own ideas. Historians do agree, though, that [Kierkegaard](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard) was a total bishōnen.
 
-Many companies have created "chat with a historical person" apps, and they are usually somewhere between cringe and grotesque. Your philosopher is a construction — an interpretation that *you've created* based on your understanding of their work. Rather than pretending to be an objective discussion with "the real" historical person, we're embracing creative interpretation to motivate you to engage more deeply with your chosen author's works.
+Many companies have created "chat with a historical person" apps, and they are usually somewhere between cringe and grotesque. Your philosopher is a **construction** — an interpretation that *you've created* based on your understanding of their work. There is precedent for [interpreting historical figures dramatically](https://www.youtube.com/watch?v=xkfvg1j1yg8) for entertainment or education.
+
+Rather than pretending to be an objective discussion with the real historical person, we're embracing creativity to motivate you to engage more deeply with your chosen author's works.
 
 
 
@@ -144,7 +146,7 @@ At minimum, you must implement a different visual representation of the philosop
 
 #### How broadly is "philospher" defined? Do I have to choose a well-known Western European figure?
 
-Pretty broadly. You are welcome to go outside the standard European/Ancient Greek/Enlightenment tradition if you'd like. You could choose a figure from economics, history, or the arts, as long as they're known for having influential ideas about their area.
+Pretty broadly. You are welcome to go outside the standard European/Ancient Greek/Enlightenment tradition if you'd like. You could choose a figure from economics, politics, history, or the arts, as long as they're known for having influential ideas about their area.
 
 I do request, however, that you not choose an explicitly religious figure.
 
