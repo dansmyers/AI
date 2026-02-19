@@ -4,6 +4,8 @@
 
 *Kant-senpai, notice my philosophy!*
 
+## Due on or before 3/13 (the last day of class before Spring Break)
+
 ## Overview
 
 In this project you will build a conversational AI application that simulates a dialogue with a historical philosopher. The philosopher will guide the student user through a discussion of their major ideas, drawing directly from their written works — but will do so in character, as a personality you have created based on your understanding of their work.
@@ -54,7 +56,9 @@ Many companies have created "chat with a historical person" apps, and they are u
 
 ## Components
 
-## The vector database
+<img src="marx_visual_novel.png" width="400px" />
+
+### The vector database
 
 Start by doing some background reading on RAG. [Here's a good starting overview](https://www.pinecone.io/learn/retrieval-augmented-generation/).
 
@@ -75,7 +79,7 @@ The basic RAG flow starts by chunking and then encoding the source material. The
 - Retrieve their associated text chunks from the database
 - Incorporate that text into the LLM prompt
 
-### Tools
+#### Tools
 
 I recommend using [ChromaDB](https://docs.trychroma.com/docs/overview/getting-started) as your database. You can install it locally.
 
@@ -84,9 +88,8 @@ Use [sentence-transformers](https://github.com/huggingface/sentence-transformers
 I recommend working with Claude to build a minimal viable example to practice working with these tools before you continue with the rest of the project.
 
 
-## State machine
+### State machine
 
-<img src="marx_visual_novel.png" width="400px" />
 
 The heart of your application is a state machine that tracks the structure of the conversation and drives the philosopher's behavior. The state has three components:
 - Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least four nodes (concepts from the work) and meaningful edges between them.
@@ -103,3 +106,69 @@ The heart of your application is a state machine that tracks the structure of th
 
 The full state at any moment is the combination of topic × stage × tone.
 
+### Two-step LLM pipeline
+
+Each conversational turn must be handled by two sequential LLM calls.
+
+- **Classification**. The user's input is evaluated and classified into one of a small, fixed set of response categories. You can choose the categories you think are useful, but here are some ideas that you should probably support:
+
+  - Demonstrates understanding
+  - Expresses confusion
+  - Offers a surprising or insightful response
+  - Asks a clarifying question
+  - Gives a minimal or evasive answer
+  - Off-topic or anachronistic input
+
+  The classification result is used by the state machine to determine any transitions before the response is generated. This call should use a minimal, focused prompt. Its output must be a structured, inspectable value — not free text.
+
+- **Generation**. Given the current state (topic, stage, tone), the classification result, the retrieved RAG passages, and the conversation history, the philosopher generates their next response in character.
+
+
+Note that these must be two separate LLM calls. You can't use one call to both classification and generation!
+
+#### Tools
+
+Use the **OpenAI API**. I will send you a key by class e-mail for an account that I've created with some credits for you to use.
+
+Make sure to use good key management. You'll probably want to put it in a `.env` file and load it at the start of your program. Don't upload the key to GitHub or post it in a public workspace.
+
+#### Exception handling
+
+You must define a strategy for handling off-topic and anachronistic inputs. This is a character design problem as much as an engineering one. How would your philosopher deflect a question about something they could not possibly know? How do they return the conversation to the work? Your exception state(s) should be consistent with the persona you have designed, and your character document should explain your choices.
+
+### Visual front-end
+
+Build a graphical front-end as a web page that presents the philosopher as a visual character in a scene. The appearance should be connected to the philosopher's current tone, as determined by the state model.
+
+At minimum, you must implement a different visual representation of the philosopher for each tone state. Discuss your choices in your character document. You can choose any visual style or represenation you think is appropriate.
+
+## Questions
+
+<img src="socrates_visual_novel.png" width="400px" />
+
+#### How broadly is "philospher" defined? Do I have to choose a well-known Western European figure?
+
+Pretty broadly. You are welcome to go outside the standard European/Ancient Greek/Enlightenment tradition if you'd like. You could choose a figure from economics, history, or the arts, as long as they're known for having influential ideas about their area.
+
+I do request, however, that you not choose an explicitly religious figure.
+
+#### Do I have to use AI-generated images?
+
+You can, but it's not required. You can create any visual style or artwork that you want.
+
+#### Do I have to use the visual novel style?
+
+No, you can pick any presentation that you want. There's lots of room for creativity here, so think about interesting options.
+
+#### What happens at the end?
+
+You can add an "End" state to your model that's reached if the user successfully transitions through all the topics.
+
+#### How hard should it be?
+
+Again, you can choose how much depth and understanding you want to require for each topic, but I recommend making it something where the user can observe some progress with a few minutes of play.
+
+
+## Submission
+
+Demo your project for me in person. I may ask you questions about your approach, your character design, and your code. Once I've approved your project, you'll upload your character document and application code to Canvas.
