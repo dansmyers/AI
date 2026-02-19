@@ -95,7 +95,7 @@ The heart of your application is a state machine that tracks the structure of th
   - Challenge: the philosopher introduces tension, a counterargument, or a harder question
   - Resolution: the conversation arrives at a conclusion, or deliberately rests in productive uncertainty
 
- Stage progression within a topic is roughly sequential, but transitions may be triggered early or late by the student's responses.
+  Stage progression within a topic is roughly sequential, but transitions may be triggered early or late by the student's responses.
 
 - Tone — the philosopher's current affective or rhetorical register. You must define at least four tone states (examples: warm, probing, skeptical, delighted, disappointed, playful) and specify how tone transitions are triggered. Tone should reflect both the philosopher's fixed character and the dynamics of the current conversation.
 
