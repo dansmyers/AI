@@ -38,7 +38,7 @@ For the thinker that you select, you should be able to choose works totaling at 
 
 ## Crafting the character
 
-<img src="marx_visual_novel.png" width="400px" />
+<img src="nietzsche_visual_novel.png" width="400px" />
 
 Once you've chosen your philosopher, create a **character document** (about 750 words) that describes his or her personality, rhetorical style, values, and characteristic ways of engaging with ideas. This document becomes the foundation of the system prompt used in your generation LLM call.
 
