@@ -86,7 +86,7 @@ I recommend working with Claude to build a minimal viable example to practice wo
 
 ## State machine
 
-<img src="kant_visual_novel.png" width="400px" />
+<img src="marx_visual_novel.png" width="400px" />
 
 The heart of your application is a state machine that tracks the structure of the conversation and drives the philosopher's behavior. The state has three components:
 - Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least four nodes (concepts from the work) and meaningful edges between them.
