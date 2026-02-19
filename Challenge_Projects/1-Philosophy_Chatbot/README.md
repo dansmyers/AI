@@ -2,6 +2,9 @@
 
 <img src="kant_visual_novel.png" width="400px" />
 
+*Kant-senpai and other images created with GPT-5.2*.
+
+
 ## Due on or before 3/13 (the last day of class before Spring Break)
 
 ## Overview
