@@ -52,11 +52,9 @@ We can't really know, after all, what Socrates was really like, whether Nietzsch
 
 Many companies have created "chat with a historical person" apps, and they are usually somewhere between cringe and grotesque. Your philosopher is a construction — an interpretation that *you've created* based on your understanding of their work. Rather than pretending to be an objective discussion with "the real" historical person, we're embracing creative interpretation to motivate you to engage more deeply with your chosen author's works.
 
-## Components
 
-<img src="marx_visual_novel.png" width="400px" />
 
-### The vector database
+## The vector database
 
 Start by doing some background reading on RAG. [Here's a good starting overview](https://www.pinecone.io/learn/retrieval-augmented-generation/).
 
@@ -77,17 +75,14 @@ The basic RAG flow starts by chunking and then encoding the source material. The
 - Retrieve their associated text chunks from the database
 - Incorporate that text into the LLM prompt
 
-#### Tools
+### Tools
 
-I recommend using [ChromaDB](https://docs.trychroma.com/docs/overview/getting-started) as your database. You can install it locally.
-
-Use [sentence-transformers](https://github.com/huggingface/sentence-transformers) for embedding.
-
-I recommend working with Claude to build a minimal viable example to practice working with these tools before you continue with the rest of the project.
+I recommend using [ChromaDB](https://docs.trychroma.com/docs/overview/getting-started) as your database. You can install it locally. Use [sentence-transformers](https://github.com/huggingface/sentence-transformers) for embedding. Work with Claude to build a minimal viable example to practice working with these tools before you continue with the rest of the project.
 
 
-### State machine
+## State machine
 
+<img src="marx_visual_novel.png" width="400px" />
 
 The heart of your application is a state machine that tracks the structure of the conversation and drives the philosopher's behavior. The state has three components:
 - Topic: the philosophical concept or passage currently under discussion. The topic determines what is retrieved from the vector database. You must define a topic graph with at least four nodes (concepts from the work) and meaningful edges between them.
@@ -104,7 +99,7 @@ The heart of your application is a state machine that tracks the structure of th
 
 The full state at any moment is the combination of topic × stage × tone.
 
-### Two-step LLM pipeline
+## Two-step LLM pipeline
 
 Each conversational turn must be handled by two sequential LLM calls.
 
@@ -124,17 +119,17 @@ Each conversational turn must be handled by two sequential LLM calls.
 
 Note that these must be two separate LLM calls. You can't use one call to both classification and generation!
 
-#### Tools
+### Tools
 
 Use the **OpenAI API**. I will send you a key by class e-mail for an account that I've created with some credits for you to use.
 
 Make sure to use good key management. You'll probably want to put it in a `.env` file and load it at the start of your program. Don't upload the key to GitHub or post it in a public workspace.
 
-#### Exception handling
+### Exception handling
 
 You must define a strategy for handling off-topic and anachronistic inputs. This is a character design problem as much as an engineering one. How would your philosopher deflect a question about something they could not possibly know? How do they return the conversation to the work? Your exception state(s) should be consistent with the persona you have designed, and your character document should explain your choices.
 
-### Visual front-end
+## Visual front-end
 
 Build a graphical front-end as a web page that presents the philosopher as a visual character in a scene. The appearance should be connected to the philosopher's current tone, as determined by the state model.
 
