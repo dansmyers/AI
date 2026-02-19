@@ -2,8 +2,6 @@
 
 <img src="kant_visual_novel.png" width="400px" />
 
-*Kant-senpai, notice my philosophy!*
-
 ## Due on or before 3/13 (the last day of class before Spring Break)
 
 ## Overview
