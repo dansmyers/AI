@@ -1,4 +1,4 @@
-# Philosophy and RAG
+# Philosophy Chatbot
 
 <img src="kant_visual_novel.png" width="400px" />
 
@@ -169,4 +169,8 @@ Again, you can choose how much depth and understanding you want to require for e
 
 ## Submission
 
-Demo your project for me in person. I may ask you questions about your approach, your character design, and your code. Once I've approved your project, you'll upload your character document and application code to Canvas.
+Demo your project for me in person. I may ask you questions about your approach, your character design, and your code. 
+
+You will also write a short reflective summary (about 500 words) of your experience developing the project, what you think succeeded and failed, and what this has helped you understand about the strengths and limitations of LLMs.
+
+Once I've approved your project, you'll upload your character document, reflection, and application code to Canvas.
