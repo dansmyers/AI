@@ -144,7 +144,7 @@ At minimum, you must implement a different visual representation of the philosop
 
 <img src="socrates_visual_novel.png" width="400px" />
 
-#### How broadly is "philospher" defined? Do I have to choose a well-known Western European figure?
+#### How broadly is "philosopher" defined? Do I have to choose a well-known Western European figure?
 
 Pretty broadly. You are welcome to go outside the standard European/Ancient Greek/Enlightenment tradition if you'd like. You could choose a figure from economics, politics, history, or the arts, as long as they're known for having influential ideas about their area.
 
@@ -165,6 +165,17 @@ You can add an "End" state to your model that's reached if the user successfully
 #### How hard should it be?
 
 Again, you can choose how much depth and understanding you want to require for each topic, but I recommend making it something where the user can observe some progress with a few minutes of play.
+
+#### Any other tips?
+
+- Use our standard development strategy: produce a spec document, develop incrementally
+- You probably want to build some throw-away prototypes for each phase to explore how it works before building the complete system
+- Think about encapsulation and components - how are you going to separate the different parts from each other?
+- The character model and state machine is a key component; put real effort into building a good model
+
+#### Do the philosophers know that they're AI simulacra of real historical thinkers?
+
+If you want them to...
 
 
 ## Submission
