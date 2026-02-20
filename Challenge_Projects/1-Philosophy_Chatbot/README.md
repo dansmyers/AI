@@ -172,6 +172,7 @@ Again, you can choose how much depth and understanding you want to require for e
 - You probably want to build some throw-away prototypes for each phase to explore how it works before building the complete system
 - Think about encapsulation and components - how are you going to separate the different parts from each other?
 - The character model and state machine is a key component; put real effort into building a good model
+- **Control the amount of text the model generates**. Without guidance, LLMS will easily crank out huge walls of text. Think about keeping the generations focused and aligned with your character's manner of speaking.
 
 #### Do the philosophers know that they're AI simulacra of real historical thinkers?
 
