@@ -42,7 +42,7 @@ Consider another board for **X's turn**:
 ```
 Suppose that X takes the top-middle square. We can consider the entire sequence of game moves under that assumption and build the entire tree of potential future game states.
 
-<img src="./Images/tictactoe_game_tree.png" width="600px" />
+<img src="./Images/tictactoe_game_tree.png" width="800px" />
 
 *Image by Claude Opus 4.6. Good bot.*
 
