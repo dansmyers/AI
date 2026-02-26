@@ -76,7 +76,7 @@ Observe that these scores are symmetric. A finishing state that's +1 for X is wo
 
 Suppose that I'm playing a game and it's my turn: I always want to choose the move that *maximizes* my score. I want to obtain a +1, or at least a 0 if +1 isn't possible. **From my perspective**, my opponent seeks the *minimum score*: they want to score -1, or 0 if that isn't possble.
 
-### The minimax concept
+## The minimax concept
 
 The driving goal of the minimax algorithm comes from combining scoring with rationality.
 
