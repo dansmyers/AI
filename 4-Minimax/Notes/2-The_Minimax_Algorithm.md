@@ -68,4 +68,4 @@ $$ score_{w} = (pawns_w - pawns_b) + 3(knights_w - knights_b) + \ldots + 9(queen
 
 More complex versions will consider not just the number of pieces, but also add or remove points for pieces that are in strong positions vs. weak positions. For example, knights are stronger in the center of the board than on the edges and pawns are in a better position when advanced. See [this article](https://chessify.me/blog/chess-engine-evaluation) for more information on chess evaluation design.
 
-In practice, a lot of the work of a real game-playing minimax engine is in designing a good evaluation function that captures the important strategic elements of the game.
+In practice, a lot of the work of a real game-playing minimax engine is in designing a good evaluation function that captures the important strategic elements of the game. In recent years, many programs have moved to using neural networks to learn evaluations from data, which was a key element in the AlphaGo program that we'll discuss in a future note.
