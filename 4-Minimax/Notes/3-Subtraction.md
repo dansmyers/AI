@@ -2,7 +2,9 @@
 
 ## Overview
 
-The subtraction game is a simple mathematical strategy game. Beginning with a pile of 21 stones, players alternate removing stones until none are left. On her turn, a player may take 1, 2, or 3 stones. The player who takes the last stone is the winner in this version.
+The subtraction game is a simple mathematical strategy game. Beginning with a pile of 21 stones, players alternate removing stones until none are left. On her turn, a player may take 1, 2, or 3 stones. The player who takes the last stone is the winner in this version. The game was played on an episode of *Survivor: Thailand* where it was called *Thai 21*.
+
+The implementation below demonstrates the basic minimax algorithm with a depth limit for playing the subtraction game. Try playing the game against the computer opponent and see how well you do. Can you win? How does the computer's performance change if you adjust the depth limit?
 
 ## Code
 
@@ -33,7 +35,9 @@ def minimax(stones, depth, is_max_player):
         the move yielding that best score
     """
 
-    # If there are no stones left, this player has lost
+    # If there are no stones left, this player has lost (the previous player reduced
+    # stones to 0 on their most recent turn)
+    #
     # If the max player has lost, return -1 (worst outcome for max)
     # If the min player has lost, return 1 (best outcome for max)
     if stones == 0:
