@@ -77,9 +77,11 @@ All chess engines use *material scoring* as a basic part of their board evaluati
 - 5 points for each rook
 - 9 points for each queen
 
-The strength of a player's position is the sum of the points for their remaining pieces.  For example, if white has 5 pawns, 1 bishop, 1 knight, and 2 rooks remaining, its score would be 21 points. The relative strength of white's position is found by calculating its score difference compared to black:
+The strength of a player's position is the sum of the points for their remaining pieces.  For example, if white has 5 pawns, 1 bishop, 1 knight, and 2 rooks remaining, its score would be 21 points. The relative strength of white's position is found by calculating its *material difference* compared to black:
 
 $$ score_{wh} = (P_{wh} - P_{bl}) + 3(K_w - K_{bl}) + 3(B_{wh} - B_{bl}) + 5(R_{wh} - R_{bl}) +  9(Q_{wh} - Q_{bl}) $$
+
+Where *P*, *K*, *B*, etc. are the counts of the remaining pieces for each side.
 
 More complex versions will consider not just the number of pieces, but also add or remove points for pieces that are in strong positions vs. weak positions. For example, knights are stronger in the center of the board than on the edges and pawns are in a better position when advanced. You can also incorporate information on the phase of the game (early, mid, or end), which can impact positional valuation.
 
