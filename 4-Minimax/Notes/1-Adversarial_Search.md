@@ -44,11 +44,13 @@ Suppose that X takes the top-middle square. We can consider the entire sequence 
 
 <img src="./Images/tictactoe_game_tree.png" width="600px" />
 
-Observe that the best outcome X can obtain through this choice is a *tie*. There is no path in the game tree that leads to a win if X takes the top-middle square.
+*Image by Claude Opus 4.6. Good bot.*
+
+Observe that O has four possible response moves at the first level of the tree. Three of those give X the option to win immediately by completing the top row, so O will rationally take the upper-left square and block X. This corresponds to the left branch of the game tree, where X will likewise choose the move that blocks O from winning. So, under rational play, the best outcome for X from this move is a *tie*.
 
 ### Practice
 
-Repeat the previous example, but choose the top-right for X's move. Build out the game tree and show that X now has a guaranteed win through this move.
+Repeat the previous example, but choose the top-right for X's move. Show that every one of O's potential countermoves leads to an immediate X win.
 
 ## Intuition
 
@@ -58,4 +60,29 @@ The tic-tac-toe example is simple, but illustrates some important concepts for a
 
 - Second, playing out the game tree for each possible move choice can reveal if a move is good or bad. In the example above, the game trees show that the top-right leads to a guaranteed win, so we should choose that move.
 
+Therefore, intuitively, at each step a player should always choose the move that provides the *best outcome*, assuming optimal play from that point forward. You should always assume that your opponent will play rationally and avoid mistakes.
 
+## Scoring outcomes
+
+The minimax algorithm assumes that we can assign a score to each terminating state *from the perspective of the current player*. For tic-tac-toe you could do the following:
+
+- A win for the current player is assigned a score of +1. That is, if it's X's turn to move, then a state where X wins is scored as +1
+ 
+- A loss for the current player is assigned a score of -1. Again, if it's X's turn, then a state where O wins counts for -1
+
+- Ties or incomplete states are assigned 0.
+
+Observe that these scores are symmetric. A finishing state that's +1 for X is worth -1 for O, and vice-versa.
+
+Suppose that I'm playing a game and it's my turn: I always want to choose the move that *maximizes* my score. I want to obtain a +1, or at least a 0 if +1 isn't possible. **From my perspective**, my opponent seeks the *minimum score*: they want to score -1, or 0 if that isn't possble.
+
+### The minimax concept
+
+The driving goal of the minimax algorithm comes from combining scoring with rationality.
+
+_I should always choose the action that maximizes my score, taking account that my opponent will always choose actions to minimize my score._
+
+Consider the tic-tac-toe game tree above, which is drawn from X's perspective as the currently moving player. 
+
+- When it's O's turn, they should rationally choose the move that *minimizes* X's best outcome in the subtree
+- X should always prefer the move that *maximizes* their best outcome in the resulting subtree
