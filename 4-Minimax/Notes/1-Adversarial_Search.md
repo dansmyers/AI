@@ -58,7 +58,7 @@ The tic-tac-toe example is simple, but illustrates some important concepts for a
 
 - First, we should assume that the opponent is rational and will always choose strategically optimal moves. We shouldn't expect to win because the opponent blundered and make a bad move.
 
-- Second, playing out the game tree for each possible move choice can reveal if a move is good or bad. In the example above, the game trees show that the top-right leads to a guaranteed win, so we should choose that move.
+- Second, playing out the game tree for each possible move choice can reveal if a move is good or bad. In the example above, the game trees show that X should take the top-right space to guarantee a win.
 
 Therefore, intuitively, at each step a player should always choose the move that provides the *best outcome*, assuming optimal play from that point forward. You should always assume that your opponent will play rationally and avoid mistakes.
 
@@ -74,9 +74,12 @@ The minimax algorithm assumes that we can assign a score to each terminating sta
 
 Observe that these scores are symmetric. A finishing state that's +1 for X is worth -1 for O, and vice-versa.
 
-Suppose that I'm playing a game and it's my turn: I always want to choose the move that *maximizes* my score. I want to obtain a +1, or at least a 0 if +1 isn't possible. **From my perspective**, my opponent seeks the *minimum score*: they want to score -1, or 0 if that isn't possble.
+Scores can be defined in whatever way is appropriate for the game. Some games don't have simple win-lose-draw outcomes, so fractional scores might be appropriate. Most simple games like tic-tac-toe are zero-sum, but this isn't a general requirement.
+
 
 ## The minimax concept
+
+Suppose that I'm playing a game and it's my turn: I always want to choose the move that *maximizes* my score. I want to obtain a +1, or at least a 0 if +1 isn't possible. **From my perspective**, my opponent seeks the *minimum score*: they want to score -1, or 0 if that isn't possble.
 
 The driving goal of the minimax algorithm comes from combining scoring with rationality.
 
