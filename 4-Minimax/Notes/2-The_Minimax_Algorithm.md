@@ -64,7 +64,7 @@ The depth-limited version shown above will prevent the search from branching out
 
 Consider chess. It's almost always infeasible to play out a full game tree for chess, so most minimax searches will end on some intermediate board state. The `score` function then becomes an assessment of how good that board state is for the current player. For example, if it's white's turn, then outcomes that place white in a strong position should be favored, because those are more likely to lead to wins than states that give black the dominant board position.
 
-The *evaluation function* takes a state and returns an approximation of its minimax score. This function allows us to evaluate the quality of incomplete states: a state with a high evaluation is closer to a winning state for the maximzing player, and likewise for low evaluations and the minimizing player.
+The *evaluation function* takes a state and returns an approximation of its minimax score. This function allows us to evaluate the quality of incomplete states: a state with a high evaluation is closer to a winning state for the maximizing player, and likewise for low evaluations and the minimizing player.
 
 ## Example: material scoring in chess
 
