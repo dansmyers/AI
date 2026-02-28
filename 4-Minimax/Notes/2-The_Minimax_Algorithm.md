@@ -58,7 +58,7 @@ A naive version of minimax would require playing out *the full game tree* for ev
 
 The depth-limited version shown above will prevent the search from branching out of control, but there are two issues that need to be considered:
 
-1. What is a good choice for the initial value of `depth`, which determines the number of levels in the tree? There's no fixed rule. In general, you should probably run the deepest possible search that you can without making moves take too long.
+1. What is a good choice for the initial value of `depth`, which determines the number of levels in the tree? There's no fixed rule. In general, you should probably run the deepest possible search that you can without making decisions take too long.
 
 2. More seriously, what should we do about incomplete states? If `depth` reaches 0, we probably won't be in a terminal state, so we can't simply score a win or loss.
 
