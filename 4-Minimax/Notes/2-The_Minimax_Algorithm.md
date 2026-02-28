@@ -83,7 +83,7 @@ $$ score_{wh} = (P_{wh} - P_{bl}) + 3(K_w - K_{bl}) + 3(B_{wh} - B_{bl}) + 5(R_{
 
 Where *P*, *K*, *B*, etc. are the counts of the remaining pieces for each side.
 
-More complex versions will consider not just the number of pieces, but also add or remove points for pieces that are in strong positions vs. weak positions. For example, knights are stronger in the center of the board than on the edges and pawns are in a better position when advanced. You can also incorporate information on the phase of the game (early, mid, or end), which can impact positional valuation.
+More complex versions will consider not just the number of pieces, but also add or remove points for pieces that are in tactically strong board positions vs. weak positions. For example, knights are stronger in the center of the board than on the edges and pawns are in a better position when advanced. You can also incorporate information on the phase of the game (early, mid, or end), which can impact positional valuation.
 
 See [this article](https://chessify.me/blog/chess-engine-evaluation) for more information on chess evaluation design.
 
