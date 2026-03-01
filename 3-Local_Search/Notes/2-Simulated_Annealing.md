@@ -63,8 +63,8 @@ Note that the function *e*<sup>*x*</sup> < 1 when *x* is negative.  Therefore, i
 - If `delta` has a large negative value, then the probability of acceptance is low; these correspond to moves to significantly worse neighbors
 
 The cooling parameter `a` controls the overall difficulty of accepting any change at all:
-- If `a` is large, then the numerator will be close to 0, which makes the exponential close to 1 and makes all moves easier to accept
-- If `a` is close to 0, the numerator becomes large, which makes the exponential close to zero and makes all moves harder to accept
+- If `a` is large, then the exponent will be close to 0, which makes the exponential close to 1 and makes all moves easier to accept
+- If `a` is close to 0, the exponent becomes large, which makes the exponential close to zero and makes all moves harder to accept
 
 ## Cooling schedule
 It turn out that if `schedule(t)` decreases slowly enough this method almost always works, but the required cooling may take too many iterations to be practical. There are no fixed rules for choosing the cooling schedule. Advanced versions can use an adaptive approach where the temperature is adjusted dynamically based on how the search is progressing.
