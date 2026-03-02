@@ -1,6 +1,6 @@
 # Classic: Perfectly Rational Pirates
 
-<img src="https://upload.wikimedia.org/wikipedia/en/0/09/Pirates_who_dont_do_anything_poster.jpg" width="300px" />
+<img src="https://upload.wikimedia.org/wikipedia/en/0/09/Pirates_who_dont_do_anything_poster.jpg" width="200px" />
 
 ## Overview
 
