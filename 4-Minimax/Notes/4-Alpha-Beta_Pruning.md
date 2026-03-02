@@ -32,16 +32,18 @@ Max nodes use the same strategy with the roles of the nodes reversed. For every 
 
 The **alpha-beta pruning** algorithm keeps track of two parameters as it builds the game tree. For each node,
 
-- `alpha` is the largest value identified by the max nodes on the path to the root
-- `beta` is the smallest value identified by the min nodes on the path to the root
+- `alpha` is the largest result identified by any higher-level max node on the path to the root
+- `beta` is the smallest result identified by any higher-level min node on the path to the root
 
 It may be helpful to think of `alpha` as the max player's current best known result. It would be good (for the max player) if it can continue to identify even larger values that represent better outcomes, but `alpha` represents the lower bound that it's guaranteed to achieve even if no more nodes are explored. Likewise, `beta` is the current estimate of the min player's best outcome.
 
-For a max node, return immediately once you have identified a score ≥ `beta`. These represent choices that are no better (for the min player) than what it can already obtain through a previously identified path.
+For a max node, return immediately once you have identified a score ≥ `beta`. This represents a result that will always be rejected by the min player because it isn't competitive with the best known result.
 
 For a min node, like the one in the example, return immediately if you identify a score ≤ `alpha`. Again, this represents a value that is no better than what the max player can already obtain.
 
 ## Bigger example
+
+<img src="Images/minimax_binary_tree.png" width="600px" />
 
 ## Pseudocode
 
