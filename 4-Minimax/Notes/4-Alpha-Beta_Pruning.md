@@ -45,5 +45,11 @@ For a min node, like the one in the example, return immediately if you identify 
 
 <img src="Images/minimax_binary_tree.png" width="600px" />
 
+Fill in the abstract game tree above. Work out which subtrees should be pruned. Process the subtrees from left to right.
+
+### Solution
+
+<img src="Images/minimax_alphabeta.png" width="600px" />
+
 ## Pseudocode
 
