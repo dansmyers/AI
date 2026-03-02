@@ -8,7 +8,7 @@ However, it's often possible to speed up the search by **pruning** subtrees that
 
 ## Example
 
-<img src="Images/minimax_pruning.png" width="400px" />
+<img src="Images/minimax_pruning.png" width="600px" />
 
 The figure above shows the abstract game tree from the previous note in a partially complete state. Observe the following:
 
