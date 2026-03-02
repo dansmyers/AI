@@ -41,5 +41,7 @@ For a max node, return immediately once you have identified a score ≥ `beta`. 
 
 For a min node, like the one in the example, return immediately if you identify a score ≤ `alpha`. Again, this represents a value that is no better than what the max player can already obtain.
 
+## Bigger example
+
 ## Pseudocode
 
