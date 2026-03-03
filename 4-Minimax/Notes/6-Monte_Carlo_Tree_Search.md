@@ -26,7 +26,7 @@ MCTS combines the idea of adversarial tree search with the UCB1 selection strate
 
 <img src="Images/mcts_diagram.png" width="800px" />
 
-*Image by Claude*.
+*Image by Claude. Here's a challenge for you: do the moves taken in step 1 correctly correspond to the moves that would be selected by the UCB1 criterion?*
 
 <br/>
 
