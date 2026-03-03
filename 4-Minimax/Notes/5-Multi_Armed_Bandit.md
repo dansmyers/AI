@@ -29,10 +29,31 @@ Let $$\mu_k$$ be the mean reward of machine $$k$$. Let $$\mu^{*}$$ be the maximu
 
 $$ \mu^{*} = \max_k \{ \mu_k \} $$
 
-Therefore, over $$T$$ pulls, the maximum reward the player could expect to obtain is $$T\mu^{*}$$.
+Therefore, over $$T$$ pulls, the maximum reward the player could expect to obtain is $$\mu^{*}T$$.
 
-In practice, if the player pulls arm $$k$$ a total of $$T_k$$ times, then the expected reward from machine $$k$$ is $$T_k\mu_k$$. Let the *regret* be the difference between the max expected reward and what the player actually obtained:
+In practice, if the player pulls arm $$k$$ a total of $$T_k$$ times, then the expected reward from machine $$k$$ is $$\mu_kT_k$$. Let the *regret* be the difference between the max expected reward and what the player actually obtained:
 
-$$ regret = T\mu^{*} - \sum_{k=1}^{K} \, T_k\mu_k $$
+$$ regret = \mu^{*}T - \sum_{k=1}^{K}  \mu_kT_k $$
 
 The right term is the sum of rewards over all machines, taking into account the number of plays made on each machine.
+
+The ideal solution would be a strategy that *minimizes regret* - but you can't really find that, because the true $$\mu_k$$ and $$\mu^{*}$$ are unknown. Instead, the prefered approach is to play a strategy that *bounds regret*.
+
+## Upper Confidence Bound
+
+The UCB strategy is the standard technique for playing the multi-armed bandit problem. It was introduced in a [2002 paper](https://link.springer.com/article/10.1023/A:1013689704352) by Peter Auer, Nicolò Cesa-Bianchi, and Paul Fischer.
+
+The UCB strategy considers a situation where you can keep pulling as many times as you want. Each pull gives you some information about the behavior of its machine, and you would like to play in such a way that regret is minimized over the long run of play.
+
+Suppose that we have played some number of pulls $$T$$. Let $$\overline{x_k}$$ be the average reward per pull obtained from machine $$k$$ over those pulls. That is, $$\overline{x_k}$$ is our estimate of what we earn for each pull of arm $$k$$.
+
+Intuitively, picking the arm with maximum $$\overline{x_k}$$  is reasonable: you might as well play the arm that seems to be giving the highest rewards.
+
+However, the more times we play $$k$$, the better we understand its reward distribution. An exploration strategy might assign more weight to arms that we haven't played as much yet, as a way to learn more about them.
+
+The UCB strategy says that, on each pull, to play the arm $$k$$ that maximizes,
+
+$$ x_k + \sqrt{\frac{2 \ln T}{T_k}} $$
+
+where $$T$$ is the total number of pulls made so far and $$T_k$$ is the number of pulls of arm $$k$$.
+
