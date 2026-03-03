@@ -1,6 +1,6 @@
 # The Multi-Armed Bandit
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Liberty_bell.jpg" width="300px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Liberty_bell.jpg" width="200px" />
 
 *Charles Fey's "Liberty Bell" slot machine, ca. 1899. An immigrant to San Francisco from Bavaria, Fey invented the classic slot machine with three rotating reels of symbols in about 1890. Some prototype gambling machines already existed, but Fey's was the first to fully automate the payout mechanism and become a huge success. The classic version had five symbols on each reel, one of which was the Liberty Bell that gave the machine its name. Via Wikipedia.*
 
@@ -25,6 +25,8 @@ The *explore vs. exploit* dynamic was also present in our local search algorithm
 
 ## Regret
 
-Let $$\mu_k$$ be the mean reward of machine $$k$$. Let the maximum reward be
+Let $$\mu_k$$ be the mean reward of machine $$k$$. Let the maximum mean reward be
 
-$$ \mu* = \max_k \{ \mu_k \} $$
+$$ \mu^{*} = \max_k \{ \mu_k \} $$
+
+Therefore, over $$T$$ pulls, the maximum reward the player could expect to obtain is $$T\mu^{*}$$.
