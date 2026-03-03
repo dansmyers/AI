@@ -6,7 +6,7 @@
 
 ## Overview
 
-The core problem of classical minimax is the need to expand the (potentially huge) game tree. Even with pruning and evaluation functions, this my be impractical if the game has a high branching factor.
+The core problem of classical minimax is the need to expand the (potentially huge) game tree. Even with pruning and evaluation functions, this may be impractical if the game has a high branching factor.
 
 **Monte Carlo Tree Search** (MCTS) is an alternative to minimax that uses *random sampling* to estimate the outcome of paths in the game tree, rather than exhaustive expansion. *Monte Carlo simulation* refers to a general category of algorithms that use samples to estimate complex calculations that would be impossible or inconvenient to evaluate exactly. The name comes from the Monte Carlo casino complex in Monaco.
 
