@@ -1,6 +1,6 @@
 # Monte Carlo Tree Search
 
-<img src="https://cdn.geekwire.com/wp-content/uploads/2016/03/160309-sedol.jpg" width="400px" />
+<img src="https://cdn.geekwire.com/wp-content/uploads/2016/03/160309-sedol.jpg" width="300px" />
 
 *Lee Sedol vs. AlphaGo in 2016. After Deep Blue's defeat of Kasparov, the East Asian game of go emerged as the next major frontier in game-playing AI. Go is played on a 19x19 grid between two players who place white and black stones. The object is to place your stones in a way that captures your opponent's stones and controls the most territory at the end of the game. Go is harder for AI than chess because the branching factor is much higher (there may be hundreds of possible moves at each turn) and because estimating the quality of a move is more difficult. The strategic value of a position may not become clear until many turns later, so standard minimax-based search struggles to identify good moves. Google DeepMind achieved a major breakthrough with the AlphaGo program, which beat top-ranked player Lee Sedol in 2016.*
 
