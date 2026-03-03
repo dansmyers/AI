@@ -25,8 +25,14 @@ The *explore vs. exploit* dynamic was also present in our local search algorithm
 
 ## Regret
 
-Let $$\mu_k$$ be the mean reward of machine $$k$$. Let the maximum mean reward be
+Let $$\mu_k$$ be the mean reward of machine $$k$$. Let $$\mu^{*}$$ be the maximum of the means across the $$K$$ machines.
 
 $$ \mu^{*} = \max_k \{ \mu_k \} $$
 
 Therefore, over $$T$$ pulls, the maximum reward the player could expect to obtain is $$T\mu^{*}$$.
+
+In practice, if the player pulls arm $$k$$ a total of $$T_k$$ times, then the expected reward from machine $$k$$ is $$T_k\mu_k$$. Let the *regret* be the difference between the max expected reward and what the player actually obtained:
+
+$$ regret = T\mu^{*} - \sum_{k=1}^{K} \, T_k\mu_k $$
+
+The right term is the sum of rewards over all machines, taking into account the number of plays made on each machine.
