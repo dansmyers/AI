@@ -24,7 +24,7 @@ MCTS combines the idea of adversarial tree search with the UCB1 selection strate
 
 ## Algorithm
 
-<img src="Images/mcts_diagram.png" width="600px" />
+<img src="Images/mcts_diagram.png" width="800px" />
 
 *Image by Claude*.
 
