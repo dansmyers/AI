@@ -40,7 +40,7 @@ The four steps are as follows:
 
 3. Perform a *rollout* of the new child node by playing the game state it represents to completion. This is usually done by making random moves until the game reaches a final state. Note that the rollout step doesn't add new nodes to the tree, it just samples one random path and observes the result.
 
-4. Send the rollout result back up the tree, updating win counts at each node leading up to the root. This provides additional information on the quality of the branches taken in this iteration.
+4. Send the rollout result back up the tree, updating win counts at each node leading up to the root. This provides additional information on the quality of the branches taken in this iteration. In the example above, the rollout resulted in a win, which updates the win/visit counts for the nodes on the path back to the root.
 
 Over time, this method concentrates effort in the best parts of the tree, which end up with more generated child nodes and more rollouts. The method runs until either a time or iteration budget is exhausted.
 
