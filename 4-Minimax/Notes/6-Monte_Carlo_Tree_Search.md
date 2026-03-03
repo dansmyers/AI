@@ -44,7 +44,7 @@ The four steps are as follows:
 
 Over time, this method concentrates effort in the best parts of the tree, which end up with more generated child nodes and more rollouts. The method runs until either a time or iteration budget is exhausted.
 
-There are a lot of variations:
+Many variations on the basic strategy are possible:
 
 - The standard rollout strategy plays out the game by picking random moves, but this may suboptimal for some games like chess. A variation puts more effort into picking reasonable moves at each rollout step, with the tradeoff of making rollouts take longer.
 
