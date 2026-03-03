@@ -1,6 +1,6 @@
 # Ultimate Tic-Tac-Toe
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Super_tic-tac-toe_rules_example.png/500px-Super_tic-tac-toe_rules_example.png" width="500px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Super_tic-tac-toe_rules_example.png/500px-Super_tic-tac-toe_rules_example.png" width="300px" />
 
 *Via Wikipedia*.
 
