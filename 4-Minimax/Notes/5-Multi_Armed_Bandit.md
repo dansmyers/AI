@@ -45,7 +45,7 @@ The UCB strategy is the standard technique for playing the multi-armed bandit pr
 
 The UCB strategy considers a situation where you can keep pulling as many times as you want. Each pull gives you some information about the behavior of its machine, and you would like to play in such a way that regret is minimized over the long run of play.
 
-Suppose that we have played some number of pulls $$t$$. Let $$\overline{x_k}$$ be the average reward per pull obtained from machine $$k$$ over those pulls. That is, $$\overline{x_k}$$ is our estimate of what we earn for each pull of arm $$k$$.
+Suppose that we have played some number of pulls $$t$$. Let $$\overline{x_k}$$ be the average reward per pull obtained from machine $$k$$ over those pulls. That is, $$\overline{x}_k$$ is our estimate of what we earn for each pull of arm $$k$$.
 
 Intuitively, picking the arm with maximum $$\overline{x_k}$$  is reasonable: you might as well play the arm that seems to be giving the highest rewards.
 
@@ -53,7 +53,7 @@ However, the more times we play $$k$$, the better we understand its reward distr
 
 The UCB strategy says that, on each pull, to play the arm $$k$$ that maximizes,
 
-$$ \overline{x_k} + \sqrt{\frac{2 \ln t}{t_k}} $$
+$$ \overline{x}_k + \sqrt{\frac{2 \ln t}{t_k}} $$
 
 where $$t$$ is the total number of pulls made so far and $$t_k$$ is the number of pulls of arm $$k$$.
 
