@@ -53,7 +53,7 @@ However, the more times we play $$k$$, the better we understand its reward distr
 
 The UCB strategy says that, on each pull, to play the arm $$k$$ that maximizes,
 
-$$ x_k + \sqrt{\frac{2 \ln t}{t_k}} $$
+$$ \overline{x_k} + \sqrt{\frac{2 \ln t}{t_k}} $$
 
 where $$t$$ is the total number of pulls made so far and $$t_k$$ is the number of pulls of arm $$k$$.
 
