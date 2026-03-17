@@ -1,7 +1,9 @@
 # Decision Trees and Intro to Machine Learning
 
+<img src="https://imgs.xkcd.com/comics/tasks.png" width="400px" />
 
-<img src="https://i.pinimg.com/736x/69/ce/37/69ce376735f3ebd5e0d64487cc0bc0c8.jpg" width="500px" />
+*This was true in 2014.*
+
 
 ## Deliverables due and in-class quiz on 4/3
 
