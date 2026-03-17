@@ -1,6 +1,6 @@
 # Decision Trees and Intro to Machine Learning
 
-<img src="https://imgs.xkcd.com/comics/tasks.png" width="400px" />
+<img src="https://imgs.xkcd.com/comics/tasks.png" width="250px" />
 
 *This was true in 2014.*
 
