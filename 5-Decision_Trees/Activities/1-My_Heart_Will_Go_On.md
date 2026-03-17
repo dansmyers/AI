@@ -6,20 +6,10 @@
 
 ## Description
 
-A previous lab focused on understanding the basics of machine learning. Now, we're going to dig into some code and write machine learning classifiers using a Python framework called scikit-learn, one of the most popular libraries for predictive analytic models in Python.
-
-Our data set will be `Titanic.csv` file we worked with last time. We're going to create a model that will allow us to understand the characteristics that contributed to passengers suriving the sinking of the *Titanic*. Along the way, we'll learn some more about building and evaluating predictive models.
-
-## Questions and Answers
-
-This lab contains questions that you'll need to answer as you go. Create a Word document and put your answers to each question in it. 
+This lab is an intro to some basic concepts of machine learning using the `scikit-learn` Python library. It uses the famous *Titanic* dataset, which is pretty much the `"Hello, World!"` of machine learning.
 
 ## Get the Data
-Create new `Lab_13` directory and `cd` into it. You can then copy the `Titanic.csv` file from the previous lab:
-```
-cp ../Lab_11/Titanic.csv .
-```
-Recall that `..` in the shell refers to the parent directory and `.` refers to the current directory, so this command is finding the `Titanic.csv` file in the sibling `Lab_11` directory and then copying it to the current `Lab_13` directory.
+Make a `Titanic` directory and `cd` into it. Download `Titanic.csv` from Canvas. 
 
 Make a new file called `model.py` and put the following code inside it:
 ```
