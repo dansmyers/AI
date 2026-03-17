@@ -10,4 +10,12 @@
 
 ## Overview
 
-We've talked about the general concept of machine learning before: Use a general-purpose algorithm to *learn from data*
+We've talked about the general concept of machine learning before. A typical application is building a model that can learn, by observing a set of training examples, how to distinguish between classes of interest, with the goal of then classifying new observations that aren't part of the original training set. Image classification is an important practical example that was considered quite hard until it was solved by deep neural networks in the mid-2010s (more on those later).
+
+Learning algorithms fall into two broad categories:
+
+- *Supervised learning*, where the input data set consists of labeled training examples, and the goal is to learn a model that maps new previously unseen inputs to labels
+
+- *Unsupervised learning*, where the input data set is unlabeled, and the goal is to learn a model that captures the structure of the data and reveals insights about meaningful subgroups. Clustering algorithms are an important category of unsupervised learning methods.
+
+
