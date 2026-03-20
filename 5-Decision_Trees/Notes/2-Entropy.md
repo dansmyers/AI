@@ -4,7 +4,7 @@
 
 Claude Shannon is one of the most important engineers of the 20th Century and a central figure in the history of computing. In 1937, as a graduate student and MIT, he authored a Master's thesis titled *A Symbolic Analysis of Relay and Switching Circuits*, which showed that concepts of Boolean algebra could be used to create digital logic circuits and laid the foundation for the design of all subsequent electonic computers.
 
-In 1958, he published *A Mathematical Theory of Communication* as a Bell Labs technical report, establishing **information theory** as a mathematical framework for understanding telecommunications and signal processing. The concepts of information theory have important applications in computer security, cryptography, and in data compression. For us, Shannon's idea of **information entropy** will be our main tool for choosing splits in a decision tree.
+In 1948, he published *A Mathematical Theory of Communication* as a report in the *Bell System Technical Journal*, establishing **information theory** as a mathematical framework for understanding telecommunications and signal processing. The concepts of information theory have important applications in computer security, cryptography, and in data compression. For us, Shannon's idea of **information entropy** will be our main tool for choosing splits in a decision tree.
 
 ## Information and uncertainty
 
@@ -51,6 +51,8 @@ $$ 1 \cdot .50 + 2 \cdot .25 + 3(.1875 + .0625) = 1.75 $$
 
 Therefore, in this example, a sequence of *N* symbols is expected to convey 1.75*N* bits of information. 
 
+This type of efficient encoding is called a **Huffman code**. It's the theoretically optimal representation if we're constrained to encode each symbol as as fixed whole number of bits.
+
 ## Entropy calculation
 
 Shannon's entropy is the formal theoretical version of the above example.
@@ -62,7 +64,7 @@ Consider symbol *i* that occurs with probability *p*<sub>*i*</sub>. The *self-in
 
 $$ I(p_i) = -\log_2(p_i) $$
 
-If *p*<sub>*i*</sub> = .05, then *i* has 1 bit of self-information. Smaller values of *p*<sub>*i*</sub> correspond to more bits of information. Intuitively, the lower the probability of a symbol, the more information is gained by observing its appearance.
+If *p*<sub>*i*</sub> = .50, then *i* has 1 bit of self-information. Smaller values of *p*<sub>*i*</sub> correspond to more bits of information. Intuitively, the lower the probability of a symbol, the more information is gained by observing its appearance.
 
 I find it helpful to think of this as the *theoretical minimum* number of bits that should be used to encode symbol *i*, if we were allowed to use fractional bits. For example, if *p*<sub>*i*</sub> = 3/16, the theoretical number of bits for that symbol is
 
@@ -82,6 +84,12 @@ Consider a few cases:
 - If *X* only takes on a single value with probability 1, then it has 0 bits of entropy
 - Lower entropies correspond to random variables that are more predictable
 - Higher entropies correspond to variables with more equally-distributed (that is, less predictable) outcomes
+
+For our previous example, the exact entropy calculation is:
+
+$$ -.50 \log_2(.50) - .25 \log_2(.25) - .1875\log_2(.1875) - .0625\log_2(.0625) \approx 1.7028 $$
+
+Notice that this is a little better than the exact encoding, because the exact entropy calculation isn't constrained to use a whole number of bits for each symbol.
 
 ### Practice questions
 
