@@ -55,9 +55,25 @@ Therefore, in this example, a sequence of *N* symbols is expected to convey 1.75
 
 Shannon's entropy is the formal theoretical version of the above example.
 
-Consider symbol *i* that occurs with probability *p*<sub>*i*</sub>. The *self-information* of symbol *i* is given by
+
+### Self-information
+
+Consider symbol *i* that occurs with probability *p*<sub>*i*</sub>. The *self-information* of symbol *i* depends on its probability of occurrence and is given by:
 
 $$ I(p_i) = -\log_2(p_i) $$
 
+If *p*<sub>*i*</sub> = .05, then *i* has 1 bit of self-information. Smaller values of *p*<sub>*i*</sub> correspond to more bits of information. Intuitively, the lower the probability of a symbol, the more information is gained by observing its appearance.
+
+I find it helpful to think of this as the *theoretical minimum* number of bits that should be used to encode symbol *i*, if we were allowed to use fractional bits. For example, if *p*<sub>*i*</sub> = 3/16, the theoretical number of bits for that symbol is
+
+$$ -\log_2(.1875) \approx 2.415 $$
+
+This is a little better than the previous example, where we were constrained to use whole bits for the encoding.
+
+### Entropy of multiple symbols
+
+The entropy of a collection of symbols is the expected value of their self-information values:
+
+$$ H(X) = - \sum_i p_i \log_2(p_i) $$
 
 
