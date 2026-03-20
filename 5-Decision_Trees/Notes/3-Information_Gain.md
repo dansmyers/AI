@@ -71,7 +71,7 @@ Again, that number by itself doesn't tell us much. It's a quantification of how 
 
 ### Step 4: Repeat for other candidate splits
 
-The method considers other options it might split on and evaluates the information gain of each one. Repeat the steps above for the `Has Bread?` variable and see what gain you obtain? Which variable is the better split?
+The method considers other options it might split on and evaluates the information gain of each one. Repeat the steps above for the `Has Bread?` variable and see what gain you obtain. Which variable is the better split?
 
 Tip: You should get about .8571 for the weighted entropy of the split, for a gain of .1281.
 
