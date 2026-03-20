@@ -36,7 +36,7 @@ Therefore, we can compare the entropy of the total set to the entropies obtained
 
 The top-level set has 4/7 sandwiches and 3/7 non-sandwiches. Therefore, its entropy is:
 
-$$ -(.5714) \ \log_2(.5714) - (.4286) \log_2(.4286) \approx .9852 $$
+$$ -.5714 \ \log_2(.5714) - .4286 \ \log_2(.4286) \approx .9852 $$
 
 Don't worry about the exact entropy number! We can observe that it's close to 1, indicating that the classes are closer to equally split, but don't worry about interpreting the specific result.
 
@@ -49,11 +49,11 @@ Suppose we evaluate `Has Meat?` as the candidate. This separates the top-level s
 
 The entropy for the `Yes` case is
 
-$$ -(.60) \log_2(.60) - .40 \log_2(.40) \approx .9709 $$
+$$ -.60 \ \log_2(.60) - .40 \ \log_2(.40) \approx .9709 $$
 
 The entropy for the no case is
 
-$$ -(.50) \log_2(.50) - (.50) \log_2(.50) = 1.0 $$
+$$ -.50 \ \log_2(.50) - .50 \ \log_2(.50) = 1.0 $$
 
 ### Step 3: Take a weighted combination of the subset entropies
 
