@@ -72,8 +72,21 @@ This is a little better than the previous example, where we were constrained to 
 
 ### Entropy of multiple symbols
 
-The entropy of a collection of symbols is the expected value of their self-information values:
+The entropy of a collection of symbols is the expected value of their self-information values. Let *X* be a discrete random variable. The entropy of *X* is given by:
 
 $$ H(X) = - \sum_i p_i \log_2(p_i) $$
 
+Consider a few cases:
 
+- If *X* is a siungle coin flip, it has 1 bit of entropy
+- If *X* only takes on a single value with probability 1, then it has 0 bits of entropy
+- Lower entropies correspond to random variables that are more predictable
+- Higher entropies correspond to variables with more equally-distributed (that is, less predictable) outcomes
+
+### Practice questions
+
+Calculate the entropies of:
+
+- A weighted coin that comes up heads 99% of the time
+- A standard six-sided die
+- A random variable representing the number of heads obtained by flipping three coins
