@@ -72,4 +72,16 @@ The method considers other options it might split on and evaluates the informati
 
 Tip: You should get about .8571 for the weighted entropy of the split, for a gain of .1281.
 
-## The GINI coefficient
+## Gini impurity
+
+An alternative to the information gain measurement is **Gini impurity**. It's defined as the probability that two randomly chosen items from the training set belong to different classes:
+
+$$ G(X) = 1 - \sum_i p_i^2 $$
+
+Equivalently, this is the probability that assigning an item a class chosen at random from the distribution of class labels results in a misclassification.
+
+The name is a bit misleading. Carrado Gini was an Italian statistician who described a measurement of statistical inequality in 1912. That score is now called the Gini coefficient (or Gini index) and is often used in developmental economics when quantifying wealth inequality in a nation. The creators of the CART decision tree algorithm developed the impurity concept as part of their work in the 1980s and called it "Gini impurity", because it was somewhat inspired by Gini's original theory, even though the actual calculation is different.
+
+Impurity doesn't reqwuire logarithms, so it's somewhat simpler to calculate the information gain, but the two measurements are similar in most practical cases. `scikit-learn` uses CART and Gini impurity as the defaults in its `DecisionTreeClassifier` implementation.
+
+
