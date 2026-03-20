@@ -21,6 +21,9 @@ Burrito           Yes           No             No
 PB & J             No          Yes            Yes
 Hot dog           Yes          Yes             No
 KFC double-down   Yes           No            Yes
+
+
+Note: I will not accept any arguments that the breading on the KFC chicken counts as "having bread"
 ```
 
 In this dataset, `Is Sandwich?` is the decision variable of interest. Suppose that we're building a decision tree and need to choose the top-level split. We have two variables we could choose: `Has Meat?` or `Has Bread?`. We'd like to choose the variable that does the best job of splitting the two classes.
