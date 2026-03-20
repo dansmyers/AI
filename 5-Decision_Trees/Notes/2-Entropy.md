@@ -2,7 +2,7 @@
 
 ## Overview
 
-Claude Shannon is one of the most important engineers of the 20th Century and a central figure in the history of computing. In 1937, as a graduate student and MIT, he authored a Master's thesis titled *A Symbolic Analysis of Relay and Switching Circuits*, which showed that concepts of Boolean algebra could be used to create digital logic circuits and laid the foundation for the design of all subsequent electonic computers.
+Claude Shannon is one of the most important engineers of the 20th Century and a central figure in the history of computing. In 1937, as a graduate student and MIT, he authored a Master's thesis titled *A Symbolic Analysis of Relay and Switching Circuits*, which showed that concepts of Boolean algebra could be used to create digital logic circuits and laid the foundation for the design of all subsequent electronic computers.
 
 In 1948, he published *A Mathematical Theory of Communication* as a report in the *Bell System Technical Journal*, establishing **information theory** as a mathematical framework for understanding telecommunications and signal processing. The concepts of information theory have important applications in computer security, cryptography, and in data compression. For us, Shannon's idea of **information entropy** will be our main tool for choosing splits in a decision tree.
 
@@ -80,7 +80,7 @@ $$ H(X) = - \sum_i p_i \log_2(p_i) $$
 
 Consider a few cases:
 
-- If *X* is a siungle coin flip, it has 1 bit of entropy
+- If *X* is a single coin flip, it has 1 bit of entropy
 - If *X* only takes on a single value with probability 1, then it has 0 bits of entropy
 - Lower entropies correspond to random variables that are more predictable
 - Higher entropies correspond to variables with more equally-distributed (that is, less predictable) outcomes
