@@ -36,7 +36,7 @@ Therefore, we can compare the entropy of the total set to the entropies obtained
 
 The top-level set has 4/7 sandwiches and 3/7 non-sandwiches. Therefore, its entropy is:
 
-$$ -(.5714) \, \log_2(.5714) - (.4286) \log_2(.4286) \approx .9852 $$
+$$ -(.5714) \ \log_2(.5714) - (.4286) \log_2(.4286) \approx .9852 $$
 
 Don't worry about the exact entropy number! We can observe that it's close to 1, indicating that the classes are closer to equally split, but don't worry about interpreting the specific result.
 
