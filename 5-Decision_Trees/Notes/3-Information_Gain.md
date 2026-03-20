@@ -58,7 +58,7 @@ Splitting on `Has Meat?` gave us an unequal split, with 5 examples in the `Yes` 
 
 Calculate the weighted average entropy between the `Yes` and `No` cases. The `Yes` class contained 5 of the 7 total examples vs. 2 out of 7 for the `No` case, so the weighted average is:
 
-$$ \frac{5}{7} .9709 + \frac{2}{7} 1.0 = .9792 $$
+$$ \frac{5}{7} \cdot .9709 + \frac{2}{7} \cdot 1.0 = .9792 $$
 
 The information gain is the **reduction** in entropy compared to the original calculation:
 
