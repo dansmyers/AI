@@ -1,1 +1,54 @@
+# Entropy and Information Theory
+
+## Overview
+
+Claude Shannon is one of the most important engineers of the 20th Century and a central figure in the history of computing. In 1937, as a graduate student and MIT, he authored a Master's thesis titled *A Symbolic Analysis of Relay and Switching Circuits*, which showed that concepts of Boolean algebra could be used to create digital logic circuits and laid the foundation for the design of all subsequent electonic computers.
+
+In 1958, he published *A Mathematical Theory of Communication* as a Bell Labs technical report, establishing **information theory** as a mathematical framework for understanding telecommunications and signal processing. The concepts of information theory have important applications in computer security, cryptography, and in data compression. For us, Shannon's idea of **information entropy** will be our main tool for choosing splits in a decision tree.
+
+## Information and uncertainty
+
+Information theory is concerned with encoding the *information content* of a signal.
+
+Suppose you have two researchers, A and B, who are performing a coin flipping experiment. A will repeatedly flip the coin, then transmit the sequence of outcomes to B. Each coin flip has two outcomes with equal probability, so the result of a single flip can be encoded using one bit. Therefore, A can encode the result of *N* flips as a sequence of *N* bits and send it to B. We can say that the outcome of a single coin flip represents *one bit* of information and that sequence of *N* flips represents *N* bits of information.
+
+From B's perspective, receiving a sequence of bits from A corresponds to *resolving uncertainty*. Before receiving the communication, B didn't know the outcome of any flips, and after receiving *N* bits he knows *N*.
+
+Also observe that we can't really do better than using 1 bit per flip in order to encode the information of this stream. The coin flips are independent and uncorrelated, so there is no general strategy to send the result of *N* flips that's more efficient that simply encoding them as *N* bits.
+
+Consider, however, a 1 GB file that contains only zero-valued bytes. The file is large, but its *information content* is low. We could practically compress the file using an encoding to represent "0 repeated 1G times*. That encoding is sufficient to remove all uncertainty about the file's exact content.
+
+## Probabilistic signals
+
+Information theory is fundamentally statistical. We consider the signal of interest to be drawn from a collection of *symbols*, each of which has an associated probability of being selected. In the coin flipping example, the two symbols are "heads" and "tails", each with probability .50.
+
+Here's another example. Suppose we have four symbols: A, B, C, and D.
+
+- A occurs with probability .50
+- B occurs with probability .25
+- C occurs with probability 3/16 = .1875
+- D occurs with probability 1/16 = .0625
+
+We need a scheme for encoding an arbitrary sequence of A, B, C and D values as bits. How could we do this efficiently? One option is to use two bits for each symbol: for example, let A be 00, B be 01, and so forth. In that case, any sequence of *N* symbols requires 2*N* bits.
+
+Intuitively, though, using the same length for every symbol is not maximally efficient. We should try to encode the most common symbols in the *smallest number of bits*. Suppose we did the following:
+```
+        |
+    0   |   1
+ ---------------
+|               |
+A            0  |  1
+          -------------
+         |             |
+         B          0  |  1 
+                 -------------
+                |             |
+                C             D
+```
+Let A be encoded as a single `0`, B as `10`, C as `110`, and D as `111`. Taking into account the probabilities of occurrence, the average bits per symbol is now
+
+$$ 1 \cdot .50 + 2 \cdot .25 + 3(.1875 + .0625) = 1.75 $$
+
+It turns out that this encoding is optimal for this probability distribution.
+
 
