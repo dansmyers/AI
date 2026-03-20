@@ -51,7 +51,7 @@ The entropy for the `Yes` case is
 
 $$ -.60 \ \log_2(.60) - .40 \ \log_2(.40) \approx .9709 $$
 
-The entropy for the no case is
+The entropy for the `No` case is
 
 $$ -.50 \ \log_2(.50) - .50 \ \log_2(.50) = 1.0 $$
 
