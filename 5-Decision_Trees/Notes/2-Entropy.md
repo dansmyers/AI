@@ -49,6 +49,15 @@ Let A be encoded as a single `0`, B as `10`, C as `110`, and D as `111`. Taking 
 
 $$ 1 \cdot .50 + 2 \cdot .25 + 3(.1875 + .0625) = 1.75 $$
 
-It turns out that this encoding is optimal for this probability distribution.
+Therefore, in this example, a sequence of *N* symbols is expected to convey 1.75*N* bits of information. 
+
+## Entropy calculation
+
+Shannon's entropy is the formal theoretical version of the above example.
+
+Consider symbol *i* that occurs with probability *p*<sub>*i*</sub>. The *self-information* of symbol *i* is given by
+
+$$ I(p_i) = -\log_2(p_i) $$
+
 
 
