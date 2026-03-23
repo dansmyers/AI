@@ -107,7 +107,7 @@ Symbol | Probability
   E    |     .20
  AB    |     .20
 ```
-The next step combines E with the AB subtree for a combined weight of .40:
+The next step combines E with the AB subtree for a combined weight of .40. The choice of which item to put on the left vs. right is arbitrary.
 ```
                     .40
                      |
@@ -119,7 +119,7 @@ The next step combines E with the AB subtree for a combined weight of .40:
  |           |                    |
  A           B                    E
 ```
-The next step merges C and D into a subtree:
+The next step merges C and D into a subtree, since they have lower probabilities than the combined ABE tree.
 ```
       .60
        |
