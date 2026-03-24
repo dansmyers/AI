@@ -98,5 +98,17 @@ During the feature-selecting loop, the method tests every value as a potential s
 
 - Sample and score a random subset of values
 
+## Pruning
 
-## Boosting
+If you completed the Titanic practice activity, you're familiar with the problem of **overfitting**, where a model achieves a high accuracy on its training data but doesn't generalize well to new data.
+
+Setting the max depth of the tree is tricky. Basic implementations tend to build out trees with too many leaves, but stopping the building process early may hurt performance because a "bad" split early in the tree might enable a useful one later. A better option, used by the CART algorithm, is to first build out the tree, then *prune* unnecessary nodes. The goal of the pruning process is to trade off the size of the tree against classification performance and remove nodes to obtain a smaller tree that still performs reasonably well.
+
+After building the complete tree, CART considers each subtree and evaluates the impact of collapsing it to a single leaf node. Pruning a subtree removes some leaf nodes, which hurts classification performance, but reduces the size of the tree. The key metric is the change in performance *per leaf node removed*. The best subtree to prune is the one that minimizes this metric: that's the subtree that offers the minimum impact relative to the number of nodes it contains.
+
+The process then repeats, identifying a second subtree to prune, then a third, and so forth. The result of this process is a sequence of progressively smaller trees. The final step uses cross-validation (discussed in a future note) to select which tree in the pruning sequence offers the best cost-complexity tradeoff.
+
+
+## Random Forests
+
+
