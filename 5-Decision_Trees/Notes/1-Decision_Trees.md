@@ -111,4 +111,21 @@ The process then repeats, identifying a second subtree to prune, then a third, a
 
 ## Random Forests
 
+If one decision tree is good, how about a *forest* of trees?
+
+An **ensemble method** is a machine learning technique that trains a collection of models and lets them vote on the best classification. Typically the individual models are small and fast, and trained so that the weaknesses of some models are balanced by the strengths of others. Many of the top-performing systems on real-world classification problems are ensembles.
+
+Some ensemble methods mix models of different types, but a common approach is to train multiple copies of the same model with randomized variations. The random forests technique trains a collection of small decision trees:
+
+- Each tree is built from a sample of the overall training set. This is done by sampling *with replacement* to create a randomized training set the same size as the original set. This method is called [*bootstrap sampling*](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).
+
+- Each tree is also restricted to using a randomized subset of features, which forces the different trees to learn different classification strategies
+
+
+The result is a collection of decision trees (each trained on a random sample of the training data and a randomized sample of features). A standard implementation may train dozens to hundreds of randomized trees. The trees are independent, so training and classification are easy to parallelize.
+
+When it's time to classify a new input, each tree performs its own classification, then the majority label is assigned as the overall output.
+
+
+
 
