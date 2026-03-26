@@ -1,4 +1,4 @@
-# Validation: Precision vs. Recall
+# Training, Testing, and Validation
 
 ## Overview
 
