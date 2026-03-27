@@ -71,6 +71,30 @@ Hierarchical clustering, also called *agglomerative clustering*, avoids the issu
 - Repeatedly identify the two nearest clusters and merge them to create a new, larger cluster.
 - Continue until all points have been merged into one top-level cluster
 
-It's typical to visualize the results of the clustering process by creating a **dendrogram** like the one above. It shows the sequence of cluster mergings from individual points up to the top-level supercluster.
+It's typical to visualize the results of the clustering process by creating a **dendrogram** like the one above. It shows the sequence of cluster mergings from individual points up to the top-level supercluster. You can choose a desired number of final clusters by cutting the dendrogram to select the last *k* groups that were merged.
 
+Hierarchical clustering does require choosing a rule for calculating the similarity of clusters to control the merging process. Distances between cluster centers are one choice. Another option is *Ward's linkage*, which merges the pair of clusters that yield a new cluster with minimal within-cluster variance; that is, it tries to merge clusters that result in similar items being grouped together. 
+
+Use scikit-learn to construct a dendrogram like the one above with Ward's linkage as the merging criterion.
+
+
+## Mixture Models
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/500px-MultivariateNormal.png" width="400px" />
+
+*Example two-dimensional normal distribution* (via Wikipedia, again)
+
+Did either clustering algorithm work well on the iris data set? What is it about the structure of the data that makes cleanly separating *iris versicolor* and *iris virginica* difficult?
+
+Here's an idea: maybe a *probabilistic* approach could perform better? Instead of drawing hard boundaries, we could think of the data points as samples drawn from statistical distributions, which might be overlapping. A point could then have a *probability* of being assigned to each cluster. This would allow us to assign each point to its most likely cluster, but also capture the idea of uncertainty for points that are genuinely between clusters and hard to place.
+
+The **Gaussian mixture model** method uses this approach. It assumes that the data are drawn from multivariate normal (Gaussian) distributions and finds the means and covariances of those distributions that best fit the observations.
+
+Intuitively, you can think of a multivariate normal distribution as having each of its features drawn from a one-dimensional normal distribution. A sample from such a distribution looks like a "blob" in space, where the means of the distributions determine the center of the blob and the covariances determine the shape and orientation.
+
+Try performing one more clustering using the GMM approach. If you want to do more research, you can read about the expectation-maximization (EM) algorithm that's used to solve the distribution-fitting problem.
+
+## Submission
+
+Submit your plots (as .png images) and code.
 
