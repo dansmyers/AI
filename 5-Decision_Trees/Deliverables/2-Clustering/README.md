@@ -15,7 +15,7 @@ There are a wide variety of clustering algorithms that differ in how they define
 
 ## K-Means
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/K-means_convergence.gif/500px-K-means_convergence.gif" width="400px"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/K-means_convergence.gif/500px-K-means_convergence.gif" width="300px"/>
 
 *Example run of k-means clustering with three clusters, from Wikipedia*
 
@@ -80,7 +80,7 @@ Use scikit-learn to construct a dendrogram like the one above with Ward's linkag
 
 ## Mixture Models
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/500px-MultivariateNormal.png" width="400px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/500px-MultivariateNormal.png" width="300px" />
 
 *Example two-dimensional normal distribution* (via Wikipedia, again)
 
