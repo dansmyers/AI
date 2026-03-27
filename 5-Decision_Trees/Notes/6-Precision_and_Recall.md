@@ -79,8 +79,16 @@ What if we just selected a random collection of *n* books without worrying wheth
 
 A minimal baseline of model performance is doing better than random.
 
-## F1 score
+## F<sub>1</sub> score
 
-The F1 score combines precision and recall into one value in the range of 0 to 1. It therefore provides a single score of model performance. The F1 formula is:
+The F<sub>1</sub> score combines precision and recall into one value in the range of 0 to 1. It therefore provides a single score of model performance. The F<sub>1</sub> formula is:
 
 $$ F_1 = \frac{2}{precision^{-1} + recall^{-1}} = 2\frac{precision \cdot recall}{precision + recall} $$
+
+The F<sub>1</sub> score is formally the **harmonic mean** of the two quantities. The harmonic mean is used when averaging rates and, unlike the normal arithmetic mean, it harshly penalizes imbalance between the two values.
+
+Suppose that you have a model with 99% precision and 1% recall. This is an extremely conservative model: it returns almost no positive cases. The arithmetic mean of the two scores is 50%, which doesn't accurately capture either aspect of the model's performance. The F<sub>1</sub> score is 
+
+$$ F_1 = 2\frac{.99 \cdot .01}{.99 + .01} = .0198 $$ 
+
+Having high precision isn't enough to overcome the very low recall score. 
