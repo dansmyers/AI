@@ -1,6 +1,6 @@
 # Clustering
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg" width="400px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg" width="300px" />
 
 *Iris versicolor* (via Wikipedia)
 
