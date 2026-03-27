@@ -22,4 +22,8 @@ The method chooses *k* points, called *centroids*, at random. It then repeatedly
 - Assigns every point to its nearest centroid
 - Moves each centroid to the average of its assigned points
 
-The centroids are assumed to be centers of the *k* clusters. 
+The centroids are assumed to be centers of the *k* clusters. As the image above shows, the assignment and averaging process tends to move centers towards distinct blobs of points.
+
+K-means works well when the centers are *globular* (that is, ball-shaped within their dimensional space) and well-separated. If the clusters have some overlap, like in the example image, it's possible to end up with boundary points assigned to the wrong cluster.
+
+
