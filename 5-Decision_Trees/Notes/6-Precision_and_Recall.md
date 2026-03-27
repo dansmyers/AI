@@ -6,13 +6,13 @@ Consider the following situation: you're building a model to predict the inciden
 
 Good job?
 
-Clearly, we should be suspiciouis of this evaluation. The *accuracy*, the percentage of correct classifications, is high, but that isn't the right measurement here, because we've failed at the actual medically-useful task of identifying positive cases. An effective evaluation needs to measure how well the model does at *making useful predictions* even if one class is rare.
+Clearly, we should be suspicious of this evaluation. The *accuracy*, the percentage of correct classifications, is high, but that isn't the right measurement here, because we've failed at the actual medically-useful task of identifying positive cases. An effective evaluation needs to measure how well the model does at *making useful predictions* even if one class is rare.
 
 Rather than accuracy, model evaluations use two metrics called **precision** and **recall**.
 
 ## Precision
 
-Think about a classification problem as a labeling task, where the model labels each item as "positive" or "negative". For example, in the *Titanic* example, we could think of "Did not survive" as being the "positive" class that we want to identify.
+Think about a classification problem as a labeling task, where the model labels each item as "positive" or "negative". For example, in the *Titanic* data, we could think of "Did not survive" as being the "positive" class that we want to identify.
 
 **Precision** is the fraction of correct positive classifications out all items labeled as positive.
 
@@ -57,9 +57,7 @@ A model with high recall is *thorough*: it is likely to find all positive cases.
 
 ## Library example
 
-Imagine that it's 1992 and you're ten years old and in the fifth grade and have to do a research paper on frogs. You won't know about the Internet until next year, when you go over to your friend Patrick's house and he has a Mac and the Prodigy online service, so you have to look for real books on frogs in your school library.
-
-Let's imagine that the library has 2500 total books, of which 30 are about frogs. The library does have a computer you can use to search (it's the 1990s, not the Stone Age). It's helpful to think about the extremes of precision and recall in terms of real numbers:
+Imagine that it's 1992 and you're ten years old and in the fifth grade and have to do a research paper on frogs. You won't know about the Internet until next year, when you go over to your friend Patrick's house and he has a Mac and the Prodigy online service, so you have to look for real books on frogs in your school library. Let's imagine that the library has 2500 total books, of which 30 are about frogs. The library does have a computer you can use to search (it's the 1990s, not the Stone Age). It's helpful to think about the extremes of precision and recall in terms of real numbers:
 
 - A search with high precision and high recall (the ideal case) would return the 30 frog books and nothing else
 
@@ -67,9 +65,22 @@ Let's imagine that the library has 2500 total books, of which 30 are about frogs
 
 - A search with high recall but low precision would return all 2500 books in the library
 
-- A search with low precision and recall (the worst case) would return all 2490 books *not* about frogs
+- A search with zero precision and recall (the worst case) would return all 2490 books *not* about frogs. This search returns the exact opposite of what it should.
 
 What if the search returned 50 results, of which 25 were frog books? In that case:
 
 - The precision is 25 / 50 = 50%
 - The recall is 25 / 30 = 83%
+
+What if we just selected a random collection of *n* books without worrying whether they're correct or not? In that case,
+
+- We'd expect 30/2500 = 1.2% of books we select to be about frogs, so the expected precision is always 1.2%.
+- The recall scales with *n*. If we take 250 books, we've taken 10% of the library, so we'd expect to get 10% of the frog books on average
+
+A minimal baseline of model performance is doing better than random.
+
+## F1 score
+
+The F1 score combines precision and recall into one value in the range of 0 to 1. It therefore provides a single score of model performance. The F1 formula is:
+
+$$ F_1 = \frac{2}{precision^{-1} + recall^{-1}} = 2\frac{precision \cdot recall}{precision + recall} $$
