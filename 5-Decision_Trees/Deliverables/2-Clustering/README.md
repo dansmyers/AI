@@ -78,7 +78,7 @@ Hierarchical clustering does require choosing a rule for calculating the similar
 Use scikit-learn to construct a dendrogram like the one above with Ward's linkage as the merging criterion.
 
 
-## Mixture Models
+## Mixture models
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MultivariateNormal.png/500px-MultivariateNormal.png" width="300px" />
 
@@ -92,7 +92,9 @@ The **Gaussian mixture model** method uses this approach. It assumes that the da
 
 Intuitively, you can think of a multivariate normal distribution as having each of its features drawn from a one-dimensional normal distribution. A sample from such a distribution looks like a "blob" in space, where the means of the distributions determine the center of the blob and the covariances determine the shape and orientation.
 
-Try performing one more clustering using the GMM approach. If you want to do more research, you can read about the expectation-maximization (EM) algorithm that's used to solve the distribution-fitting problem.
+Try performing one more clustering using the GMM approach. How do its cluster assignments compare to the real data?
+
+If you want to do more research, you can read about the expectation-maximization (EM) algorithm that's used to solve the distribution-fitting problem.
 
 ## Submission
 
