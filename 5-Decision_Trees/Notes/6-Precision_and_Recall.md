@@ -14,7 +14,7 @@ Rather than accuracy, model evaluations use two metrics called **precision** and
 
 Think about a classification problem as a labeling task, where the model labels each item as "positive" or "negative". For example, in the *Titanic* data, we could think of "Did not survive" as being the "positive" class that we want to identify.
 
-**Precision** is the fraction of correct positive classifications out all items labeled as positive.
+**Precision** is the fraction of correct positive classifications out of all items labeled as positive.
 
 - Suppose that a *Titanic* model labeled 100 passengers as "Did not survive", and that label was correct for 90 of them. The precision in that case would be 90 / 100 = 90%.
 
