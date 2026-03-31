@@ -31,5 +31,3 @@ We're going to start our overview of ML by looking at one of the most important 
 - Precision and recall
 - ROC curves
 - Cross-validation
-
-## Resources
