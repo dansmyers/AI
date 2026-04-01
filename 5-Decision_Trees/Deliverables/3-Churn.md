@@ -1,6 +1,6 @@
 # Challenge Project &ndash; Telco Customer Churn
 
-<img src="https://compote.slate.com/images/6b1fe977-d4a8-4435-8d78-4988afa998c7.jpg" width="50%" />
+<img src="https://compote.slate.com/images/6b1fe977-d4a8-4435-8d78-4988afa998c7.jpg" width="400px" />
 
 ## Description
 
