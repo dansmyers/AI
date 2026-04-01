@@ -16,17 +16,12 @@ You need to do the following:
 
 - Download the telco churn data set, which is included in this repo as a `.csv` file.
 
-- Perform a brief exploratory analysis: pick **two** features of the data that you suspect might be related to churn (for example, whether the customer is a senior citizen or not) 
-and create plots showing the fraction of customers that churned vs. did not churn for each feature. For exampple, if you choose `SeniorCitizen` as a feature of interest, you would
-want to show if there is any difference in the fraction of senior citizens that churned vs. non-senior citizens that churned.
+- Perform a brief exploratory analysis: pick **two** features of the data that you suspect might be related to churn (for example, whether the customer is a senior citizen or not) and create plots showing the fraction of customers that churned vs. did not churn for each feature. For exampple, if you choose `SeniorCitizen` as a feature of interest, you would want to show if there is any difference in the fraction of senior citizens that churned vs. non-senior citizens that churned.
 
 - Construct a predictive model for customer churn. You have the freedom to choose any technique that you think is appropriate.
 
 - Note that there is a customer ID field in the data set. **Don't** include that in your model, or you'll be trying to classify customers based on their individual IDs.
 
+- Hold out 20% of the data for a testing set. Report the confusion matrix, precision, and recall of your model. Do you also need a validation set? Think about it.
+
 - Create a **short** writeup summarizing the results of your exploratory analysis, your model, and a course of action that you would recommend taking based upon your analysis.
-
-## ROC curve
-
-<img src="https://blog.alliedoffsets.com/hs-fs/hubfs/0_VmdsukltMmSfn1iK.webp?width=2560&height=1920&name=0_VmdsukltMmSfn1iK.webp" width="400px" />
-
