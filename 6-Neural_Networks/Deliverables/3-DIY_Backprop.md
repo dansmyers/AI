@@ -139,7 +139,7 @@ An alternative is the **rectified linear unit** (ReLU), which simply outputs `ma
 
 $$ ReLU(x) = \frac{x + |x|}{2} $$
 
-The "rectified" name comes from electronics, where a *rectifier* is a circuit element that converts AC current into DC by blocking the negative part of the alternating cycle. The term also shows up in audio engineering, where it's related to [amplifier distortion](https://www.gibson.com/products/mesa-boogie-90s-dual-rectifier?view=mesa) (🤘😈🤘).
+The "rectified" name comes from electronics, where a *rectifier* is a circuit element that converts AC current into DC by blocking the negative part of the alternating cycle. The term also shows up in audio engineering, where it's related to [amplifier distortion](https://www.youtube.com/watch?v=i97OkCXwotE) (🤘😈🤘).
 
 - Do some research on why the ReLU function is preferred for training modern neural networks. Also look at the "leaky ReLU" variation and explain why it's sometimes preferable to the basic ReLU.
 
