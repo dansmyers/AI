@@ -1,7 +1,5 @@
 # DIY Backpropagation
 
-### UNDER CONSTRUCTION - DON'T START ON THIS YET
-
 ## Overview
 
 It's time: implement your own version of the backpropagation algorithm that can train a neural network with one hidden layer and an arbitrary number of nodes.
