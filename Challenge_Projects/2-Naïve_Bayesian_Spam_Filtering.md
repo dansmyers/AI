@@ -1,6 +1,6 @@
 # Bayesian Spam Filtering
 
-<img src="https://imgs.xkcd.com/comics/bayes_theorem_2x.png" width="300px" />
+<img src="https://imgs.xkcd.com/comics/bayes_theorem_2x.png" width="200px" />
 
 ## Due 4/24
 
