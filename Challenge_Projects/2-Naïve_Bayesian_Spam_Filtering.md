@@ -1,6 +1,6 @@
 # Bayesian Spam Filtering
 
-## We'll work through these examples in class &ndash; you don't need to complete this for homework
+## Due 4/24
 
 ## Overview
 
