@@ -1,5 +1,7 @@
 # Bayesian Spam Filtering
 
+<img src="https://imgs.xkcd.com/comics/bayes_theorem_2x.png" width="300px" />
+
 ## Due 4/24
 
 ## Overview
@@ -21,8 +23,6 @@ An important practical application of the Bayesian classifier is **e-mail spam f
 
 
 ## Bayesian Classification
-
-<img src="https://imgs.xkcd.com/comics/machine_learning_2x.png" width="33%" />
 
 ### Classification as a Conditional Probability
 
