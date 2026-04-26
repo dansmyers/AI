@@ -2,7 +2,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/%22Flacking%22_d%27Ememem_%C3%A0_Lyon%2C_2021.jpg/960px-%22Flacking%22_d%27Ememem_%C3%A0_Lyon%2C_2021.jpg" width="300px" />
 
-*Ememem is an artist based in France who repairs cracks in streets and sidewalks with tile mosaics. He calls the style "flacking" after flaque, the French word for puddle.
+*Ememem is an artist based in France who repairs cracks in streets and sidewalks with tile mosaics. He calls the style "flacking" after flaque, the French word for puddle.*
 
 ## Due 5/5 (last day of exams)
 
